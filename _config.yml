@@ -14,11 +14,12 @@ default_img:
 
 # Profile settings
 name: Bratishka
-profile_img:
-profile:
+profile_img: /images/profile.jpg
+profile: Hello, it's me.
 social:
   github: https://github.com/MerkulovDaniil/
   vk: https://vk.com/merkulov_daniil
+  medium: https://medium.com/@bratishkin
 
 # Build settings
 include: ["_categories"]
