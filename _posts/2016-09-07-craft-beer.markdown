@@ -47,7 +47,9 @@ Slow-carb cornhole crucifix thundercats intelligentsia. Trust fund bushwick la c
 </figure>
 
 <figure>
+<center>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2YbFiUKo1fo" frameborder="0" allowfullscreen></iframe>
+</center>
 </figure>
 
 Gluten-free la croix activated charcoal tousled, brunch semiotics sartorial mustache hashtag. Leggings pabst waistcoat quinoa cliche pinterest letterpress, flannel poke forage +1 retro snackwave humblebrag schlitz. Wayfarers chartreuse occupy, direct trade farm-to-table irony blog activated charcoal shoreditch fam live-edge. Intelligentsia scenester gochujang gentrify portland offal. Pop-up schlitz hot chicken humblebrag, tattooed ugh neutra yr street art normcore la croix thundercats lo-fi. Gentrify cray pug authentic, cliche listicle actually subway tile woke semiotics af. Trust fund edison bulb biodiesel listicle, tattooed cornhole fashion axe blue bottle XOXO leggings pop-up vexillologist.
