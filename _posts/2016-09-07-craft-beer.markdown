@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Craft Beer
+title: Тестовый постик
 date: 2016-09-07 00:00:00
 categories:
   - Science
