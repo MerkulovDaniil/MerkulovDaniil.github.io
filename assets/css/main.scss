@@ -11,17 +11,18 @@
   'helpers'
 ;
 
-.thumb-wrap {
-  position: relative;
-  padding-bottom: 56.25%; /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */
-  padding-top: 30px;
-  height: 0;
-  overflow: hidden;
+.video-container {
+ position: relative;
+ padding-bottom: 56.25%;
+ padding-top: 30px;
+ height: 0;
+ overflow: hidden;
 }
-.thumb-wrap iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+
+.video-container iframe {
+ position: absolute;
+ top:0;
+ left: 0;
+ width: 100%;
+ height: 100%;
 }
