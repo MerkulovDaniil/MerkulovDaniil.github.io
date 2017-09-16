@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Тестовый постик
+title: Славные края древних русичей
 date: 2017-09-15 00:00:00
 categories:
   - Travel
 description:
-image: /images/kalyazin.png
-image-sm: /images/kalyazin.png
+image: images/posts/170915_kalyazin/kalyazin.jpg
+image-sm: images/posts/170915_kalyazin/kalyazin-sm.jpg
 ---
 
 Сгоняли по древним местам:)
