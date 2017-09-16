@@ -13,3 +13,7 @@ image-sm: /images/kalyazin.png
 
 
 {% include youtube.html youtube_id="sjqgm-hDGWw" %}
+
+blabla
+
+<iframe width="560" height="420" src="http://www.youtube.com/embed/oHg5SJYRHA0?color=white&theme=light"></iframe>
