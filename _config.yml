@@ -15,11 +15,12 @@ default_img:
 # Profile settings
 name: Bratishka
 profile_img: /images/profile.jpg
-profile: Hello, it's me.
+profile: Меня зовут Даня, я люблю математику, стендап и Русь.
 social:
   github: https://github.com/MerkulovDaniil/
   vk: https://vk.com/merkulov_daniil
   medium: https://medium.com/@bratishkin
+  telegram: t.me/bratishk
 
 # Build settings
 include: ["_categories"]
