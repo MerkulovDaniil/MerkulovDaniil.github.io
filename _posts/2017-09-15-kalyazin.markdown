@@ -11,4 +11,5 @@ image-sm: /images/kalyazin.png
 
 Сгоняли по древним местам:)
 
+
 {% include youtube.html youtube_id="sjqgm-hDGWw" %}
