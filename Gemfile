@@ -5,7 +5,3 @@ group :jekyll_plugins do
   gem "jekyll-sitemap"
   gem "octopress-autoprefixer"
 end
-
-group :jekyll_plugins do
-  gem "jekyll-youtube"
-end

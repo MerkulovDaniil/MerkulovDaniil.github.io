@@ -33,7 +33,4 @@ sass:
   style: compressed
 
 # Gems
-gems: [jekyll-paginate, jekyll-sitemap, octopress-autoprefixer, jekyll-youtube]
-
-plugins: [jekyll-youtube]
-# This will require each of these gems automatically.
+gems: [jekyll-paginate, jekyll-sitemap, octopress-autoprefixer]
