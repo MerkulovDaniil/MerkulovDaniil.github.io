@@ -13,17 +13,11 @@ image-sm: /images/posts/170915_kalyazin/kalyazin-sm.jpg
 
 Новый тест
 
-```
 <div class="video">
     <figure>
         <iframe width="640" height="480" src="//www.youtube.com/embed/sjqgm-hDGWw" frameborder="0" allowfullscreen></iframe>
     </figure>
 </div>
-```
-
-
-
-
 
 
 {% include youtube.html youtube_id="sjqgm-hDGWw" %}
