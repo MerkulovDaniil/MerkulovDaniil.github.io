@@ -6,25 +6,25 @@ paginate_path: "/blog/page-:num"
 google_analytics:
 
 # SEO settings
-title: Awakening
-description: Cozy and warm place
-url: ""
+title: merkulov.top
+description: cozy and warm place
+url: "merkulov.top"
 twitter_username:
 default_img:
 
 # Profile settings
 name: Bratishka
 profile_img: /images/profile.jpg
-profile: Меня зовут Даня, я люблю математику, стендап и Русь.
+profile: Меня зовут Даня, я PhD студент в Сколковском Институте Науки и Технологий. Я люблю математику, преподавать, историю, путешествовать и неоднозначность бытия. Этот сайт - попытка собрать воедино то, что мне кажется или показалось важным.
 social:
   github: https://github.com/MerkulovDaniil/
   vk: https://vk.com/merkulov_daniil
   medium: https://medium.com/@bratishkin
-  telegram: t.me/bratishk
+  telegram: https://t.me/bratishk
 
 # Build settings
 include: ["_categories"]
-exclude: ["_screenshots", "Gemfile", "Gemfile.lock"]
+exclude: [Gemfile", "Gemfile.lock"]
 markdown: kramdown
 permalink: /:year/:month/:day/:title/
 
@@ -33,4 +33,7 @@ sass:
   style: compressed
 
 # Gems
-gems: [jekyll-paginate, jekyll-sitemap, octopress-autoprefixer]
+gems: [jekyll-paginate, jekyll-sitemap, octopress-autoprefixer, jekyll-youtube]
+
+plugins: [jekyll-youtube]
+# This will require each of these gems automatically.
