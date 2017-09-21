@@ -19,4 +19,4 @@ image-sm: /images/posts/170921_baikal/card-sm.jpg
 
 # Остановка Иркутск. А может, Слюдянка?
 
-[](/images/posts/170921_baikal/slud.jpg)
+![](/images/posts/170921_baikal/slud.jpg)
