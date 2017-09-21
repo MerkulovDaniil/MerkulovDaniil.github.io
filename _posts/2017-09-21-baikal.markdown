@@ -17,6 +17,6 @@ image-sm: /images/posts/170921_baikal/card-sm.jpg
 
 [Первая часть](http://bratishkin.livejournal.com/1184.html) этой милой сердцу истории.
 
-# Остановка Иркутск. А может, Слюдянка?
+## Остановка Иркутск. А может, Слюдянка?
 
 ![](/images/posts/170921_baikal/slud.jpg)
