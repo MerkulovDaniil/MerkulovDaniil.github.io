@@ -30,13 +30,13 @@ You should take:
 
 ### Internships
 
-You should know, that there is an opportunity of funding your research trips (including conferences, schools and etc.). All information and manuals about this kind of activity could be found on [SIS](https://sis.skoltech.ru/Resources/Policies%20and%20Guidelines/PhD_ShortTermTrips_Announcement_2017_v5.pdf).
+You should know, that there is an opportunity for funding your research trips (including conferences, schools and etc.). All information and manuals about this kind of activity could be found on [SIS](https://sis.skoltech.ru/Resources/Policies%20and%20Guidelines/PhD_ShortTermTrips_Announcement_2017_v5.pdf).
 
 ### Thesis
 
 ![](/images/posts/171106_PrePhD/thesis_requirements.png)
 
-Each direction has its own requirements about quality of your thesis. Rank of the conference could be checked [here](http://www.conferenceranks.com/). 
+Each direction has its own requirements about the quality of your thesis. Rank of the conference could be checked [here](http://www.conferenceranks.com/). 
 
 ### Other
 
@@ -46,8 +46,8 @@ There are few more important things to mention about our study at Skoltech's doc
 
 *   Your scientific advisor should identify your Individual Doctor Committee, which consists of 3 members (including your scientific supervisor) working closely and regularly with you. They might be external members as well as Skoltech faculty.
 *   Qualifying Exam. The latest information I found about qualifying exam is [here](/images/posts/171106_PrePhD/qexam.pdf). It has pass/fail grade and usually takes place after finishing all the coursework.
-*   You should submit your overall individual study [plan](https://form.jotformeu.com/71054916865362) by the February 1, 2018.
-*   Each year your center will conduct an annual progress review, which might affect on your scholarship.
+*   You should submit your overall individual study [plan](https://form.jotformeu.com/71054916865362) by February 1, 2018.
+*   Each year your center will conduct an annual progress review, which might affect your scholarship.
 *   It seems unreasonable as yet, but still: after writing your core papers and thesis, you have to pass a tricky quest (which should be clarified carefully): give a talk on a scientific seminar, write an essay, invite 5 members of a jury committee, collect feedback from reviewers and so on. The only thing that makes sense right now: you should communicate with scientific society properly and be very proactive.
 
 ## Guru's opinion
@@ -56,9 +56,9 @@ There are few more important things to mention about our study at Skoltech's doc
 
 ### PhD Grind
 
-Definitely, must-read book, written by Phillip Guo (MIT and Stanford graduate), which explains the entire experience about PhD program in Computer Science.  It illustrates inner experiences, thoughts, depressive and rush phases of a PhD student. It also covers questions about student-advisor relations, internships, sources of a research funding and importance of networking.  
+Definitely, must-read book, written by Phillip Guo (MIT and Stanford graduate), which explains the entire experience about a PhD program in Computer Science.  It illustrates inner experiences, thoughts, depressive and rush phases of a PhD student. It also covers questions about student-advisor relations, internships, sources of a research funding and importance of networking.  
 
-In my opinion, the most impressive insights come from the stories, when author just cold e-mailed or talking with completely unfamiliar people from his field and those actions led to great publications, results and even professorship. It is also interesting, that author chose "startup" way to getting his dissertation done, which means collecting feedback, doing problems, that inspire yourself.
+In my opinion, the most impressive insights come from the stories, when the author just cold e-mailed or talking with completely unfamiliar people from his field and those actions led to great publications, results and even professorship. It is also interesting, that author chose "startup" way to getting his dissertation done, which means collecting feedback, doing problems, that inspire yourself.
 
 [Book's page](http://pgbovine.net/PhD-memoir.htm)  
 
@@ -66,9 +66,9 @@ In my opinion, the most impressive insights come from the stories, when author j
 
 ### A Survival Guide to a PhD
 
-[Andrej](https://twitter.com/karpathy) is the Stanford graduate and Tesla AI director right now. After finishing his PhD he wrote an interesting [article](http://karpathy.github.io/2016/09/07/phd/) about such kind of investing a few years of your life. I strongly recommend to read this article at weekends with a cup of tea or coffee and a notebook to put your favorite insights from it. Here are mine:
+[Andrej](https://twitter.com/karpathy) is the Stanford graduate and Tesla AI director right now. After finishing his PhD he wrote an interesting [article](http://karpathy.github.io/2016/09/07/phd/) about such kind of investing a few years of your life. I strongly recommend reading this article on weekends with a cup of tea or coffee and a notebook to put your favorite insights from it. Here are mine:
 
-Firstly, he describe the main pro's of doing PhD
+Firstly, he describes the main pro's of doing PhD
 
 >   You’re young and there’s really no need to rush. Once you graduate from a PhD you can spend the next ~50 years of your life in some company.
 
@@ -76,17 +76,17 @@ About future's choice:
 
 >   Lastly, as a random thought I heard it said that you should only do a PhD if you want to go into academia. In light of all of the above I’d argue that a PhD has strong intrinsic value - it’s an end by itself, not just a means to some end (e.g. academic job).
 
-He also suggests you to choose research topic carefully and ambitiously:
+He also suggests you choose research topic carefully and ambitiously:
 
 >   People have a strange bug built into psychology: a 10x more important or impactful problem intuitively feels 10x harder (or 10x less likely) to achieve. This is a fallacy - in my experience a 10x more important problem is at most 2-3x harder to achieve. In fact, in some cases a 10x harder problem may be easier to achieve.
 
 Things, that impressed me the most about writing the papers:
 
 *   **Review papers**: your "internal classifier" should be trained on a balanced training sample (you should read both the top-tier accepted papers and negative examples as well)
-*   **Get the gestalt right**: it is all about the form of your paper, citation's density, figures, sizes. Experienced reviewer might has a good classifier, based strongly on the general view of your paper.
+*   **Get the gestalt right**: it is all about the form of your paper, citation's density, figures, sizes. Experienced reviewer might have a good classifier, based strongly on the general view of your paper.
 *   **Identify the core contribution:** Don't put all your experiments and thoughts in your paper in a random way. If you have more, than one important contribution - write more papers! :)
-*   **Concentration:** The paper is not just the report - it is a highly processed and very focused discussion of problem, approach and context.
-*   **Certain vocabulary:** There are some key words in each area of knowledge, which could indicate the quality and the style of a work. And no doubts, that's shouldn't contain any language mistakes.
+*   **Concentration:** The paper is not just the report - it is a highly processed and very focused discussion of a problem, approach and context.
+*   **Certain vocabulary:** There are some keywords in each area of knowledge, which could indicate the quality and the style of a work. And no doubts, that's shouldn't contain any language mistakes.
 *   **Internal deadlines 2 weeks prior:** Great idea, don't you think so? Your colleagues have time to review your work carefully, and you still have time to carry out some missed experiments.
 
 
@@ -94,13 +94,13 @@ There is the rich [discussion](https://news.ycombinator.com/item?id=12447495) ab
 
 ## Personal plan
 
-Here I will cover my personal ideas, hopes and plans about my battle for the degree :)
+Here I will cover my personal ideas, hopes and plans for my battle for the degree :)
 
 ### Courses
 
 #### Information and Coding theory
 
-It seems, that Fisher information concept could breath a new life to the machine learning and (I hope) to the understanding the nature of generalization of such complex models as Deep Neural Networks. Moreover, it is just one of the most *tasty* and beautiful subfield of applied math.
+It seems, that Fisher information concept could breathe a new life to the machine learning and (I hope) to the understanding the nature of generalization of such complex models as Deep Neural Networks. Moreover, it is just one of the most *tasty* and beautiful subfield of applied math.
 
 #### Deep Learning
 
