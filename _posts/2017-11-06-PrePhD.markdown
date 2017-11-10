@@ -5,13 +5,9 @@ date: 2017-09-15 00:00:00
 categories:
   - Science
 description:
-image: /images/posts/170915_kalyazin/kalyazin.jpg
-image-sm: /images/posts/170915_kalyazin/kalyazin-sm.jpg
+image: /images/posts/171106_PrePhD/card.png
+image-sm: /images/posts/171106_PrePhD/card-sm.png
 ---
-
-# PhD: Look before the Adventure
-
-## Why?
 
 My doctoral program (at last) officially started. Here I wanna briefly highlight my personal plans on it, Skoltech requirements, interesting literature and some related stuff.
 
