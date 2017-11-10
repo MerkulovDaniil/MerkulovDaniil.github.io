@@ -1,7 +1,7 @@
 ---
 layout: post
 title: PhD Look before the Adventure
-date: 2017-09-15 00:00:00
+date: 2017-11-10 00:00:00
 categories:
   - Science
 description:
@@ -9,7 +9,7 @@ image: /images/posts/171106_PrePhD/card.png
 image-sm: /images/posts/171106_PrePhD/card-sm.png
 ---
 
-My doctoral program (at last) officially started. Here I wanna briefly highlight my personal plans on it, Skoltech requirements, interesting literature and some related stuff.
+My doctoral program (at last) officially started. Here I wanna briefly highlight my personal plans on it, Skoltech requirements, interesting reading and some related stuff.
 
 ## Skoltech Requirements
 
@@ -25,6 +25,7 @@ You should take:
 *   1 "innovation" course (aka Ideas to Impact or Intellectual Property)
 *   1 philosophy course (6 credits)
 *   1 course as a TA
+*   1 course about teaching methodology (and this is not TA activity)
 *   Research Seminar. It is still not transparent requirement, but I suppose, that weekly seminar in your lab is enough for this criteria. 
 
 ### Internships
@@ -44,6 +45,7 @@ The orientation presentation, which took place at the end of October could be do
 There are few more important things to mention about our study at Skoltech's doctoral program:
 
 *   Your scientific advisor should identify your Individual Doctor Committee, which consists of 3 members (including your scientific supervisor) working closely and regularly with you. They might be external members as well as Skoltech faculty.
+*   Qualifying Exam. The latest information I found about qualifying exam is [here](/images/posts/171106_PrePhD/qexam.pdf). It has pass/fail grade and usually takes place after finishing all the coursework.
 *   You should submit your overall individual study [plan](https://form.jotformeu.com/71054916865362) by the February 1, 2018.
 *   Each year your center will conduct an annual progress review, which might affect on your scholarship.
 *   It seems unreasonable as yet, but still: after writing your core papers and thesis, you have to pass a tricky quest (which should be clarified carefully): give a talk on a scientific seminar, write an essay, invite 5 members of a jury committee, collect feedback from reviewers and so on. The only thing that makes sense right now: you should communicate with scientific society properly and be very proactive.
@@ -112,12 +114,18 @@ Right in the current term (Nov - Dec, 17) I assist my scientific advisor prof. O
 
 *   My personal Individual Study Plan is below. It should be emphasized, that this is preliminary version.
 
-![]()
+![](/images/posts/171106_PrePhD/ind_plan.png)
 
+*   I will take philosophy course by Ivan Lupandin and innovation course by Kelvin Willoughby. 
 
+*   There could be useful to take English course (3 ECTS) in order to obtain Russian state degree.
 
-### Thesis
+*   I will try to participate in summer internships during the first years of my PhD program. And the end of the year - exact application time of many summer programs. The deadlines are coming!
 
-My favorite picture from [this](http://phdcomics.com/) series: 
+*   Choosing thesis topic at the first year of study seems the most challenging step to do for me.
+
+    ​
+
+I would like to read this post after my graduation and reflect it in some way. And finally, this is my favorite picture from [this](http://phdcomics.com/) series: 
 
 ![](/images/posts/171106_PrePhD/phd_saturdays.jpg)
