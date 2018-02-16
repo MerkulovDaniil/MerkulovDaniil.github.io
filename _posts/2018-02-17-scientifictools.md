@@ -7,12 +7,10 @@ categories:
 description:
 image: /images/posts/180217_scientifictools/card.png
 image-sm: /images/posts/180217_scientifictools/card-sm.png
-
 --
 
 # Быстрый старт в научные вычисления
 
-[TOC]
 
 ## Введение. Для кого и зачем.
 
