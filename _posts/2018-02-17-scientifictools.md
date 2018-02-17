@@ -87,13 +87,12 @@ Binder гарантирует Вам 1Гб оперативной памяти (
     Вообще говоря, seaborn - это отдельная библиотека, которая работает в тесной связке с matplotlib, но имеет много своих [фишечек](https://seaborn.pydata.org/examples/index.html).
 
 *    Особенно хотелось бы выделить интерактивный режим работы с графиками в jupyter notebook. Если в начале ячейки прописать:
-
-    ```python
-    %matplotlib notebook
-    ```
+```python
+%matplotlib notebook
+```
 
     То будут доступны прикольные штуки, типа интерактивного зума в выделенное окно, изменение размера фигуры и прочее:
-    ![](/images/posts/180217_scientifictools/matplotlib_notebook.gif)
+![](/images/posts/180217_scientifictools/matplotlib_notebook.gif)
 
     Из минусов: рендеринг очень медленный (особенно, если график "тяжелый"), иногда глючит (особенно, если менять бекенд для отрисовки графиков в работающем ядре - т.е. если сначала у вас было `%matplotlib inline`, то после замены на `%matplotlib notebook` может кекнуться - решается перезапуском Kernel). Для интерактивных графиков можно так же использовать библиотеки [bokeh](https://bokeh.pydata.org/en/latest/docs/gallery.html) ([демка](https://demo.bokehplots.com/apps/movies), иллюстрирующая работу bokeh на IMDB) и [plot.ly](https://plot.ly/) (если разобраться в документации, ее вполне себе можно использовать бесплатно, вот средненький [пример](http://nbviewer.jupyter.org/github/merkulovdaniil/mipt_optimization/blob/master/lectures/1.%20Introduction/1_introduction.ipynb))
 ##### pandas
