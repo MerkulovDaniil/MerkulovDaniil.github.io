@@ -124,6 +124,11 @@ img {
   max-width: 100%;
 }
 
+img[src$="#full"] {
+width: 100vw;
+max-width: none;
+}
+
 blockquote {
   margin: 2em 0;
 

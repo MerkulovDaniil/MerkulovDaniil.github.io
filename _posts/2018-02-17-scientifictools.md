@@ -22,7 +22,7 @@ image-sm: ../images/posts/180217_scientifictools/card-sm.png
 
 Нужно [тыкнуть](https://www.anaconda.com/download/) на страницу скачивания и выбрать третий Python.
 
-![](../images/posts/180217_scientifictools/anaconda.png)
+![](../images/posts/180217_scientifictools/anaconda.png#full)
 
 Итак, Вы установили Python, Jupyter и еще много всякого. Как же запускать jupyter notebook без боли в произвольной папке?
 
@@ -85,6 +85,7 @@ Binder гарантирует Вам 1Гб оперативной памяти (
     # Если вставить вот такую строчку перед рисованием графиков, они будут отрисовываться в стиле комиксов
     import matplotlib.pyplot as plt
     plt.xkcd()
+    ~~~
   ~~~
     ![](../images/posts/180217_scientifictools/xkcd.png)
 
