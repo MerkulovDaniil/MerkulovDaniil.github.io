@@ -8,9 +8,9 @@ google_analytics:
 # SEO settings
 title: merkulov.top
 description: cozy and warm place
-url: "merkulov.top"
+url: "http://www.merkulov.top"
 twitter_username:
-default_img:
+default_img: "http://www.merkulov.top/images/posts/180217_scientifictools/card-sm.png"
 
 # Profile settings
 name: Bratishka
@@ -26,6 +26,8 @@ social:
 include: ["_categories"]
 exclude: [Gemfile", "Gemfile.lock"]
 markdown: kramdown
+kramdown:
+  input: GFM
 permalink: /:year/:month/:day/:title/
 
 # Sass
@@ -33,4 +35,4 @@ sass:
   style: compressed
 
 # Gems
-gems: [jekyll-paginate, jekyll-sitemap, octopress-autoprefixer]
+gems: [jekyll-paginate, jekyll-sitemap, octopress-autoprefixer, jemoji]
