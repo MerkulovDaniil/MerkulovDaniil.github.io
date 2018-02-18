@@ -5,8 +5,8 @@ date: 2018-02-17 00:00:00
 categories:
   - Science
 description:
-image: /images/posts/180217_scientifictools/card.png
-image-sm: /images/posts/180217_scientifictools/card-sm.png
+image: ../images/posts/180217_scientifictools/card.png
+image-sm: ../images/posts/180217_scientifictools/card-sm.png
 ---
 
 ## Введение. Для кого и зачем.
@@ -22,15 +22,16 @@ image-sm: /images/posts/180217_scientifictools/card-sm.png
 
 Нужно [тыкнуть](https://www.anaconda.com/download/) на страницу скачивания и выбрать третий Python.
 
-![](/images/posts/180217_scientifictools/anaconda.png)
+![](../images/posts/180217_scientifictools/anaconda.png)
 
 Итак, Вы установили Python, Jupyter и еще много всякого. Как же запускать jupyter notebook без боли в произвольной папке?
 
 #### Как быстро запускать jupyter notebook
 Достаточно создать исполняемый скрипт, запускаемый двойным нажатием со следующим содержанием:
-```bash
+~~~ bash
 jupyter notebook --notebook-dir='C:\\Users\\bratishka\\Desired_folder'
-```
+~~~
+
 В Windows это будет файл с расширением `.bat`, в Linux `.sh`, который можно редактировать с помощью любого текстового редактора (например, моего любимого [sublime](https://www.sublimetext.com/)). Обратите внимание на то, что бэкслэши в примере двойные - это сделано, чтобы избежать проблем с кодировками (иногда, например, `\U` в адресе папки может сильно подпортить Вам жизнь:) )
 
 #### Облачные возможности jupyter
@@ -47,13 +48,13 @@ jupyter notebook --notebook-dir='C:\\Users\\bratishka\\Desired_folder'
 
 ##### Рендеринг готовых тетрадок и презентаций онлайн
 Сервис [nbviewer.jupyter.org](https://nbviewer.jupyter.org/) умеет отображать ноутбуки загруженные в Ваш личный аккаунт на гитхабе. Пример тетрадки можно найти [здесь](https://nbviewer.jupyter.org/github/merkulovdaniil/mipt_optimization/blob/master/lectures/10.%20Numerical%20methods/10_numerical_methods.ipynb). Так же, рендерятся презентации ([пример](https://nbviewer.jupyter.org/format/slides/github/oseledets/nla2017/blob/master/lectures/lecture-4.ipynb#/30)), для их запуска нужно нажать значок подарка:
-![](/images/posts/180217_scientifictools/nbviewer_pres.gif)
+![](../images/posts/180217_scientifictools/nbviewer_pres.gif)
 
 ##### Расшарить свой проект с возможностью запуска кода
 
 Вершиной повторяемых вычислений на сегодняшний день является возможность выложить весь свой проект в интернет и сделать его запускаемо-кликабельным с ядром, которое работает где то в облаке. Это гарантирует повторяемость полученных Вами результатов, снимая их зависимость от железа и установленных на Вашей вычислительной станции библиотек. Представьте, что Вам не нужно больше скачивать необходимое ПО и пакеты, Вам нужно нажать всего одну кнопку. Эта штука называется [binder](https://mybinder.org/):
 
-![](/images/posts/180217_scientifictools/binder.gif)
+![](../images/posts/180217_scientifictools/binder.gif)
 
 Binder гарантирует Вам 1Гб оперативной памяти (может быть и больше, но ограничение сверху - 4Гб), относительно небольшие вычислительные ресурсы, а так же запрет внешних сетевых подключений. Кроме того, сервер так же выключается после 10 минут бездействия (открытое окно в браузере считается *не* бездействием). На [сайте](https://mybinder.readthedocs.io/en/latest/) хорошая документация (для того, чтобы выложить интерактивную запускаемую тетрадку - даже мануала читать не нужно. Выложить ее на гитхаб, указать ссылку и получить рабочую кнопку) . 
 
@@ -71,28 +72,28 @@ Binder гарантирует Вам 1Гб оперативной памяти (
 
 Библиотека для построения графиков. Здесь алгоритм простой: заходите на [сайт](https://matplotlib.org/gallery/index.html), тыкаете на пример, который больше всего похож на тот, что у Вас в голове, копипасите код и доводите до блеска. Приведу лишь парочку трюков:
 
-*   ```python
+* ~~~python
     # Если вставить вот такую строчку перед рисованием графиков, они будут отрисовываться в стиле комиксов
     import matplotlib.pyplot as plt
     plt.xkcd()
-    ```
-    ![](/images/posts/180217_scientifictools/xkcd.png)
+  ~~~
+    ![](../images/posts/180217_scientifictools/xkcd.png)
 
-*   ```python
+* ~~~python
     # А если вставить такую строчку перед рисованием графиков, они будут отрисовываться в другом стиле. 
     import seaborn
-    ```
-    ![](/images/posts/180217_scientifictools/seaborn.png)
+  ~~~
+    ![](../images/posts/180217_scientifictools/seaborn.png)
 
     Вообще говоря, seaborn - это отдельная библиотека, которая работает в тесной связке с matplotlib, но имеет много своих [фишечек](https://seaborn.pydata.org/examples/index.html).
 
 *    Особенно хотелось бы выделить интерактивный режим работы с графиками в jupyter notebook. Если в начале ячейки прописать:
-```python
+~~~python
 %matplotlib notebook
-```
+~~~
 
     То будут доступны прикольные штуки, типа интерактивного зума в выделенное окно, изменение размера фигуры и прочее:
-![](/images/posts/180217_scientifictools/matplotlib_notebook.gif)
+![](../images/posts/180217_scientifictools/matplotlib_notebook.gif)
 
     Из минусов: рендеринг очень медленный (особенно, если график "тяжелый"), иногда глючит (особенно, если менять бекенд для отрисовки графиков в работающем ядре - т.е. если сначала у вас было `%matplotlib inline`, то после замены на `%matplotlib notebook` может кекнуться - решается перезапуском Kernel). Для интерактивных графиков можно так же использовать библиотеки [bokeh](https://bokeh.pydata.org/en/latest/docs/gallery.html) ([демка](https://demo.bokehplots.com/apps/movies), иллюстрирующая работу bokeh на IMDB) и [plot.ly](https://plot.ly/) (если разобраться в документации, ее вполне себе можно использовать бесплатно, вот средненький [пример](http://nbviewer.jupyter.org/github/merkulovdaniil/mipt_optimization/blob/master/lectures/1.%20Introduction/1_introduction.ipynb))
 ##### pandas
@@ -105,27 +106,25 @@ Binder гарантирует Вам 1Гб оперативной памяти (
 
 ##### sympy
 
-Библиотека символьных вычислений. Эта штука понимает, что $x$
+Библиотека символьных вычислений. Эта штука умеет считать символьные производные, сравнивать формульные выражения и даже интегрировать. Опять же, небольшой туториал на [сайте](http://docs.sympy.org/latest/tutorial/intro.html).
 
 ##### cython
 
-##### tensorflow + keras
-
-##### pytorch
+Не совсем библиотека, но 
 
 ##### прочее
 
 Не забывать:
 
-```python
+~~~python
 import this
-```
+~~~
 
 Быстрое и честное умножение матриц (в т.ч. векторов):
 
-```python
+~~~python
 A @ B
-```
+~~~
 
 
 
