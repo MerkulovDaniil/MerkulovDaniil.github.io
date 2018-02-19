@@ -125,6 +125,7 @@ img {
 }
 
 img[src$="#full"] {
+margin:0
 width: 100vw;
 max-width: none;
 }
