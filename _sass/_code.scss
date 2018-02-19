@@ -6,7 +6,7 @@ kbd,
 pre,
 samp {
   font-family: Courier, monospace;
-  font-size: $font-small;
+  font-size: $font-post;
 }
 
 pre {
@@ -24,7 +24,7 @@ pre {
   border-radius: 5px;
   overflow: hidden;
 
-  @media (min-width: $mq-med) {
+  @media (min-width: $mq-md) {
     padding: {
       right: 2em;
       left: 2em;
@@ -34,7 +34,7 @@ pre {
   #markdown & {
     margin-bottom: 1.5rem;
 
-    @media (min-width: $mq-med) {
+    @media (min-width: $mq-md) {
       min-width: 110%;
     }
   }
