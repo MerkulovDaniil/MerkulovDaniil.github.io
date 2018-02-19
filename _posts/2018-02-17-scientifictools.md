@@ -24,7 +24,6 @@ image-sm: /images/posts/180217_scientifictools/card-sm.png
 ### Jupyter
 
 Нужно [тыкнуть](https://www.anaconda.com/download/) на страницу скачивания и выбрать третий Python.
-
 ![](/images/posts/180217_scientifictools/anaconda.png#full)
 
 Итак, Вы установили Python, Jupyter и еще много всякого. Как же запускать jupyter notebook без боли в произвольной папке? 
