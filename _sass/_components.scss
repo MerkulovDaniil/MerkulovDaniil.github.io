@@ -492,7 +492,7 @@
   }
 
   img[src$="#full"] {
-    display: inline;
+    display: inline-block;
     left: 0;
     width: 100%;
     max-width: none;
