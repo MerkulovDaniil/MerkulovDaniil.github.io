@@ -490,10 +490,11 @@
   img {
     margin: 2em 0;
   }
-  
+
   img[src$="#full"] {
   margin-top: 0.25em;
   margin-left: 0em;
+  left: 0;
   width: 100vw;
   max-width: none;
   }
