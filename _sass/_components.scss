@@ -493,8 +493,10 @@
 
   img[src$="#full"] {
     margin-bottom: 1.5rem;
-    border-bottom: 3px;
-    border-top: 3px;
+    border-bottom: 10px;
+    border-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     left: 0;
     width: 100%;
     max-width: none;
