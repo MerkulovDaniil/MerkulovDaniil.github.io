@@ -1,0 +1,17 @@
+---
+layout: post
+title: Лучшие проекты по оптимизации 2018
+date: 2018-06-10 00:00:00
+categories:
+  - Science
+description:
+image: /images/posts/171106_PrePhD/card.png
+image-sm: /images/posts/171106_PrePhD/card-sm.png
+---
+
+# Лучшие проекты по оптимизации 2018
+
+ Тест 1
+{% include image-inline.html url="https://i.ytimg.com/vi/z4CCIsvnMmo/maxresdefault.jpg" width="33%" alt=page.post-title caption="Даня"  %}
+
+Тест2
