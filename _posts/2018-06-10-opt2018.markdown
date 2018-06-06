@@ -9,15 +9,17 @@ image: /images/posts/171106_PrePhD/card.png
 image-sm: /images/posts/171106_PrePhD/card-sm.png
 ---
 
-# Лучшие проекты по оптимизации 2018
+Весенний семестр 2018 года для некоторых студентов третьего курса ФУПМ закончился сдачей проектов по курсу "Методы Оптимизации". Суть проектов заключается в том, чтобы прокачать свои знания и навыки в любой приятной студенту области - будь то программирование на Python или какой - либо конкретный численный метод решения задач оптимизации. Ребята заблаговременно выбрали тему и в течение месяца делали маленькие понятные шаги по реализации проекта. В этом посте приведен список наиболее интересных проектов этого года.
 
-### Project 1
+------
 
-{% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Даня1"  %}
+### Nonlinear Conjugate Gradients
 
-1
+{% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Александр Артеменков"  %}
 
-2
+![Постер](/files/posts/opt2018/artmenkov_poster.pdf)
+
+![Код]()
 
 3
 
@@ -28,17 +30,14 @@ image-sm: /images/posts/171106_PrePhD/card-sm.png
 6
 
 ------
-~~~python_test
-import zen
-~~~
 
 ### Project 2
 
 {% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Даня2"  %}
 
-1
+![Постер](/files/posts/opt2018/artmenkov_poster.pdf)
 
-2
+![Код]()
 
 3
 
@@ -47,3 +46,189 @@ import zen
 5
 
 6
+
+------
+
+### Project 3
+
+{% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Даня2"  %}
+
+![Постер](/files/posts/opt2018/artmenkov_poster.pdf)
+
+![Код]()
+
+3
+
+4
+
+5
+
+6
+
+------
+
+### Project 4
+
+{% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Даня2"  %}
+
+![Постер](/files/posts/opt2018/artmenkov_poster.pdf)
+
+![Код]()
+
+3
+
+4
+
+5
+
+6
+
+------
+
+### Project 5
+
+{% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Даня2"  %}
+
+![Постер](/files/posts/opt2018/artmenkov_poster.pdf)
+
+![Код]()
+
+3
+
+4
+
+5
+
+6
+
+------
+
+### Project 6
+
+{% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Даня2"  %}
+
+![Постер](/files/posts/opt2018/artmenkov_poster.pdf)
+
+![Код]()
+
+3
+
+4
+
+5
+
+6
+
+------
+
+### Project 7
+
+{% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Даня2"  %}
+
+![Постер](/files/posts/opt2018/artmenkov_poster.pdf)
+
+![Код]()
+
+3
+
+4
+
+5
+
+6
+
+------
+
+### Project 8
+
+{% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Даня2"  %}
+
+![Постер](/files/posts/opt2018/artmenkov_poster.pdf)
+
+![Код]()
+
+3
+
+4
+
+5
+
+6
+
+------
+
+### Project 9
+
+{% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Даня2"  %}
+
+![Постер](/files/posts/opt2018/artmenkov_poster.pdf)
+
+![Код]()
+
+3
+
+4
+
+5
+
+6
+
+------
+
+### Project 10
+
+{% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Даня2"  %}
+
+![Постер](/files/posts/opt2018/artmenkov_poster.pdf)
+
+![Код]()
+
+3
+
+4
+
+5
+
+6
+
+------
+
+### Project 11
+
+{% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Даня2"  %}
+
+![Постер](/files/posts/opt2018/artmenkov_poster.pdf)
+
+![Код]()
+
+3
+
+4
+
+5
+
+6
+
+------
+
+### Project 12
+
+{% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Даня2"  %}
+
+![Постер](/files/posts/opt2018/artmenkov_poster.pdf)
+
+![Код]()
+
+3
+
+4
+
+5
+
+6
+
+
+------
+
+* toc
+{:toc}
