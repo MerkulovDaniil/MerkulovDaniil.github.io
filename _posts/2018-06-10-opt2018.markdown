@@ -28,6 +28,32 @@ image-sm: /images/posts/171106_PrePhD/card-sm.png
 
 Тест4
 
+{% include image-inline.html url="https://i.ytimg.com/vi/z4CCIsvnMmo/maxresdefault.jpg" width="33%" alt=page.post-title caption="Даня"  %}
+
+Тест5
+
+Тест6
+
+## LOL2 
+
+Тест7
+
+Тест-1
+
+Тест0
+
+Тест 1
+
+{% include image-inline.html url="https://i.ytimg.com/vi/z4CCIsvnMmo/maxresdefault.jpg" width="33%" alt=page.post-title caption="Даня"  %}
+
+Тест2
+
+Тест3
+
+Тест4
+
+{% include image-inline.html url="https://i.ytimg.com/vi/z4CCIsvnMmo/maxresdefault.jpg" width="33%" alt=page.post-title caption="Даня"  %}
+
 Тест5
 
 Тест6
