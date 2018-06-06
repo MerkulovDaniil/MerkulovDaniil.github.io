@@ -20,7 +20,7 @@ image-sm: /images/posts/171106_PrePhD/card-sm.png
 
 Тест 1
 
-{% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="33%" alt=page.post-title caption="Даня"  %}
+{% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Даня"  %}
 
 Тест2
 
@@ -28,7 +28,7 @@ image-sm: /images/posts/171106_PrePhD/card-sm.png
 
 Тест4
 
-{% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="33%" alt=page.post-title caption="Даня"  %}
+{% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Даня"  %}
 
 Тест5
 
@@ -44,7 +44,7 @@ image-sm: /images/posts/171106_PrePhD/card-sm.png
 
 Тест 1
 
-{% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="33%" alt=page.post-title caption="Даня"  %}
+{% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Даня"  %}
 
 Тест2
 
