@@ -12,29 +12,49 @@ image-sm: /images/posts/171106_PrePhD/card-sm.png
 # Лучшие проекты по оптимизации 2018
 
 ### Project 1
+
 1
+
 2
+
 3
+
 3
+
 4
+
 5
+
 6
+
 7
+
 8
+
 9
+
 10
 
 {% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Даня"  %}
 
 1
+
 2
+
 3
+
 4
+
 5
+
 6
+
 7
+
 8
+
 9
+
 10
 
 1
