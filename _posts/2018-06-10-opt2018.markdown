@@ -17,9 +17,9 @@ image-sm: /images/posts/171106_PrePhD/card-sm.png
 
 {% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Александр Артеменков"  %}
 
-![Постер](/files/posts/opt2018/artmenkov_poster.pdf)
+[Постер](/files/posts/opt2018/artmenkov_poster.pdf)
 
-![Код]()
+[Код]()
 
 3
 
@@ -35,9 +35,9 @@ image-sm: /images/posts/171106_PrePhD/card-sm.png
 
 {% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Даня2"  %}
 
-![Постер](/files/posts/opt2018/artmenkov_poster.pdf)
+[Постер](/files/posts/opt2018/artmenkov_poster.pdf)
 
-![Код]()
+[Код]()
 
 3
 
@@ -53,9 +53,9 @@ image-sm: /images/posts/171106_PrePhD/card-sm.png
 
 {% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Даня2"  %}
 
-![Постер](/files/posts/opt2018/artmenkov_poster.pdf)
+[Постер](/files/posts/opt2018/artmenkov_poster.pdf)
 
-![Код]()
+[Код]()
 
 3
 
@@ -71,9 +71,9 @@ image-sm: /images/posts/171106_PrePhD/card-sm.png
 
 {% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Даня2"  %}
 
-![Постер](/files/posts/opt2018/artmenkov_poster.pdf)
+[Постер](/files/posts/opt2018/artmenkov_poster.pdf)
 
-![Код]()
+[Код]()
 
 3
 
@@ -89,9 +89,9 @@ image-sm: /images/posts/171106_PrePhD/card-sm.png
 
 {% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Даня2"  %}
 
-![Постер](/files/posts/opt2018/artmenkov_poster.pdf)
+[Постер](/files/posts/opt2018/artmenkov_poster.pdf)
 
-![Код]()
+[Код]()
 
 3
 
@@ -107,9 +107,9 @@ image-sm: /images/posts/171106_PrePhD/card-sm.png
 
 {% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Даня2"  %}
 
-![Постер](/files/posts/opt2018/artmenkov_poster.pdf)
+[Постер](/files/posts/opt2018/artmenkov_poster.pdf)
 
-![Код]()
+[Код]()
 
 3
 
@@ -125,9 +125,9 @@ image-sm: /images/posts/171106_PrePhD/card-sm.png
 
 {% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Даня2"  %}
 
-![Постер](/files/posts/opt2018/artmenkov_poster.pdf)
+[Постер](/files/posts/opt2018/artmenkov_poster.pdf)
 
-![Код]()
+[Код]()
 
 3
 
@@ -143,9 +143,9 @@ image-sm: /images/posts/171106_PrePhD/card-sm.png
 
 {% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Даня2"  %}
 
-![Постер](/files/posts/opt2018/artmenkov_poster.pdf)
+[Постер](/files/posts/opt2018/artmenkov_poster.pdf)
 
-![Код]()
+[Код]()
 
 3
 
@@ -161,9 +161,9 @@ image-sm: /images/posts/171106_PrePhD/card-sm.png
 
 {% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Даня2"  %}
 
-![Постер](/files/posts/opt2018/artmenkov_poster.pdf)
+[Постер](/files/posts/opt2018/artmenkov_poster.pdf)
 
-![Код]()
+[Код]()
 
 3
 
@@ -179,9 +179,9 @@ image-sm: /images/posts/171106_PrePhD/card-sm.png
 
 {% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Даня2"  %}
 
-![Постер](/files/posts/opt2018/artmenkov_poster.pdf)
+[Постер](/files/posts/opt2018/artmenkov_poster.pdf)
 
-![Код]()
+[Код]()
 
 3
 
@@ -197,9 +197,9 @@ image-sm: /images/posts/171106_PrePhD/card-sm.png
 
 {% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Даня2"  %}
 
-![Постер](/files/posts/opt2018/artmenkov_poster.pdf)
+[Постер](/files/posts/opt2018/artmenkov_poster.pdf)
 
-![Код]()
+[Код]()
 
 3
 
@@ -215,9 +215,9 @@ image-sm: /images/posts/171106_PrePhD/card-sm.png
 
 {% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Даня2"  %}
 
-![Постер](/files/posts/opt2018/artmenkov_poster.pdf)
+[Постер](/files/posts/opt2018/artmenkov_poster.pdf)
 
-![Код]()
+[Код]()
 
 3
 
