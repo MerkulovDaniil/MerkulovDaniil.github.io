@@ -27,6 +27,11 @@ image-sm: /images/posts/171106_PrePhD/card-sm.png
 
 6
 
+------
+~~~python_test
+import zen
+~~~
+
 ### Project 2
 
 {% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Даня2"  %}
