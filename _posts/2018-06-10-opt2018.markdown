@@ -17,7 +17,7 @@ image-sm: /images/posts/171106_PrePhD/card-sm.png
 
 {% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Александр Артеменков"  %}
 
-[Постер](/files/posts/opt2018/artmenkov_poster.pdf)
+[Постер](/files/posts/opt2018/artemenkov_poster.pdf)
 
 [Код]()
 
@@ -31,11 +31,47 @@ image-sm: /images/posts/171106_PrePhD/card-sm.png
 
 ------
 
-### Project 2
+### Around Deep Image Prior
 
-{% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Даня2"  %}
+{% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Александр Борзилов"  %}
 
-[Постер](/files/posts/opt2018/artmenkov_poster.pdf)
+[Постер](/files/posts/opt2018/borzilov_poster.pdf)
+
+[Код](https://drive.google.com/drive/folders/1sk6qVo1UPAKkF3Lc1t4TcSRG-SYLrzeA?usp=sharing)
+
+3
+
+4
+
+5
+
+6
+
+------
+
+### Artificial Bee Colony In Optimization
+
+{% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Александр Иванов"  %}
+
+[Постер](/files/posts/opt2018/ivanov_poster.pdf)
+
+[Код](https://github.com/Avi2011class/Artificial-bee-colony)
+
+3
+
+4
+
+5
+
+6
+
+------
+
+### Benchmarking of Quasi-Newton Methods
+
+{% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Игорь Соколов"  %}
+
+[Постер](/files/posts/opt2018/sokolov_poster.pdf)
 
 [Код]()
 
@@ -49,31 +85,13 @@ image-sm: /images/posts/171106_PrePhD/card-sm.png
 
 ------
 
-### Project 3
+### Empirical Study of TD γ Reinforcement Learning Algorithm
 
-{% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Даня2"  %}
+{% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Кирилл Бобырев"  %}
 
-[Постер](/files/posts/opt2018/artmenkov_poster.pdf)
+[Постер](/files/posts/opt2018/bobyrev_poster.pdf)
 
-[Код]()
-
-3
-
-4
-
-5
-
-6
-
-------
-
-### Project 4
-
-{% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Даня2"  %}
-
-[Постер](/files/posts/opt2018/artmenkov_poster.pdf)
-
-[Код]()
+[Код](https://drive.google.com/file/d/1fmRALZn0-BRKlHWK_juP9sswUdpEtCZ0/view?usp=sharing)
 
 3
 
@@ -85,31 +103,13 @@ image-sm: /images/posts/171106_PrePhD/card-sm.png
 
 ------
 
-### Project 5
+### The Linear Coupling
 
-{% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Даня2"  %}
+{% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Даниил Селиханович"  %}
 
-[Постер](/files/posts/opt2018/artmenkov_poster.pdf)
+[Постер](/files/posts/opt2018/selikhanovych_poster.pdf)
 
-[Код]()
-
-3
-
-4
-
-5
-
-6
-
-------
-
-### Project 6
-
-{% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Даня2"  %}
-
-[Постер](/files/posts/opt2018/artmenkov_poster.pdf)
-
-[Код]()
+[Код](https://colab.research.google.com/drive/1gTzwkumnxrgIAcfbbfDMC-Qs2otsZmhv#scrollTo=BtL8yFbf5qvc)
 
 3
 
@@ -121,31 +121,13 @@ image-sm: /images/posts/171106_PrePhD/card-sm.png
 
 ------
 
-### Project 7
+### The Thomson Problem
 
-{% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Даня2"  %}
+{% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Эльвира Зайнулина"  %}
 
-[Постер](/files/posts/opt2018/artmenkov_poster.pdf)
+[Постер](/files/posts/opt2018/zainulina_poster.pdf)
 
-[Код]()
-
-3
-
-4
-
-5
-
-6
-
-------
-
-### Project 8
-
-{% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Даня2"  %}
-
-[Постер](/files/posts/opt2018/artmenkov_poster.pdf)
-
-[Код]()
+[Код](https://colab.research.google.com/drive/1E_uIrEGwjUKjWyJyp0niwKqkknDIZTon)
 
 3
 
@@ -157,31 +139,13 @@ image-sm: /images/posts/171106_PrePhD/card-sm.png
 
 ------
 
-### Project 9
+### BeardIT
 
-{% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Даня2"  %}
+{% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Анастасия Меркулова"  %}
 
-[Постер](/files/posts/opt2018/artmenkov_poster.pdf)
+[Постер](/files/posts/opt2018/merkulova_poster.pdf)
 
-[Код]()
-
-3
-
-4
-
-5
-
-6
-
-------
-
-### Project 10
-
-{% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Даня2"  %}
-
-[Постер](/files/posts/opt2018/artmenkov_poster.pdf)
-
-[Код]()
+[Код](https://colab.research.google.com/drive/1Zq8cmSkOpK11\JhGitLesttTLDKheo1Aa)
 
 3
 
@@ -193,13 +157,13 @@ image-sm: /images/posts/171106_PrePhD/card-sm.png
 
 ------
 
-### Project 11
+### Conjugate Gradient Method
 
-{% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Даня2"  %}
+{% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Ангелина Ярошенко"  %}
 
-[Постер](/files/posts/opt2018/artmenkov_poster.pdf)
+[Постер](/files/posts/opt2018/yaroshenko_poster.pdf)
 
-[Код]()
+[Код](https://colab.research.google.com/drive/1N-LVEs8mC4RTXPbFzqR700Veb2KbdQx5)
 
 3
 
@@ -211,9 +175,45 @@ image-sm: /images/posts/171106_PrePhD/card-sm.png
 
 ------
 
-### Project 12
+### Cancer Treatment Using Optimization Methods
+
+{% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Елизавета Киселева"  %}
+
+[Постер](/files/posts/opt2018/kiseleva_poster.pdf)
+
+[Код](https://drive.google.com/file/d/1YNlCwQ37BUf_KSEBRrlnthyN4hVWXn0Y/view?usp=sharing)
+
+3
+
+4
+
+5
+
+6
+
+------
+
+### Symmetric Positive-Definite matrixes (SPD) and their applications
 
 {% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Даня2"  %}
+
+[Постер](/files/posts/opt2018/durasov_poster.pdf)
+
+[Код](https://github.com/NikitaDurasov/SPD_reduce)
+
+3
+
+4
+
+5
+
+6
+
+------
+
+### Теорминимумы
+
+{% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="15%" alt=page.post-title caption="Саша и Тёма"  %}
 
 [Постер](/files/posts/opt2018/artmenkov_poster.pdf)
 
