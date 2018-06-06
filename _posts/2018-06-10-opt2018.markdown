@@ -91,7 +91,7 @@ image-sm: /images/posts/171106_PrePhD/card-sm.png
 
 [Постер](/files/posts/opt2018/bobyrev_poster.pdf)
 
-[Код](https://drive.google.com/file/d/1fmRALZn0-BRKlHWK_juP9sswUdpEtCZ0/view?usp=sharing)
+[Код](https://colab.research.google.com/drive/1fmRALZn0-BRKlHWK_juP9sswUdpEtCZ0?authuser=2#scrollTo=6DEOJnl0idB-)
 
 3
 
@@ -145,7 +145,7 @@ image-sm: /images/posts/171106_PrePhD/card-sm.png
 
 [Постер](/files/posts/opt2018/merkulova_poster.pdf)
 
-[Код](https://colab.research.google.com/drive/1Zq8cmSkOpK11\JhGitLesttTLDKheo1Aa)
+[Код](https://colab.research.google.com/drive/1uAbqWNeLgiJ72EqfDzSiU6w8J0txEOxa)
 
 3
 
@@ -181,7 +181,7 @@ image-sm: /images/posts/171106_PrePhD/card-sm.png
 
 [Постер](/files/posts/opt2018/kiseleva_poster.pdf)
 
-[Код](https://drive.google.com/file/d/1YNlCwQ37BUf_KSEBRrlnthyN4hVWXn0Y/view?usp=sharing)
+[Код](https://colab.research.google.com/drive/1YNlCwQ37BUf_KSEBRrlnthyN4hVWXn0Y?authuser=2)
 
 3
 
@@ -229,6 +229,8 @@ image-sm: /images/posts/171106_PrePhD/card-sm.png
 
 
 ------
+
+Содержание:
 
 * toc
 {:toc}
