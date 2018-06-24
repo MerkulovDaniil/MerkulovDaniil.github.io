@@ -494,9 +494,10 @@
   img[src$="#full"] {
     width: 100vw;
     position: relative;
-    left: 50%;  
+    left: 50%;
+    right: 50%;
     margin-left: -50vw;
-    width: 100%;
+    margin-right: -50vw;
   }
 
   /*img[src$="#full"] {
