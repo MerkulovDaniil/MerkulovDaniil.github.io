@@ -7,6 +7,7 @@ categories:
 description:
 image: /images/posts/180217_scientifictools/card.png
 image-sm: /images/posts/180217_scientifictools/card-sm.png
+mathjax: True
 ---
 
 ## Введение. Для кого и зачем.
