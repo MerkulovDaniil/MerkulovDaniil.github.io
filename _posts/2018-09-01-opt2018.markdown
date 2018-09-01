@@ -15,7 +15,7 @@ image-sm: /images/posts/171106_PrePhD/card-sm.png
 
 ### Nonlinear Conjugate Gradients
 
-{% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="20%" alt=page.post-title caption="Александр Артеменков"  %}
+{% include image-inline.html url="/images/posts/180610_opt2018/artemenkov.jpg" width="20%" alt=page.post-title caption="Александр Артеменков"  %}
 
 [Постер](/files/posts/opt2018/artemenkov_poster.pdf)
 
@@ -33,7 +33,7 @@ image-sm: /images/posts/171106_PrePhD/card-sm.png
 
 ### Around Deep Image Prior
 
-{% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="20%" alt=page.post-title caption="Александр Борзилов"  %}
+{% include image-inline.html url="/images/posts/180610_opt2018/borzilov.png" width="20%" alt=page.post-title caption="Александр Борзилов"  %}
 
 [Постер](/files/posts/opt2018/borzilov_poster.pdf)
 
@@ -51,7 +51,7 @@ image-sm: /images/posts/171106_PrePhD/card-sm.png
 
 ### Artificial Bee Colony In Optimization
 
-{% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="20%" alt=page.post-title caption="Александр Иванов"  %}
+{% include image-inline.html url="/images/posts/180610_opt2018/ivanov.png" width="20%" alt=page.post-title caption="Александр Иванов"  %}
 
 [Постер](/files/posts/opt2018/ivanov_poster.pdf)
 
@@ -69,7 +69,7 @@ image-sm: /images/posts/171106_PrePhD/card-sm.png
 
 ### Benchmarking of Quasi-Newton Methods
 
-{% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="20%" alt=page.post-title caption="Игорь Соколов"  %}
+{% include image-inline.html url="/images/posts/180610_opt2018/sokolov.jpg" width="20%" alt=page.post-title caption="Игорь Соколов"  %}
 
 [Постер](/files/posts/opt2018/sokolov_poster.pdf)
 
@@ -87,7 +87,7 @@ image-sm: /images/posts/171106_PrePhD/card-sm.png
 
 ### Empirical Study of TD γ Reinforcement Learning Algorithm
 
-{% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="20%" alt=page.post-title caption="Кирилл Бобырев"  %}
+{% include image-inline.html url="/images/posts/180610_opt2018/bobyrev.jpg" width="20%" alt=page.post-title caption="Кирилл Бобырев"  %}
 
 [Постер](/files/posts/opt2018/bobyrev_poster.pdf)
 
@@ -105,7 +105,7 @@ image-sm: /images/posts/171106_PrePhD/card-sm.png
 
 ### The Linear Coupling
 
-{% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="20%" alt=page.post-title caption="Даниил Селиханович"  %}
+{% include image-inline.html url="/images/posts/180610_opt2018/selikhanovych.png" width="20%" alt=page.post-title caption="Даниил Селиханович"  %}
 
 [Постер](/files/posts/opt2018/selikhanovych_poster.pdf)
 
@@ -141,7 +141,7 @@ image-sm: /images/posts/171106_PrePhD/card-sm.png
 
 ### BeardIT
 
-{% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="20%" alt=page.post-title caption="Анастасия Меркулова"  %}
+{% include image-inline.html url="/images/posts/180610_opt2018/merkulova.png" width="20%" alt=page.post-title caption="Анастасия Меркулова"  %}
 
 [Постер](/files/posts/opt2018/merkulova_poster.pdf)
 
@@ -159,7 +159,7 @@ image-sm: /images/posts/171106_PrePhD/card-sm.png
 
 ### Conjugate Gradient Method
 
-{% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="20%" alt=page.post-title caption="Ангелина Ярошенко"  %}
+{% include image-inline.html url="/images/posts/180610_opt2018/yaroshenko.jpg" width="20%" alt=page.post-title caption="Ангелина Ярошенко"  %}
 
 [Постер](/files/posts/opt2018/yaroshenko_poster.pdf)
 
@@ -177,7 +177,7 @@ image-sm: /images/posts/171106_PrePhD/card-sm.png
 
 ### Cancer Treatment Using Optimization Methods
 
-{% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="20%" alt=page.post-title caption="Елизавета Киселева"  %}
+{% include image-inline.html url="/images/posts/180610_opt2018/kiseleva.jpg" width="20%" alt=page.post-title caption="Елизавета Киселева"  %}
 
 [Постер](/files/posts/opt2018/kiseleva_poster.pdf)
 
@@ -195,7 +195,7 @@ image-sm: /images/posts/171106_PrePhD/card-sm.png
 
 ### Symmetric Positive-Definite matrixes (SPD) and their applications
 
-{% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="20%" alt=page.post-title caption="Даня2"  %}
+{% include image-inline.html url="/images/posts/180610_opt2018/durasov.jpg" width="20%" alt=page.post-title caption="Никита Дурасов"  %}
 
 [Постер](/files/posts/opt2018/durasov_poster.pdf)
 
@@ -211,23 +211,7 @@ image-sm: /images/posts/171106_PrePhD/card-sm.png
 
 ------
 
-### Теорминимумы
-
-{% include image-inline.html url="/images/posts/180610_opt2018/kot.png" width="20%" alt=page.post-title caption="Саша и Тёма"  %}
-
-[Постер](/files/posts/opt2018/artmenkov_poster.pdf)
-
-[Код]()
-
-3
-
-4
-
-5
-
-6
-
-------
+Кроме того, в качестве проектов Саша Улитин и Артем Товкес взяли на свои плечи разработку и верстку интерактивного теоретического минимума по осеннему и весеннему семестрам оптимизации, но об этом чуть позже в виде отдельного поста.  
 
 Содержание:
 
