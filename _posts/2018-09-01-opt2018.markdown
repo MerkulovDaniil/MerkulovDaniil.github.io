@@ -26,6 +26,8 @@ image-sm: /images/posts/180610_opt2018/card-sm.png
 
 </div>
 
+<p> </p>
+
 ------
 
 ### The Thomson Problem
