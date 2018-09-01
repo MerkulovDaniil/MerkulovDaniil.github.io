@@ -37,5 +37,9 @@
     text-align: center; 
 }
 .image-inline-caption{
-    display: table-caption;
+    position: relative;
+    display: inline-block;
+    float: left;
+    padding: 0px 20px 0px 0px;
+    text-align: center; 
 }
