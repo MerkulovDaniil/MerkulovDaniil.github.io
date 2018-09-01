@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Лучшие проекты по оптимизации 2018
-date: 2018-06-10 00:00:00
+date: 2018-09-01 00:00:00
 categories:
   - Science
 description:
@@ -226,7 +226,6 @@ image-sm: /images/posts/171106_PrePhD/card-sm.png
 5
 
 6
-
 
 ------
 
