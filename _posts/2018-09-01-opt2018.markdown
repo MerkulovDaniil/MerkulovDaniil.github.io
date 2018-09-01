@@ -18,15 +18,13 @@ image-sm: /images/posts/180610_opt2018/card-sm.png
 {% include image-inline.html url="/images/posts/180610_opt2018/artemenkov.jpg" width="20%" alt=page.post-title caption="Александр Артеменков"  %}
 
 <div class = "project_info">
-[Постер](/files/posts/opt2018/artemenkov_poster.pdf)
 
-[Код]()
+<a href="/files/posts/opt2018/artemenkov_poster.pdf">Постер</a>
+<a href="https://colab.research.google.com/drive/1p9sJnHYXCN5QAU9h4EHUkiKRuGPIqQuP">Код</a>
 
 Саша в работе сравнивал метод сопряженных градиентов с квазиньютоновскими методами. Во время проекта он приобрел особую любовь к первому:) Широко исследовался вопрос сходимости алгоритмов в зависимости от точки старта. Работа выполнена четко и на очень высоком уровне, код прилагается.
 
 </div>
-
-<p> </p>
 
 ------
 
@@ -34,11 +32,14 @@ image-sm: /images/posts/180610_opt2018/card-sm.png
 
 {% include image-inline.html url="/images/posts/180610_opt2018/zainulina.png" width="20%" alt=page.post-title caption="Эльвира Зайнулина"  %}
 
-[Постер](/files/posts/opt2018/zainulina_poster.pdf)
+<div class = "project_info">
 
-[Код](https://colab.research.google.com/drive/1E_uIrEGwjUKjWyJyp0niwKqkknDIZTon)
+<a href="/files/posts/opt2018/zainulina_poster.pdf">Постер</a>
+<a href="https://colab.research.google.com/drive/1E_uIrEGwjUKjWyJyp0niwKqkknDIZTon">Код</a>
 
 Эльвира в проекте изучала численное решение известной задачи Томсона (как расположатся Кулоновские заряды на проводящей сфере, предоставленные сами себе). Была проделана колоссальная работа в анализе текущего состояния проблемы, поиска свежих статей на тему численного решения. В результате, Эльвира представила один из самых выдающихся с точки зрения визуализации проектов: прямо в юпитер ноутбуке можно ползунками устанавливать  число зарядов, размерность задачи, наблюдать за отрисовкой решения в реальном времени. Кроме того, результаты, полученные различными методами минимизации потенциальной энергии, совпали с известными решениями.
+
+</div>
 
 ------
 
