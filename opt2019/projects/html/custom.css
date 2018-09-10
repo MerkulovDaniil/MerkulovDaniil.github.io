@@ -1,0 +1,105 @@
+/*
+Placeholder for custom user CSS
+
+mainly to be overridden in profile/static/custom/custom.css
+
+This will always be an empty file in IPython
+*/
+
+/*for the error , connecting & renaming window*/
+@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:400,700);
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300&subset=cyrillic,greek');
+
+#notebook-container {
+-webkit-box-shadow: none;
+box-shadow: none;
+}
+h1 {
+font-family: 'Open Sans Condensed', sans-serif;
+line-height: 20px;
+}
+h2, h3, h4, h5, h6 {
+font-family: 'Open Sans', sans-serif;
+line-height: 20px;
+}
+h1 { font-size: 5rem;}
+h2 { font-size: 4rem; }
+h3 { font-size: 3.5rem; }
+h4 { font-size: 3rem; }
+h5 { font-size: 2.5rem; }
+h6 { font-size: 2rem; }
+p {
+font-family: 'Open Sans', sans-serif;
+font-size: 1.25em;
+line-height: 30px;
+font-weight: 400;
+}
+.CodeMirror pre {
+font-family: 'Source Code Pro', monospace;
+font-size: 1em;
+}
+div.input_area {
+border: none;
+background: whitesmoke;
+}
+div.text_cell_render h1 {
+    font-weight: 200;
+    font-size: 50pt;
+	line-height: 110%;
+    color:#CD2305;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    display: block;
+}
+div.text_cell_render h2 {
+    font-size: 30pt;
+	line-height: 110%;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    display: block;
+}
+
+
+[dir="rtl"] .modal-footer {
+	text-align : left !important;
+}
+
+[dir="rtl"] .close {
+	float : left;
+}
+
+[dir="rtl"] .fa-step-forward::before {
+    content: "\f048";
+}
+
+/*@import url(http://fonts.googleapis.com/css?family=Lato|Source+Code+Pro|Montserrat:400,700);
+
+#notebook-container {
+-webkit-box-shadow: none;
+box-shadow: none;
+}
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Montserrat', sans-serif;
+line-height: 20px;
+}
+h1 { font-size: 4.5em; }
+h2 { font-size: 4rem; }
+h3 { font-size: 3.5rem; }
+h4 { font-size: 3rem; }
+h5 { font-size: 2.5rem; }
+h6 { font-size: 2rem; }
+p {
+font-family: 'Lato', sans-serif;
+font-size: 1.25em;
+line-height: 30px;
+font-weight: 400;
+color: #8d8d8d;
+}
+.CodeMirror pre {
+font-family: 'Source Code Pro', monospace;
+font-size: 1em;
+}
+div.input_area {
+border: none;
+background: whitesmoke;
+}*/
