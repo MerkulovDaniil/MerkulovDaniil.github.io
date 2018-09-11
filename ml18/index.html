@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300&subset=cyrillic,greek');
+
+* {box-sizing: border-box;}
+
+body { 
+  margin: 0;
+  font-family: Open Sans, sans-serif;
+}
+
+.header {
+  font-weight: 700;
+  font-family: Open Sans Condensed, sans-serif;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 20px 10px;
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 35px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.header-right {
+  float: right;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+  }
+}
+
+table {
+    left: 10%;
+    right: 10%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 70%;
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    color: #000;
+}
+
+th{
+  background-color: #f1f1f1;
+  color: black;
+}
+
+tr:hover{
+  background-color: #e8f3ff;
+}
+
+.responsive {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    max-width: 1024px;
+    height: auto;
+}
+
+</style>
+<title>Course</title>
+</head>
+<body>
+
+<div class="header">
+  <a href="#home" class="logo">Machine Learning 18</a>
+  <div class="header-right">
+    <a class="active" href="#home">Home</a>
+    <a href="./lectures/lectures.html">Lectures</a>
+    <a href="./homeworks/homeworks.html">Homework</a>
+    <a href="https://stepik.org/course/28997/" target="_blank">Stepik</a>
+    <!-- <a href="./team.html">Текущая команда</a> -->
+    <a href="./projects/projects.html">Projects</a>
+  </div>
+</div>
+
+<div style="padding-left:20px; padding-right:20px;">
+<p>Institute of Computational Mathematics RAS</p>
+<p>Skolkovo Institute of Science and Technology</p>
+<p>Classes: <strong>Wednesday 10.00 - 12.00</strong></p>
+<p>Instructors: <a href="mailto:i.oseledets@skoltech.ru">Ivan Oseledets</a>, <a href='https://t.me/bratishk'>Danya Merkulov</a>, <a href='https://github.com/amkatrutsa'>Alexandr Katrutsa</a></p>
+<p><img src='./files/fitting.png' alt='overfitting' class="responsive" align="center" /></p>
+<h2>Summary</h2>
+<p>This is one semestуr course, which provides students of CMC MSU with basic Machine Learning algorithms and ideas. The course will focus both on theoretical concepts and practical implementations of the numerical algorithms. Python 3 is the official ecosystem of the course.</p>
+<h2>Course Materials</h2>
+<p>All the materials will be available at this site in section &quot;Lectures&quot;. It might be a lot of misprints, so - do not hestitate to <a href='https://t.me/bratishk'>drop me</a> a line about it. </p>
+<h2>Homeworks</h2>
+<p>Will be also available here as soon as possible. Homeworks will be assigned roughly every week. Homework should be submitted through the Stepik platform. If you have some problems with stepik's deadlines - <a href='https://t.me/bratishk'>send me</a> a message about it.</p>
+<h2>Grading</h2>
+<p><img src='./files/grade.png' alt='grade' class="responsive" align="center" /></p>
+</div>
+
+</body>
+</html>
