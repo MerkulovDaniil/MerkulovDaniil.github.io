@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>2 week 2</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>3 Interior. Projection. Separation</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -11775,31 +11775,459 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="&#1044;&#1086;&#1084;&#1072;&#1096;&#1085;&#1077;&#1077;-&#1079;&#1072;&#1076;&#1072;&#1085;&#1080;&#1077;-2">&#1044;&#1086;&#1084;&#1072;&#1096;&#1085;&#1077;&#1077; &#1079;&#1072;&#1076;&#1072;&#1085;&#1080;&#1077; 2<a class="anchor-link" href="#&#1044;&#1086;&#1084;&#1072;&#1096;&#1085;&#1077;&#1077;-&#1079;&#1072;&#1076;&#1072;&#1085;&#1080;&#1077;-2">&#182;</a></h1><ol>
-<li><p>Покажите, что множество афинно тогда и только тогда, когда его пересечение с любой прямой афинно.</p>
-</li>
-<li><p>Пусть $S_1, \ldots, S_k$ - произвольные непустые множества в $\mathbb{R}^n$. Докажите, что:</p>
+<h1 id="&#1052;&#1077;&#1090;&#1086;&#1076;&#1099;-&#1054;&#1087;&#1090;&#1080;&#1084;&#1080;&#1079;&#1072;&#1094;&#1080;&#1080;.-&#1044;&#1072;&#1085;&#1080;&#1080;&#1083;-&#1052;&#1077;&#1088;&#1082;&#1091;&#1083;&#1086;&#1074;.-&#1054;&#1090;&#1076;&#1077;&#1083;&#1080;&#1084;&#1086;&#1089;&#1090;&#1100;.-&#1055;&#1088;&#1086;&#1077;&#1082;&#1094;&#1080;&#1103;.-&#1054;&#1087;&#1086;&#1088;&#1085;&#1072;&#1103;-&#1075;&#1080;&#1087;&#1077;&#1088;&#1087;&#1083;&#1086;&#1089;&#1082;&#1086;&#1089;&#1090;&#1100;">&#1052;&#1077;&#1090;&#1086;&#1076;&#1099; &#1054;&#1087;&#1090;&#1080;&#1084;&#1080;&#1079;&#1072;&#1094;&#1080;&#1080;. &#1044;&#1072;&#1085;&#1080;&#1080;&#1083; &#1052;&#1077;&#1088;&#1082;&#1091;&#1083;&#1086;&#1074;. &#1054;&#1090;&#1076;&#1077;&#1083;&#1080;&#1084;&#1086;&#1089;&#1090;&#1100;. &#1055;&#1088;&#1086;&#1077;&#1082;&#1094;&#1080;&#1103;. &#1054;&#1087;&#1086;&#1088;&#1085;&#1072;&#1103; &#1075;&#1080;&#1087;&#1077;&#1088;&#1087;&#1083;&#1086;&#1089;&#1082;&#1086;&#1089;&#1090;&#1100;<a class="anchor-link" href="#&#1052;&#1077;&#1090;&#1086;&#1076;&#1099;-&#1054;&#1087;&#1090;&#1080;&#1084;&#1080;&#1079;&#1072;&#1094;&#1080;&#1080;.-&#1044;&#1072;&#1085;&#1080;&#1080;&#1083;-&#1052;&#1077;&#1088;&#1082;&#1091;&#1083;&#1086;&#1074;.-&#1054;&#1090;&#1076;&#1077;&#1083;&#1080;&#1084;&#1086;&#1089;&#1090;&#1100;.-&#1055;&#1088;&#1086;&#1077;&#1082;&#1094;&#1080;&#1103;.-&#1054;&#1087;&#1086;&#1088;&#1085;&#1072;&#1103;-&#1075;&#1080;&#1087;&#1077;&#1088;&#1087;&#1083;&#1086;&#1089;&#1082;&#1086;&#1089;&#1090;&#1100;">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Interior">Interior<a class="anchor-link" href="#Interior">&#182;</a></h2><h3 id="&#1042;&#1085;&#1091;&#1090;&#1088;&#1077;&#1085;&#1085;&#1086;&#1089;&#1090;&#1100;-&#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1072;">&#1042;&#1085;&#1091;&#1090;&#1088;&#1077;&#1085;&#1085;&#1086;&#1089;&#1090;&#1100; &#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1072;<a class="anchor-link" href="#&#1042;&#1085;&#1091;&#1090;&#1088;&#1077;&#1085;&#1085;&#1086;&#1089;&#1090;&#1100;-&#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1072;">&#182;</a></h3><p>Внутренностью множества $S$ называется следующее множество: 
+$$\mathbf{int} (S) = \{\mathbf{x} \in S \mid \exists \varepsilon &gt; 0, B(\mathbf{x}, \varepsilon) \subset S\}$$
+где $B(\mathbf{x}, \varepsilon) = \mathbf{x} + \varepsilon B$ - шар с центром в т.$\mathbf{x}$ и радиусом $\varepsilon$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#1054;&#1090;&#1085;&#1086;&#1089;&#1080;&#1090;&#1077;&#1083;&#1100;&#1085;&#1072;&#1103;-&#1074;&#1085;&#1091;&#1090;&#1088;&#1077;&#1085;&#1085;&#1086;&#1089;&#1090;&#1100;-&#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1072;">&#1054;&#1090;&#1085;&#1086;&#1089;&#1080;&#1090;&#1077;&#1083;&#1100;&#1085;&#1072;&#1103; &#1074;&#1085;&#1091;&#1090;&#1088;&#1077;&#1085;&#1085;&#1086;&#1089;&#1090;&#1100; &#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1072;<a class="anchor-link" href="#&#1054;&#1090;&#1085;&#1086;&#1089;&#1080;&#1090;&#1077;&#1083;&#1100;&#1085;&#1072;&#1103;-&#1074;&#1085;&#1091;&#1090;&#1088;&#1077;&#1085;&#1085;&#1086;&#1089;&#1090;&#1100;-&#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1072;">&#182;</a></h3><p>Относительной внутренностью множества $S$ называется следующее множество: 
+$$\mathbf{relint} (S) = \{\mathbf{x} \in S \mid \exists \varepsilon &gt; 0, B(\mathbf{x}, \varepsilon) \cap \mathbf{aff} (S) \subseteq S\}$$</p>
+<p><img src="../files/relint.gif" alt="center"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>$ \mathbf{cone} \left( \bigcup\limits_{i=1}^k S_i\right) = \sum\limits_{i=1}^k \mathbf{cone} \left( S_i\right) $</li>
-<li>$ \mathbf{conv} \left( \sum\limits_{i=1}^k S_i\right) = \sum\limits_{i=1}^k \mathbf{conv} \left( S_i\right) $</li>
+<li>Любое непустое выпуклое множество $S \subseteq \mathbb{R}^n$ имеет непустую относительную внутренность $\mathbf{relint}(S)$</li>
 </ul>
-</li>
-<li><p>Докажите, что множество $S \subseteq \mathbb{R}^n$ выпукло тогда и только тогда, когда $(\alpha + \beta)S = \alpha S + \beta S$ для всех неотрицательных $\alpha$ и $\beta$</p>
-</li>
-<li><p>Пусть $x \in \mathbb{R}$ - случайная величина с заданным вероятностным распределением $\mathbb{P}(x = a_i) = p_i$, где $i = 1, \ldots, n$, а $a_1 &lt; \ldots &lt; a_n$. Говорят, что вектор вероятностей исходов $p \in \mathbb{R}^n$ принадлежит вероятностному симплексу, т.е. $P = \left\{ p \mid \mathbf{1}^Tp = 1, p \succeq 0\right\} = \left\{ p \mid p_1 + \ldots + p_n = 1, p_i \ge 0 \right\}$.</p>
-<p>Определите, выпукло ли множество таких $p$, которые удовлетворяют условию:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Projection">Projection<a class="anchor-link" href="#Projection">&#182;</a></h2><h3 id="&#1056;&#1072;&#1089;&#1089;&#1090;&#1086;&#1103;&#1085;&#1080;&#1077;-&#1084;&#1077;&#1078;&#1076;&#1091;-&#1090;&#1086;&#1095;&#1082;&#1086;&#1081;-&#1080;-&#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1086;&#1084;">&#1056;&#1072;&#1089;&#1089;&#1090;&#1086;&#1103;&#1085;&#1080;&#1077; &#1084;&#1077;&#1078;&#1076;&#1091; &#1090;&#1086;&#1095;&#1082;&#1086;&#1081; &#1080; &#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1086;&#1084;<a class="anchor-link" href="#&#1056;&#1072;&#1089;&#1089;&#1090;&#1086;&#1103;&#1085;&#1080;&#1077;-&#1084;&#1077;&#1078;&#1076;&#1091;-&#1090;&#1086;&#1095;&#1082;&#1086;&#1081;-&#1080;-&#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1086;&#1084;">&#182;</a></h3><p>Расстоянием $d$ от точки $\mathbf{y} \in \mathbb{R}^n$ до замкнутого множества $S \subset \mathbb{R}^n$ является:
+$$d(\mathbf{y}, S, \| \cdot \|) = \inf\{\|x - y\| \mid x \in S \}$$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#1055;&#1088;&#1086;&#1077;&#1082;&#1094;&#1080;&#1103;-&#1090;&#1086;&#1095;&#1082;&#1080;-&#1085;&#1072;-&#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1086;">&#1055;&#1088;&#1086;&#1077;&#1082;&#1094;&#1080;&#1103; &#1090;&#1086;&#1095;&#1082;&#1080; &#1085;&#1072; &#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1086;<a class="anchor-link" href="#&#1055;&#1088;&#1086;&#1077;&#1082;&#1094;&#1080;&#1103;-&#1090;&#1086;&#1095;&#1082;&#1080;-&#1085;&#1072;-&#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1086;">&#182;</a></h3><p>Проекцией точки $\mathbf{y} \in \mathbb{R}^n$ на множество $S \subseteq \mathbb{R}^n$ называется точка $\pi_S(\mathbf{y}) \in S$: $$\| \pi_S(\mathbf{y}) - \mathbf{y}\| \le \|\mathbf{x} - \mathbf{y}\|, \forall \mathbf{x} \in S$$</p>
 <ul>
-<li>$\mathbb{P}(x &gt; \alpha) \le \beta$</li>
-<li>$\mathbb{E} |x^{2018}| \le \alpha \mathbb{E}|x|$</li>
-<li>$\mathbb{E} |x^{2}| \ge \alpha $</li>
-<li>$\mathbb{V}x \ge \alpha$</li>
+<li>Если множество - открыто, и точка в нем не лежит, то её проекции на это множество не существует</li>
+<li>Если точка лежит в множестве, то её проекция - это сама точка</li>
+<li>$$\pi_S(\mathbf{y}) = \underset{\mathbf{y}}{\operatorname{argmin}} \|\mathbf{x}-\mathbf{y}\|$$</li>
 </ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Пусть $S \subseteq \mathbb{R}^n$ - выпуклое замкнутое множество. Пусть так же имеются точки $\mathbf{y} \in \mathbb{R}^n$ и $\mathbf{\pi} \in S$. Тогда если для всех $\mathbf{x} \in S$ справедливо неравенство: $$\langle \pi  -\mathbf{y}, \mathbf{x} - \pi\rangle \ge 0, $$ то $\pi$ является проекцией точки $\mathbf{y}$ на $S$, т.е. $\pi_S (\mathbf{y}) = \pi$</li>
+<li>Пусть $S \subseteq \mathbb{R}^n$ - афинное множество. Пусть так же имеются точки $\mathbf{y} \in \mathbb{R}^n$ и $\mathbf{\pi} \in S$. Тогда $\pi$ является проекцией точки $\mathbf{y}$ на $S$, т.е. $\pi_S (\mathbf{y}) = \pi$ тогда и только тогда, когда для всех $\mathbf{x} \in S$ справедливо равенство: $$\langle \pi  -\mathbf{y}, \mathbf{x} - \pi\rangle = 0 $$ </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-1">&#1055;&#1088;&#1080;&#1084;&#1077;&#1088; 1<a class="anchor-link" href="#&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-1">&#182;</a></h4><p>Найти $\pi_S (y) = \pi$, если $S = \{x \in \mathbb{R}^n \mid \|x - x_c\| \le R \}$, $y \notin S$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Решение:
+<img src="../files/proj_cir.gif" alt=""></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><p>Из рисунка строим гипотезу: $\pi = x_0 + R \cdot \frac{y - x_0}{\|y - x_0\|}$</p>
+</li>
+<li><p>Проверяем неравенство для выпуклого замкнутого множества: $(\pi - y)^T(x - \pi) \ge 0$</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>$$\left( x_0 - y + R \frac{y - x_0}{\|y - x_0\|} \right)^T\left( x - x_0 - R \frac{y - x_0}{\|y - x_0\|} \right) =$$
+$$\left( \frac{(y - x_0)(R - \|y - x_0\|)}{\|y - x_0\|} \right)^T\left( \frac{(x-x_0)\|y-x_0\|-R(y - x_0)}{\|y - x_0\|} \right) =$$
+$$\frac{R - \|y - x_0\|}{\|y - x_0\|^2} \left(y - x_0 \right)^T\left( \left(x-x_0\right)\|y-x_0\|-R\left(y - x_0\right) \right) = $$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>$$\frac{R - \|y - x_0\|}{\|y - x_0\|} \left( \left(y - x_0 \right)^T\left( x-x_0\right)-R\|y - x_0\| \right) =$$</p>
+<p>$$\left(R - \|y - x_0\| \right) \left( \frac{(y - x_0 )^T( x-x_0)}{\|y - x_0\|}-R \right)$$</p>
+<p>Первый сомножитель отрицателен по выбору точки $y$. Второй сомножитель так же отрицателен, если применить к его записи теорему Коши - Буняковского: $$(y - x_0 )^T( x-x_0) \le \|y - x_0\|\|x-x_0\|$$
+$$\frac{(y - x_0 )^T( x-x_0)}{\|y - x_0\|} - R \le \frac{\|y - x_0\|\|x-x_0\|}{\|y - x_0\|} - R = \|x - x_0\| - R \le 0$$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-2">&#1055;&#1088;&#1080;&#1084;&#1077;&#1088; 2<a class="anchor-link" href="#&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-2">&#182;</a></h4><p>Найти $\pi_S (y) = \pi$, если $S = \{x \in \mathbb{R}^n \mid c^T x = b \}$, $y \notin S$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Решение:</p>
+<p><img src="../files/proj_half.gif" alt=""></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Из рисунка строим гипотезу: $\pi = y + \alpha c$. Коэффициент $\alpha$ подбирается так, чтобы $\pi \in S$: $c^T \pi = b$, т.е.: $$c^T (y + \alpha c) = b$$
+$$c^Ty + \alpha c^T c = b$$
+$$c^Ty = b - \alpha c^T c$$</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Проверяем неравенство для выпуклого замкнутого множества: $(\pi - y)^T(x - \pi) \ge 0$
+$$(y + \alpha c - y)^T(x - y - \alpha c) = $$
+$$ \alpha c^T(x - y - \alpha c) = $$
+$$ \alpha (c^Tx) - \alpha (c^T y) - \alpha^2 c^Tc) = $$
+$$ \alpha b - \alpha (b - \alpha c^T c) - \alpha^2 c^Tc = $$
+$$ \alpha b - \alpha b + \alpha^2 c^T c - \alpha^2 c^Tc = 0 \ge 0$$</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-3">&#1055;&#1088;&#1080;&#1084;&#1077;&#1088; 3<a class="anchor-link" href="#&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-3">&#182;</a></h4><p>Найти $\pi_S (y) = \pi$, если $S = \{x \in \mathbb{R}^n \mid Ax = b, A \in \mathbb{R}^{m \times n},  b \in \mathbb{R}^{m} \}$, $y \notin S$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Решение:</p>
+<p><img src="../files/proj_poly.gif" alt=""></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Из рисунка строим гипотезу: $\pi = y + \sum\limits_{i=1}^m\alpha_i A_i = y + A^T \alpha$. Коэффициент $\alpha$ подбирается так, чтобы $\pi \in S$: $A \pi = b$, т.е.: $$c^T (y + A^T \alpha) = b$$
+$$A(y + A^T\alpha) = b$$
+$$Ay = b - A A^T\alpha$$</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Проверяем неравенство для выпуклого замкнутого множества: $(\pi - y)^T(x - \pi) \ge 0$
+$$(y + A^T\alpha  - y)^T(x - y - A^T\alpha) = $$
+$$ \alpha^T A(x - y - A^T\alpha) = $$
+$$ \alpha^T (Ax) - \alpha^T (A y) - \alpha^T AA^T \alpha) = $$
+$$ \alpha^T b - \alpha^T (b - A A^T\alpha) - \alpha^T AA^T \alpha = $$
+$$ \alpha^T b - \alpha^T b + \alpha^T AA^T \alpha - \alpha^T AA^T \alpha = 0 \ge 0$$</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Separation">Separation<a class="anchor-link" href="#Separation">&#182;</a></h2><h3 id="&#1054;&#1090;&#1076;&#1077;&#1083;&#1080;&#1084;&#1099;&#1077;-&#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1072;">&#1054;&#1090;&#1076;&#1077;&#1083;&#1080;&#1084;&#1099;&#1077; &#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1072;<a class="anchor-link" href="#&#1054;&#1090;&#1076;&#1077;&#1083;&#1080;&#1084;&#1099;&#1077;-&#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1072;">&#182;</a></h3><p>Множества $S_1$ и $S_2$ называются отделимыми, если существуют $\mathbf{p} \neq \mathbf{0} \in \mathbb{R}^n$ и $\beta \in \mathbb{R}$, что:
+$$\langle \mathbf{p}, \mathbf{x_1}\rangle \le \beta \le \langle \mathbf{p}, \mathbf{x_2}\rangle, \;\; \forall \mathbf{x_1} \in S_1, \;\; \forall \mathbf{x_2} \in S_2$$</p>
+<p><img src="../files/simple_separation.png" alt="center"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#1057;&#1086;&#1073;&#1089;&#1090;&#1074;&#1077;&#1085;&#1085;&#1086;-&#1086;&#1090;&#1076;&#1077;&#1083;&#1080;&#1084;&#1099;&#1077;-&#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1072;">&#1057;&#1086;&#1073;&#1089;&#1090;&#1074;&#1077;&#1085;&#1085;&#1086; &#1086;&#1090;&#1076;&#1077;&#1083;&#1080;&#1084;&#1099;&#1077; &#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1072;<a class="anchor-link" href="#&#1057;&#1086;&#1073;&#1089;&#1090;&#1074;&#1077;&#1085;&#1085;&#1086;-&#1086;&#1090;&#1076;&#1077;&#1083;&#1080;&#1084;&#1099;&#1077;-&#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1072;">&#182;</a></h3><p>Множества $S_1$ и $S_2$ называются собственно отделимыми, если они отделимы и дополнительно можно указать такие $\mathbf{x_1} \in S_1,  \mathbf{x_2} \in S_2$
+$$\langle \mathbf{p}, \mathbf{x_1}\rangle &lt; \langle \mathbf{p}, \mathbf{x_2}\rangle$$</p>
+<p><img src="../files/self_separation.png" alt="center"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#1057;&#1090;&#1088;&#1086;&#1075;&#1086;-&#1086;&#1090;&#1076;&#1077;&#1083;&#1080;&#1084;&#1099;&#1077;-&#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1072;">&#1057;&#1090;&#1088;&#1086;&#1075;&#1086; &#1086;&#1090;&#1076;&#1077;&#1083;&#1080;&#1084;&#1099;&#1077; &#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1072;<a class="anchor-link" href="#&#1057;&#1090;&#1088;&#1086;&#1075;&#1086;-&#1086;&#1090;&#1076;&#1077;&#1083;&#1080;&#1084;&#1099;&#1077;-&#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1072;">&#182;</a></h3><p>Множества $S_1$ и $S_2$ называются строго отделимыми, если существует $\mathbf{p} \neq \mathbf{0} \in \mathbb{R}^n$, что:
+$$\langle \mathbf{p}, \mathbf{x_1}\rangle &lt; \langle \mathbf{p}, \mathbf{x_2}\rangle, \;\; \forall \mathbf{x_1} \in S_1, \;\; \forall \mathbf{x_2} \in S_2$$</p>
+<p><img src="../files/strict.png" alt="center"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#1057;&#1080;&#1083;&#1100;&#1085;&#1086;-&#1086;&#1090;&#1076;&#1077;&#1083;&#1080;&#1084;&#1099;&#1077;-&#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1072;">&#1057;&#1080;&#1083;&#1100;&#1085;&#1086; &#1086;&#1090;&#1076;&#1077;&#1083;&#1080;&#1084;&#1099;&#1077; &#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1072;<a class="anchor-link" href="#&#1057;&#1080;&#1083;&#1100;&#1085;&#1086;-&#1086;&#1090;&#1076;&#1077;&#1083;&#1080;&#1084;&#1099;&#1077;-&#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1072;">&#182;</a></h3><p>Множества $S_1$ и $S_2$ называются сильно отделимыми, если существуют $\mathbf{p} \neq \mathbf{0} \in \mathbb{R}^n$ и $\beta \in \mathbb{R}$, что:
+$$ \underset{\mathbf{x_1} \in S_1}{\operatorname{sup}} \langle \mathbf{p}, \mathbf{x_1}\rangle &lt; \beta &lt; \underset{\mathbf{x_2} \in S_2}{\operatorname{inf}}\langle \mathbf{p}, \mathbf{x_2}\rangle, \;\; \forall \mathbf{x_1} \in S_1, \;\; \forall \mathbf{x_2} \in S_2$$</p>
+<p><img src="../files/strong.png" alt="center"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="../files/separation.png" alt="center"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#1056;&#1072;&#1089;&#1089;&#1090;&#1086;&#1103;&#1085;&#1080;&#1077;-&#1084;&#1077;&#1078;&#1076;&#1091;-&#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1072;&#1084;&#1080;">&#1056;&#1072;&#1089;&#1089;&#1090;&#1086;&#1103;&#1085;&#1080;&#1077; &#1084;&#1077;&#1078;&#1076;&#1091; &#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1072;&#1084;&#1080;<a class="anchor-link" href="#&#1056;&#1072;&#1089;&#1089;&#1090;&#1086;&#1103;&#1085;&#1080;&#1077;-&#1084;&#1077;&#1078;&#1076;&#1091;-&#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1072;&#1084;&#1080;">&#182;</a></h3><p>Расстоянием между множествами $S_1$ и $S_2$ называется число:
+$$d(S_1, S_2,\| \cdot \|) = \underset{\mathbf{x_1} \in S_1, \mathbf{x_2} \in S_2}{\operatorname{inf}} \|\mathbf{x_1} - \mathbf{x_2}\|$$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Если $X$ и $Y$ - непустые выпуклые множества в $\mathbb{R}^n$ и $X \cap Y = \emptyset$, тогда $X$ и $Y$ - отделимы.</li>
+<li>Если $X$ - непустое выпуклое замкнутое множество в $\mathbb{R}^n$ и $\mathbf{y} \notin X$, тогда точку $\mathbf{y}$ можно строго отделить от множества $X$.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Supporting-hyperplane">Supporting hyperplane<a class="anchor-link" href="#Supporting-hyperplane">&#182;</a></h2><h3 id="&#1054;&#1087;&#1086;&#1088;&#1085;&#1072;&#1103;-&#1075;&#1080;&#1087;&#1077;&#1088;&#1087;&#1083;&#1086;&#1089;&#1082;&#1086;&#1089;&#1090;&#1100;">&#1054;&#1087;&#1086;&#1088;&#1085;&#1072;&#1103; &#1075;&#1080;&#1087;&#1077;&#1088;&#1087;&#1083;&#1086;&#1089;&#1082;&#1086;&#1089;&#1090;&#1100;<a class="anchor-link" href="#&#1054;&#1087;&#1086;&#1088;&#1085;&#1072;&#1103;-&#1075;&#1080;&#1087;&#1077;&#1088;&#1087;&#1083;&#1086;&#1089;&#1082;&#1086;&#1089;&#1090;&#1100;">&#182;</a></h3><p>Гиперплоскость $\Gamma_{p,\beta} = \left\{\mathbf{x} \in \mathbb{R}^n : \langle p, \mathbf{x} \rangle &gt; \beta \right\}$ называется опорной к множеству $S$ в граничной точке $\mathbf{a} \in \partial S$, если $$\langle p, \mathbf{x} \rangle \ge \beta = \langle p, \mathbf{a} \rangle \;\; \forall \mathbf{x} \in S$$</p>
+<p>Опорная гиперплоскость называется <em>собственно опорной</em>, если, кроме того, можно указать $\mathbf{x_0} \in S: \langle p, \mathbf{x_0} \rangle &gt; \beta$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>В любой граничной (относительно граничной) точке выпуклого множества существует опорная (собственно опорная) гиперплоскость.</li>
+<li>Касательная плоскость к поверхности $F(x) = 0,$ где  $F: \mathbb{R}^n \rightarrow \mathbb{R}^1$ в точке $x_0$ определяется уравнением: $$\nabla F(x_0)^T(x-x_0) = 0$$</li>
+<li>Касательная плоскость к графику функции $f(x),$ где  $f: \mathbb{R}^n \rightarrow \mathbb{R}^1$ в точке $x_0$ определяется уравнением: $$\phi(x) = f(x_0) + \nabla f(x_0)^T(x-x_0) = 0$$</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-4">&#1055;&#1088;&#1080;&#1084;&#1077;&#1088; 4<a class="anchor-link" href="#&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-4">&#182;</a></h4><p>Построить гиперплоскость, разделяющую $S_1$ и $S_2$:
+$$S_1 = \left\{ x \in \mathbb{R}^2 \mid x_1 x_2 \ge 1, x_1 &gt; 0\right\}, \;\;\; S_2 = \left\{ x \in \mathbb{R}^2 \mid x_2 \le \frac{4}{x_1 - 1} +9\right\}$$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Решение:</p>
+<ul>
+<li>Найдем $\partial S_1 \cap \partial S_2$:
+$$
+\begin{cases}
+ x_1 x_2 = 1 \\
+ x_2 = \frac{4}{x_1 - 1} +9
+\end{cases}
+$$</li>
+</ul>
+<p>$$
+ \begin{cases}
+   x_1 = \frac{1}{3} \\
+   x_2 = 3
+ \end{cases}
+$$
+т.е. множества пересекаются в точке $x_0 = (\frac{1}{3}, 3)$</p>
+<ul>
+<li>Построим касательные плоскости к обеим поверхностям в точке пересечения:
+$$
+\begin{cases}
+ \nabla F_1(x_0)^T(x-x_0) = 0 \\
+ \nabla F_2(x_0)^T(x-x_0) = 0
+\end{cases}
+$$</li>
+</ul>
+<p>$$
+ \begin{cases}
+   3 x_1 + \frac{1}{3}x_2 - 2 = 0 \\
+   -6 x_1 - \frac{2}{3}x_2 + 4 = 0
+ \end{cases}
+$$</p>
+<p>Итого, получаем: $9x_1 + x_2 = 6$, т.е. $p = (9,1), \beta = 6$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-5">&#1055;&#1088;&#1080;&#1084;&#1077;&#1088; 5<a class="anchor-link" href="#&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-5">&#182;</a></h4><p>Построить опорную гиперплоскость для множества $S = \left\{ x \in \mathbb{R}^2 \mid e^{x_1} \le x_2\right\}$ в граничной точке $x_0 = (0,1)$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Решение:</p>
+<ul>
+<li>Имеем поверхность $F(x_1, x_2) = e^{x_1} - x_2, \;\;\; \nabla F = (e^{x_1}, -1), \;\;\; \nabla F(x_0) = (1,-1)$</li>
+<li>Тогда $$\nabla F(x_0)^T(x-x_0) = 0$$
+$$(1,-1)^T (x_1, x_2 - 1) = 0$$</li>
+<li>Искомая опорная гиперплоскость: $x_1 - x_2 + 1 = 0$</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-6">&#1055;&#1088;&#1080;&#1084;&#1077;&#1088; 6<a class="anchor-link" href="#&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-6">&#182;</a></h4><p>Построить опорную гиперплоскость для множества $S = \left\{ x \in \mathbb{R}^3 \mid x_3 \ge x_1^2 + x_2^2\right\}$ так, чтобы она отделяла его от точки $x_0 = \left(-\frac{5}{4}, \frac{5}{16}, \frac{15}{16}\right)$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Решение:</p>
+<ul>
+<li><p>Заметим, что здесь $x_0 \notin \partial S$. А значит, таких гиперплоскостей много. Возможный вариант: искать опорную гиперплоскость в точке $\pi_S(x_0) = \pi \in S$. Значит, $\Gamma_{p, \beta} = \left\{ x \in \mathbb{R}^3 \mid p^Tx = \beta, p^T \pi = \beta \right\}$</p>
+</li>
+<li><p>Будем искать $\pi$, решая задачу минимизации:</p>
+</li>
+</ul>
+<p>$$\underset{x \in \partial S}{\operatorname{min}}\|x - x_0\|^2$$
+$$\underset{x \in \partial S}{\operatorname{min}}(x - x_0)^T(x - x_0)$$</p>
+<p>Учитывая структуру множества $\partial S = \{x \in \mathbb{R}^3 \mid x_3 = x_1^2 + x_2^2\}$, можем перейти к задаче безусловной минимизации.</p>
+<p>$$ \left( x_1 + \frac{5}{4} \right)^2 + \left( x_2 - \frac{5}{16} \right)^2 + \left( x_1^2 + x_2^2 - \frac{15}{16} \right)^2 \rightarrow \operatorname{min}$$</p>
+<p>Единственным решением которой является точка $\pi = \left( -1, \frac{1}{4}, \frac{17}{16}\right)$.</p>
+<ul>
+<li>Тогда $p = x_0 - \pi = \left( -\frac{1}{4}, \frac{1}{16}, -\frac{1}{8}\right), \;\; \beta = p^T \pi = \frac{17}{128}$</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#1044;&#1086;&#1084;&#1072;&#1096;&#1085;&#1077;&#1077;-&#1079;&#1072;&#1076;&#1072;&#1085;&#1080;&#1077;-3">&#1044;&#1086;&#1084;&#1072;&#1096;&#1085;&#1077;&#1077; &#1079;&#1072;&#1076;&#1072;&#1085;&#1080;&#1077; 3<a class="anchor-link" href="#&#1044;&#1086;&#1084;&#1072;&#1096;&#1085;&#1077;&#1077;-&#1079;&#1072;&#1076;&#1072;&#1085;&#1080;&#1077;-3">&#182;</a></h2><ol>
+<li><p>Найти $\pi_S (y) = \pi$, если $S = \{x \in \mathbb{R}^n \mid c^T x \ge b \}$</p>
+</li>
+<li><p>Найти $\pi_S (y) = \pi$, если $S = \{x \in \mathbb{R}^n \mid x = x_0 + X \alpha, X \in \mathbb{R}^{n \times m},  \alpha \in \mathbb{R}^{m}\}$, $y \notin S$</p>
+</li>
+<li><p>Построить гиперплоскость, разделяющую $S_1$ и $S_2$:
+$$S_1 = \left\{ x \in \mathbb{R}^n \mid x_1^2 + x_2^2 + \ldots + x_n^2 \le 1\right\}, \;\;\; S_2 = \left\{ x \in \mathbb{R}^n \mid x_1^2 + x_2^2 + \ldots + x_{n-1}^2 + 1 \le x_n \right\}$$</p>
+</li>
+<li><p>Построить опорную гиперплоскость для множества $S = \left\{ x \in \mathbb{R}^3 \mid \frac{x_1^2}{4}+\frac{x_2^2}{8}+\frac{x_3^2}{25} \le 1 \right\}$ в граничной точке $x_0 = \left(-1, \frac{12}{5}, \frac{\sqrt{3}}{2}\right)$</p>
+</li>
+<li><p>Пусть $S \subset \mathbb{R}^n$ - замкнутое выпуклое множество, $\mathbf{x} \in S$. Найти множество $Y \subset \mathbb{R}^n$ такое, что $\forall \mathbf{y} \in Y$ выполнено $\mathbf{x} = \pi_S(\mathbf{y})$</p>
+</li>
+<li><p>Пусть даны $\mathbf{x} \in \mathbb{R}^n$ и выпуклый конус $K \subseteq \mathbb{R}^n$. Пусть $Y = \mathbf{x} + K$, $\mathbf{y} \in Y$. Найти множество $X \subset \mathbb{R}^n$, такое, что $\mathbf{x} \in X, \forall \mathbf{y} \in Y: x = \pi_X(\mathbf{y})$</p>
 </li>
 </ol>
 <p>В качестве решения необходимо предоставить либо:</p>
 <ul>
 <li><code>.pdf</code> файл, сверстанный с помощью $ \LaTeX $ с решениями задач</li>
-<li><code>.html</code> с оформленным решением, полученный из <code>.ipynb</code></li>
+<li><code>.ipynb</code> с оформленным решением </li>
 </ul>
 
 </div>

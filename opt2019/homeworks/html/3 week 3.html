@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>2 week 2</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>3 week 3</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -11775,25 +11775,19 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="&#1044;&#1086;&#1084;&#1072;&#1096;&#1085;&#1077;&#1077;-&#1079;&#1072;&#1076;&#1072;&#1085;&#1080;&#1077;-2">&#1044;&#1086;&#1084;&#1072;&#1096;&#1085;&#1077;&#1077; &#1079;&#1072;&#1076;&#1072;&#1085;&#1080;&#1077; 2<a class="anchor-link" href="#&#1044;&#1086;&#1084;&#1072;&#1096;&#1085;&#1077;&#1077;-&#1079;&#1072;&#1076;&#1072;&#1085;&#1080;&#1077;-2">&#182;</a></h1><ol>
-<li><p>Покажите, что множество афинно тогда и только тогда, когда его пересечение с любой прямой афинно.</p>
+<h1 id="&#1044;&#1086;&#1084;&#1072;&#1096;&#1085;&#1077;&#1077;-&#1079;&#1072;&#1076;&#1072;&#1085;&#1080;&#1077;-3">&#1044;&#1086;&#1084;&#1072;&#1096;&#1085;&#1077;&#1077; &#1079;&#1072;&#1076;&#1072;&#1085;&#1080;&#1077; 3<a class="anchor-link" href="#&#1044;&#1086;&#1084;&#1072;&#1096;&#1085;&#1077;&#1077;-&#1079;&#1072;&#1076;&#1072;&#1085;&#1080;&#1077;-3">&#182;</a></h1><ol>
+<li><p>Найти $\pi_S (y) = \pi$, если $S = \{x \in \mathbb{R}^n \mid c^T x \ge b \}$</p>
 </li>
-<li><p>Пусть $S_1, \ldots, S_k$ - произвольные непустые множества в $\mathbb{R}^n$. Докажите, что:</p>
-<ul>
-<li>$ \mathbf{cone} \left( \bigcup\limits_{i=1}^k S_i\right) = \sum\limits_{i=1}^k \mathbf{cone} \left( S_i\right) $</li>
-<li>$ \mathbf{conv} \left( \sum\limits_{i=1}^k S_i\right) = \sum\limits_{i=1}^k \mathbf{conv} \left( S_i\right) $</li>
-</ul>
+<li><p>Найти $\pi_S (y) = \pi$, если $S = \{x \in \mathbb{R}^n \mid x = x_0 + X \alpha, X \in \mathbb{R}^{n \times m},  \alpha \in \mathbb{R}^{m}\}$, $y \notin S$</p>
 </li>
-<li><p>Докажите, что множество $S \subseteq \mathbb{R}^n$ выпукло тогда и только тогда, когда $(\alpha + \beta)S = \alpha S + \beta S$ для всех неотрицательных $\alpha$ и $\beta$</p>
+<li><p>Построить гиперплоскость, разделяющую $S_1$ и $S_2$:
+$$S_1 = \left\{ x \in \mathbb{R}^n \mid x_1^2 + x_2^2 + \ldots + x_n^2 \le 1\right\}, \;\;\; S_2 = \left\{ x \in \mathbb{R}^n \mid x_1^2 + x_2^2 + \ldots + x_{n-1}^2 + 1 \le x_n \right\}$$</p>
 </li>
-<li><p>Пусть $x \in \mathbb{R}$ - случайная величина с заданным вероятностным распределением $\mathbb{P}(x = a_i) = p_i$, где $i = 1, \ldots, n$, а $a_1 &lt; \ldots &lt; a_n$. Говорят, что вектор вероятностей исходов $p \in \mathbb{R}^n$ принадлежит вероятностному симплексу, т.е. $P = \left\{ p \mid \mathbf{1}^Tp = 1, p \succeq 0\right\} = \left\{ p \mid p_1 + \ldots + p_n = 1, p_i \ge 0 \right\}$.</p>
-<p>Определите, выпукло ли множество таких $p$, которые удовлетворяют условию:</p>
-<ul>
-<li>$\mathbb{P}(x &gt; \alpha) \le \beta$</li>
-<li>$\mathbb{E} |x^{2018}| \le \alpha \mathbb{E}|x|$</li>
-<li>$\mathbb{E} |x^{2}| \ge \alpha $</li>
-<li>$\mathbb{V}x \ge \alpha$</li>
-</ul>
+<li><p>Построить опорную гиперплоскость для множества $S = \left\{ x \in \mathbb{R}^3 \mid \frac{x_1^2}{4}+\frac{x_2^2}{8}+\frac{x_3^2}{25} \le 1 \right\}$ в граничной точке $x_0 = \left(-1, \frac{12}{5}, \frac{\sqrt{3}}{2}\right)$</p>
+</li>
+<li><p>Пусть $S \subset \mathbb{R}^n$ - замкнутое выпуклое множество, $\mathbf{x} \in S$. Найти множество $Y \subset \mathbb{R}^n$ такое, что $\forall \mathbf{y} \in Y$ выполнено $\mathbf{x} = \pi_S(\mathbf{y})$</p>
+</li>
+<li><p>Пусть даны $\mathbf{x} \in \mathbb{R}^n$ и выпуклый конус $K \subseteq \mathbb{R}^n$. Пусть $Y = \mathbf{x} + K$, $\mathbf{y} \in Y$. Найти множество $X \subset \mathbb{R}^n$, такое, что $\mathbf{x} \in X, \forall \mathbf{y} \in Y: x = \pi_X(\mathbf{y})$</p>
 </li>
 </ol>
 <p>В качестве решения необходимо предоставить либо:</p>

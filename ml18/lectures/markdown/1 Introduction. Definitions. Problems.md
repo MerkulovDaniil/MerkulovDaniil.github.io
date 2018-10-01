@@ -228,7 +228,7 @@ def true_fun(X):
 
 ```python
 n_samples = 30
-degrees = [1, 3, 5, 7, 9, 11]
+degrees = [2, 3, 4, 7, 5, 125]
 
 X = np.sort(np.random.rand(n_samples))
 y = true_fun(X) + np.random.randn(n_samples) * 0.2
