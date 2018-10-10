@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>3_separation</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>3 Matrix Calculus</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -11726,9 +11726,7 @@ body {
 div#notebook {
   overflow: visible;
   border-top: none;
-}
-
-@media print {
+}@media print {
   div.cell {
     display: block;
     page-break-inside: avoid;
@@ -11749,7 +11747,7 @@ div#notebook {
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -11773,416 +11771,343 @@ div#notebook {
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="&#1052;&#1077;&#1090;&#1086;&#1076;&#1099;-&#1054;&#1087;&#1090;&#1080;&#1084;&#1080;&#1079;&#1072;&#1094;&#1080;&#1080;.-&#1044;&#1072;&#1085;&#1080;&#1080;&#1083;-&#1052;&#1077;&#1088;&#1082;&#1091;&#1083;&#1086;&#1074;.-&#1054;&#1090;&#1076;&#1077;&#1083;&#1080;&#1084;&#1086;&#1089;&#1090;&#1100;.-&#1055;&#1088;&#1086;&#1077;&#1082;&#1094;&#1080;&#1103;.-&#1054;&#1087;&#1086;&#1088;&#1085;&#1072;&#1103;-&#1075;&#1080;&#1087;&#1077;&#1088;&#1087;&#1083;&#1086;&#1089;&#1082;&#1086;&#1089;&#1090;&#1100;">&#1052;&#1077;&#1090;&#1086;&#1076;&#1099; &#1054;&#1087;&#1090;&#1080;&#1084;&#1080;&#1079;&#1072;&#1094;&#1080;&#1080;. &#1044;&#1072;&#1085;&#1080;&#1080;&#1083; &#1052;&#1077;&#1088;&#1082;&#1091;&#1083;&#1086;&#1074;. &#1054;&#1090;&#1076;&#1077;&#1083;&#1080;&#1084;&#1086;&#1089;&#1090;&#1100;. &#1055;&#1088;&#1086;&#1077;&#1082;&#1094;&#1080;&#1103;. &#1054;&#1087;&#1086;&#1088;&#1085;&#1072;&#1103; &#1075;&#1080;&#1087;&#1077;&#1088;&#1087;&#1083;&#1086;&#1089;&#1082;&#1086;&#1089;&#1090;&#1100;<a class="anchor-link" href="#&#1052;&#1077;&#1090;&#1086;&#1076;&#1099;-&#1054;&#1087;&#1090;&#1080;&#1084;&#1080;&#1079;&#1072;&#1094;&#1080;&#1080;.-&#1044;&#1072;&#1085;&#1080;&#1080;&#1083;-&#1052;&#1077;&#1088;&#1082;&#1091;&#1083;&#1086;&#1074;.-&#1054;&#1090;&#1076;&#1077;&#1083;&#1080;&#1084;&#1086;&#1089;&#1090;&#1100;.-&#1055;&#1088;&#1086;&#1077;&#1082;&#1094;&#1080;&#1103;.-&#1054;&#1087;&#1086;&#1088;&#1085;&#1072;&#1103;-&#1075;&#1080;&#1087;&#1077;&#1088;&#1087;&#1083;&#1086;&#1089;&#1082;&#1086;&#1089;&#1090;&#1100;">&#182;</a></h1>
+<h1 id="Lecture-3.-Matrix-Calculus">Lecture 3. Matrix Calculus<a class="anchor-link" href="#Lecture-3.-Matrix-Calculus">&#182;</a></h1>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Interior">Interior<a class="anchor-link" href="#Interior">&#182;</a></h2><h3 id="&#1042;&#1085;&#1091;&#1090;&#1088;&#1077;&#1085;&#1085;&#1086;&#1089;&#1090;&#1100;-&#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1072;">&#1042;&#1085;&#1091;&#1090;&#1088;&#1077;&#1085;&#1085;&#1086;&#1089;&#1090;&#1100; &#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1072;<a class="anchor-link" href="#&#1042;&#1085;&#1091;&#1090;&#1088;&#1077;&#1085;&#1085;&#1086;&#1089;&#1090;&#1100;-&#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1072;">&#182;</a></h3><p>Внутренностью множества $S$ называется следующее множество: 
-$$\mathbf{int} (S) = \{\mathbf{x} \in S \mid \exists \varepsilon > 0, B(\mathbf{x}, \varepsilon) \subset S\}$$
-где $B(\mathbf{x}, \varepsilon) = \mathbf{x} + \varepsilon B$ - шар с центром в т.$\mathbf{x}$ и радиусом $\varepsilon$</p>
+<h2 id="&#1041;&#1072;&#1079;&#1086;&#1074;&#1099;&#1077;-&#1087;&#1086;&#1085;&#1103;&#1090;&#1080;&#1103;">&#1041;&#1072;&#1079;&#1086;&#1074;&#1099;&#1077; &#1087;&#1086;&#1085;&#1103;&#1090;&#1080;&#1103;<a class="anchor-link" href="#&#1041;&#1072;&#1079;&#1086;&#1074;&#1099;&#1077;-&#1087;&#1086;&#1085;&#1103;&#1090;&#1080;&#1103;">&#182;</a></h2><h3 id="&#1043;&#1088;&#1072;&#1076;&#1080;&#1077;&#1085;&#1090;">&#1043;&#1088;&#1072;&#1076;&#1080;&#1077;&#1085;&#1090;<a class="anchor-link" href="#&#1043;&#1088;&#1072;&#1076;&#1080;&#1077;&#1085;&#1090;">&#182;</a></h3><p>Пусть есть функция $f(x): \mathbb{R}^n \to \mathbb{R}$, тогда вектор, составленный из частных производных следующим образом:
+$$\nabla f(x) = \dfrac{df}{dx} = \begin{pmatrix}
+    \frac{\partial f}{\partial x_1} \\
+    \frac{\partial f}{\partial x_2} \\
+    \vdots \\
+    \frac{\partial f}{\partial x_n}
+\end{pmatrix}$$
+называется градиентом функции $f(x)$. Этот вектор указывает направление наискорейшего возрастания в точке. Стало быть, вектор $- \nabla f(x)$ совпадает с направлением наискорейшего спуска для заданной функции в точке. Кроме того, вектор градиента в конкретной точке всегда перпендикулярен линии уровня функции, содержащей эту точку.</p>
+<p><img src="../files/gradient.gif" alt="wikipedia&#39;s image"></p>
+<p>Соответственно, 
+$$\nabla f(x)^T = \dfrac{df}{dx^T} = \left(\frac{\partial f}{\partial x_1}, \frac{\partial f}{\partial x_2}, \ldots, \frac{\partial f}{\partial x_n} \right)$$</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#1054;&#1090;&#1085;&#1086;&#1089;&#1080;&#1090;&#1077;&#1083;&#1100;&#1085;&#1072;&#1103;-&#1074;&#1085;&#1091;&#1090;&#1088;&#1077;&#1085;&#1085;&#1086;&#1089;&#1090;&#1100;-&#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1072;">&#1054;&#1090;&#1085;&#1086;&#1089;&#1080;&#1090;&#1077;&#1083;&#1100;&#1085;&#1072;&#1103; &#1074;&#1085;&#1091;&#1090;&#1088;&#1077;&#1085;&#1085;&#1086;&#1089;&#1090;&#1100; &#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1072;<a class="anchor-link" href="#&#1054;&#1090;&#1085;&#1086;&#1089;&#1080;&#1090;&#1077;&#1083;&#1100;&#1085;&#1072;&#1103;-&#1074;&#1085;&#1091;&#1090;&#1088;&#1077;&#1085;&#1085;&#1086;&#1089;&#1090;&#1100;-&#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1072;">&#182;</a></h3><p>Относительной внутренностью множества $S$ называется следующее множество: 
-$$\mathbf{relint} (S) = \{\mathbf{x} \in S \mid \exists \varepsilon > 0, B(\mathbf{x}, \varepsilon) \cap \mathbf{aff} (S) \subseteq S\}$$</p>
-<p><img src="relint.gif" alt="center"></p>
+<h3 id="&#1043;&#1077;&#1089;&#1089;&#1080;&#1072;&#1085;">&#1043;&#1077;&#1089;&#1089;&#1080;&#1072;&#1085;<a class="anchor-link" href="#&#1043;&#1077;&#1089;&#1089;&#1080;&#1072;&#1085;">&#182;</a></h3><p>Пусть есть функция $f(x): \mathbb{R}^n \to \mathbb{R}$, тогда матрица, составленная из смешанных производных второго порядка следующим образом:
+$$f''(x) = \dfrac{d(\nabla f)}{dx^T} = \dfrac{d\left(\nabla f^T\right)}{dx} = \begin{pmatrix}
+    \frac{\partial^2 f}{\partial x_1 \partial x_1} &amp; \frac{\partial^2 f}{\partial x_1 \partial x_2} &amp; \dots  &amp; \frac{\partial^2 f}{\partial x_1 \partial x_n} \\
+    \frac{\partial^2 f}{\partial x_2 \partial x_1} &amp; \frac{\partial^2 f}{\partial x_2 \partial x_2} &amp; \dots  &amp; \frac{\partial^2 f}{\partial x_2 \partial x_n} \\
+    \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+    \frac{\partial^2 f}{\partial x_n \partial x_1} &amp; \frac{\partial^2 f}{\partial x_n \partial x_2} &amp; \dots  &amp; \frac{\partial^2 f}{\partial x_n \partial x_n}
+\end{pmatrix}$$
+называется матрицей Гессе фугкции $f(x)$ и содержит в себе информацию о кривизне функции многих переменных в точке. Определитель этой матрицы называют гессианом функции $f(x)$ в точке. Эта матрица симметрична в том случае, когда порядок смешанного дифференциирования не важен, т.е. в случае, когда смешанные производные непрерывны.</p>
+<p>Широко прянято называть гессианом не определитель матрицы Гессе, а саму матрицу, мы будем делать так же:) Положительная (отрицательная) определенность гессиана в точке является достаточным условием локального минимума (максимума) функции в точке.</p>
+<p>Обобщением понятия гессиана на случай векторнозначной функции $\left(f(x): \mathbb{R}^n \to \mathbb{R}^m \right)$ является трехмерный тензор, состоящий из гессианов по каждой компоненте вектор - функции: $\left( H\left(f_1(x)\right), H\left(f_2(x)\right), \ldots, H\left(f_m(x)\right)\right)$</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Любое непустое выпуклое множество $S \subseteq \mathbb{R}^n$ имеет непустую относительную внутренность $\mathbf{relint}(S)$</li>
+<h3 id="&#1071;&#1082;&#1086;&#1073;&#1080;&#1072;&#1085;">&#1071;&#1082;&#1086;&#1073;&#1080;&#1072;&#1085;<a class="anchor-link" href="#&#1071;&#1082;&#1086;&#1073;&#1080;&#1072;&#1085;">&#182;</a></h3><p>Для функции $f(x): \mathbb{R}^n \to \mathbb{R}^m$ вводится понятие матрицы Якоби:
+$$f'(x) = \dfrac{df}{dx^T} = \begin{pmatrix}
+    \frac{\partial f_1}{\partial x_1} &amp; \frac{\partial f_1}{\partial x_2} &amp; \dots  &amp; \frac{\partial f_1}{\partial x_n} \\
+    \frac{\partial f_2}{\partial x_1} &amp; \frac{\partial f_2}{\partial x_2} &amp; \dots  &amp; \frac{\partial f_2}{\partial x_n} \\
+    \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+    \frac{\partial f_m}{\partial x_1} &amp; \frac{\partial f_m}{\partial x_2} &amp; \dots  &amp; \frac{\partial f_m}{\partial x_n}
+\end{pmatrix}$$</p>
+<p>Если матрица квадратная, то её определитель называют якобианом функции $f(x)$. Часто саму матрицу так же называют якобианом. Если для некоторой функции в точке определитель матрицы Якоби отличен от нуля, то тогда и только тогда в окрестности этой точки существует обратная функция.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#1052;&#1072;&#1090;&#1088;&#1080;&#1095;&#1085;&#1086;&#1077;-&#1076;&#1080;&#1092;&#1092;&#1077;&#1088;&#1077;&#1085;&#1094;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1080;&#1077;">&#1052;&#1072;&#1090;&#1088;&#1080;&#1095;&#1085;&#1086;&#1077; &#1076;&#1080;&#1092;&#1092;&#1077;&#1088;&#1077;&#1085;&#1094;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1080;&#1077;<a class="anchor-link" href="#&#1052;&#1072;&#1090;&#1088;&#1080;&#1095;&#1085;&#1086;&#1077;-&#1076;&#1080;&#1092;&#1092;&#1077;&#1088;&#1077;&#1085;&#1094;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1080;&#1077;">&#182;</a></h2><h3 id="&#1057;&#1074;&#1086;&#1076;&#1085;&#1072;&#1103;-&#1090;&#1072;&#1073;&#1083;&#1080;&#1094;&#1072;">&#1057;&#1074;&#1086;&#1076;&#1085;&#1072;&#1103; &#1090;&#1072;&#1073;&#1083;&#1080;&#1094;&#1072;<a class="anchor-link" href="#&#1057;&#1074;&#1086;&#1076;&#1085;&#1072;&#1103;-&#1090;&#1072;&#1073;&#1083;&#1080;&#1094;&#1072;">&#182;</a></h3><p>$$f(x) : X \to Y; \;\;\;\;\;\;\;\; \frac{\partial f(x)}{\partial x} \in G$$</p>
+<table>
+<thead><tr>
+<th style="text-align:center">X</th>
+<th style="text-align:center">Y</th>
+<th style="text-align:center">G</th>
+<th style="text-align:center">Обозначение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">$\mathbb{R}$</td>
+<td style="text-align:center">$\mathbb{R}$</td>
+<td style="text-align:center">$\mathbb{R}$</td>
+<td style="text-align:center">$f'(x)$ (производная)</td>
+</tr>
+<tr>
+<td style="text-align:center">$\mathbb{R}^n$</td>
+<td style="text-align:center">$\mathbb{R}$</td>
+<td style="text-align:center">$\mathbb{R^n}$</td>
+<td style="text-align:center">$\dfrac{\partial f}{\partial x_i}$ (градиент)</td>
+</tr>
+<tr>
+<td style="text-align:center">$\mathbb{R}^n$</td>
+<td style="text-align:center">$\mathbb{R}^m$</td>
+<td style="text-align:center">$\mathbb{R}^{n \times m}$</td>
+<td style="text-align:center">$\dfrac{\partial f_i}{\partial x_j}$ (якобиан)</td>
+</tr>
+<tr>
+<td style="text-align:center">$\mathbb{R}^{m \times n}$</td>
+<td style="text-align:center">$\mathbb{R}$</td>
+<td style="text-align:center">$\mathbb{R}^{m \times n}$</td>
+<td style="text-align:center">$\dfrac{\partial f}{\partial x_{ij}}$</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#1054;&#1073;&#1097;&#1072;&#1103;-&#1089;&#1093;&#1077;&#1084;&#1072;">&#1054;&#1073;&#1097;&#1072;&#1103; &#1089;&#1093;&#1077;&#1084;&#1072;<a class="anchor-link" href="#&#1054;&#1073;&#1097;&#1072;&#1103;-&#1089;&#1093;&#1077;&#1084;&#1072;">&#182;</a></h3><p><img src="../files/matrix_calculus.gif" alt="github.com/amkatrutsa"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#1044;&#1080;&#1092;&#1092;&#1077;&#1088;&#1077;&#1085;&#1094;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1080;&#1077;-&#1089;&#1083;&#1086;&#1078;&#1085;&#1086;&#1081;-&#1092;&#1091;&#1085;&#1082;&#1094;&#1080;&#1080;">&#1044;&#1080;&#1092;&#1092;&#1077;&#1088;&#1077;&#1085;&#1094;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1080;&#1077; &#1089;&#1083;&#1086;&#1078;&#1085;&#1086;&#1081; &#1092;&#1091;&#1085;&#1082;&#1094;&#1080;&#1080;<a class="anchor-link" href="#&#1044;&#1080;&#1092;&#1092;&#1077;&#1088;&#1077;&#1085;&#1094;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1080;&#1077;-&#1089;&#1083;&#1086;&#1078;&#1085;&#1086;&#1081;-&#1092;&#1091;&#1085;&#1082;&#1094;&#1080;&#1080;">&#182;</a></h3><ul>
+<li>Пусть $x \in \mathbb{R}^n; \;\;\; g: \mathbb{R}^n \to \mathbb{R}^p;\;\;\; f : \mathbb{R}^p \to \mathbb{R}^1$</li>
 </ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Projection">Projection<a class="anchor-link" href="#Projection">&#182;</a></h2><h3 id="&#1056;&#1072;&#1089;&#1089;&#1090;&#1086;&#1103;&#1085;&#1080;&#1077;-&#1084;&#1077;&#1078;&#1076;&#1091;-&#1090;&#1086;&#1095;&#1082;&#1086;&#1081;-&#1080;-&#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1086;&#1084;">&#1056;&#1072;&#1089;&#1089;&#1090;&#1086;&#1103;&#1085;&#1080;&#1077; &#1084;&#1077;&#1078;&#1076;&#1091; &#1090;&#1086;&#1095;&#1082;&#1086;&#1081; &#1080; &#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1086;&#1084;<a class="anchor-link" href="#&#1056;&#1072;&#1089;&#1089;&#1090;&#1086;&#1103;&#1085;&#1080;&#1077;-&#1084;&#1077;&#1078;&#1076;&#1091;-&#1090;&#1086;&#1095;&#1082;&#1086;&#1081;-&#1080;-&#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1086;&#1084;">&#182;</a></h3><p>Расстоянием $d$ от точки $\mathbf{y} \in \mathbb{R}^n$ до замкнутого множества $S \subset \mathbb{R}^n$ является:
-$$d(\mathbf{y}, S, \| \cdot \|) = \inf\{\|x - y\| \mid x \in S \}$$</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#1055;&#1088;&#1086;&#1077;&#1082;&#1094;&#1080;&#1103;-&#1090;&#1086;&#1095;&#1082;&#1080;-&#1085;&#1072;-&#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1086;">&#1055;&#1088;&#1086;&#1077;&#1082;&#1094;&#1080;&#1103; &#1090;&#1086;&#1095;&#1082;&#1080; &#1085;&#1072; &#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1086;<a class="anchor-link" href="#&#1055;&#1088;&#1086;&#1077;&#1082;&#1094;&#1080;&#1103;-&#1090;&#1086;&#1095;&#1082;&#1080;-&#1085;&#1072;-&#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1086;">&#182;</a></h3><p>Проекцией точки $\mathbf{y} \in \mathbb{R}^n$ на множество $S \subseteq \mathbb{R}^n$ называется точка $\pi_S(\mathbf{y}) \in S$: $$\| \pi_S(\mathbf{y}) - \mathbf{y}\| \le \|\mathbf{x} - \mathbf{y}\|, \forall \mathbf{x} \in S$$</p>
+<p>$$\underset{n \times 1}{\dfrac{\partial f \left(g(x)\right)}{\partial x_j}} = \sum\limits_{i=1}^p\dfrac{\partial f}{\partial g_i} \cdot \dfrac{\partial g_i}{\partial x_j} = \underset{n \times p}{\dfrac{\partial g^T}{\partial x_j}} \cdot \underset{p \times 1}{\dfrac{\partial f}{\partial g}}$$</p>
 <ul>
-<li>Если множество - открыто, и точка в нем не лежит, то её проекции на это множество не существует</li>
-<li>Если точка лежит в множестве, то её проекция - это сама точка</li>
-<li>$$\pi_S(\mathbf{y}) = \underset{\mathbf{y}}{\operatorname{argmin}} \|\mathbf{x}-\mathbf{y}\|$$</li>
-<li>Пусть $S \subseteq \mathbb{R}^n$ - выпуклое замкнутое множество. Пусть так же имеются точки $\mathbf{y} \in \mathbb{R}^n$ и $\mathbf{\pi} \in S$. Тогда если для всех $\mathbf{x} \in S$ справедливо неравенство: $$\langle \pi  -\mathbf{y}, \mathbf{x} - \pi\rangle \ge 0, $$ то $\pi$ является проекцией точки $\mathbf{y}$ на $S$, т.е. $\pi_S (\mathbf{y}) = \pi$</li>
-<li>Пусть $S \subseteq \mathbb{R}^n$ - афинное множество. Пусть так же имеются точки $\mathbf{y} \in \mathbb{R}^n$ и $\mathbf{\pi} \in S$. Тогда $\pi$ является проекцией точки $\mathbf{y}$ на $S$, т.е. $\pi_S (\mathbf{y}) = \pi$ тогда и только тогда, когда для всех $\mathbf{x} \in S$ справедливо равенство: $$\langle \pi  -\mathbf{y}, \mathbf{x} - \pi\rangle = 0 $$ </li>
+<li>Для векторнозначной функции: пусть $x \in \mathbb{R}^n; \;\;\; g: \mathbb{R}^n \to \mathbb{R}^p;\;\;\; f : \mathbb{R}^p \to \mathbb{R}^m$</li>
 </ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-1">&#1055;&#1088;&#1080;&#1084;&#1077;&#1088; 1<a class="anchor-link" href="#&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-1">&#182;</a></h4><p>Найти $\pi_S (y) = \pi$, если $S = \{x \in \mathbb{R}^n \mid \|x - x_c\| \le R \}$, $y \notin S$</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Решение:
-<img src="proj_cir.gif" alt=""></p>
+<p>$$\underset{m \times n}{\dfrac{\partial f \left(g(x)\right)}{\partial x^T}} = \underset{m \times p}{\dfrac{\partial f}{\partial g^T}} \cdot \underset{p \times n}{\dfrac{\partial g}{\partial x^T}}$$</p>
 <ul>
-<li><p>Из рисунка строим гипотезу: $\pi = x_0 + R \cdot \frac{y - x_0}{\|y - x_0\|}$</p>
-</li>
-<li><p>Проверяем неравенство для выпуклого замкнутого множества: $(\pi - y)^T(x - \pi) \ge 0$</p>
-</li>
+<li>Стало быть для $p = 1$: $x \in \mathbb{R}^n; \;\;\; g: \mathbb{R}^n \to \mathbb{R}^1;\;\;\; f : \mathbb{R}^1 \to \mathbb{R}^m$</li>
 </ul>
-$$\left( x_0 - y + R \frac{y - x_0}{\|y - x_0\|} \right)^T\left( x - x_0 - R \frac{y - x_0}{\|y - x_0\|} \right) =$$$$\left( \frac{(y - x_0)(R - \|y - x_0\|)}{\|y - x_0\|} \right)^T\left( \frac{(x-x_0)\|y-x_0\|-R(y - x_0)}{\|y - x_0\|} \right) =$$$$\frac{R - \|y - x_0\|}{\|y - x_0\|^2} \left(y - x_0 \right)^T\left( \left(x-x_0\right)\|y-x_0\|-R\left(y - x_0\right) \right) = $$$$\frac{R - \|y - x_0\|}{\|y - x_0\|} \left( \left(y - x_0 \right)^T\left( x-x_0\right)-R\|y - x_0\| \right) =$$$$\left(R - \|y - x_0\| \right) \left( \frac{(y - x_0 )^T( x-x_0)}{\|y - x_0\|}-R \right)$$<p>Первый сомножитель отрицателен по выбору точки $y$. Второй сомножитель так же отрицателен, если применить к его записи теорему Коши - Буняковского: $$(y - x_0 )^T( x-x_0) \le \|y - x_0\|\|x-x_0\|$$
-$$\frac{(y - x_0 )^T( x-x_0)}{\|y - x_0\|} - R \le \frac{\|y - x_0\|\|x-x_0\|}{\|y - x_0\|} - R = \|x - x_0\| - R \le 0$$</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-2">&#1055;&#1088;&#1080;&#1084;&#1077;&#1088; 2<a class="anchor-link" href="#&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-2">&#182;</a></h4><p>Найти $\pi_S (y) = \pi$, если $S = \{x \in \mathbb{R}^n \mid c^T x = b \}$, $y \notin S$</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Решение:</p>
-<p><img src="proj_half.gif" alt=""></p>
+<p>$$\underset{m \times n}{\dfrac{\partial f \left(g(x)\right)}{\partial x^T}} = \underset{m \times 1}{\dfrac{\partial f}{\partial g}} \cdot \underset{1 \times n}{\dfrac{\partial g}{\partial x^T}}$$</p>
 <ul>
-<li><p>Из рисунка строим гипотезу: $\pi = y + \alpha c$. Коэффициент $\alpha$ подбирается так, чтобы $\pi \in S$: $c^T \pi = b$, т.е.: $$c^T (y + \alpha c) = b$$
-$$c^Ty + \alpha c^T c = b$$
-$$c^Ty = b - \alpha c^T c$$</p>
-</li>
-<li><p>Проверяем неравенство для выпуклого замкнутого множества: $(\pi - y)^T(x - \pi) \ge 0$
-$$(y + \alpha c - y)^T(x - y - \alpha c) = $$
-$$ \alpha c^T(x - y - \alpha c) = $$
-$$ \alpha (c^Tx) - \alpha (c^T y) - \alpha^2 c^Tc) = $$
-$$ \alpha b - \alpha (b - \alpha c^T c) - \alpha^2 c^Tc = $$
-$$ \alpha b - \alpha b + \alpha^2 c^T c - \alpha^2 c^Tc = 0 \ge 0$$</p>
-</li>
+<li>Еще один важный случай:</li>
 </ul>
+<p>$$ f: \mathbb{R}^n \to \mathbb{R}^m; \;\;\; \alpha: \mathbb{R}^n \to \mathbb{R}^1$$
+$$\underset{m \times n}{\dfrac{d\left(\alpha(x)f(x)\right)}{dx^T}} = \alpha(x) \underset{m \times n}{\dfrac{df}{dx^T}} + \underset{m \times 1}{f(x)} \underset{1 \times n}{\dfrac{d\alpha(x)}{dx^T}}$$</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-3">&#1055;&#1088;&#1080;&#1084;&#1077;&#1088; 3<a class="anchor-link" href="#&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-3">&#182;</a></h4><p>Найти $\pi_S (y) = \pi$, если $S = \{x \in \mathbb{R}^n \mid Ax = b, A \in \mathbb{R}^{m \times n},  b \in \mathbb{R}^{m} \}$, $y \notin S$</p>
+<h2 id="&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;&#1099;">&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;&#1099;<a class="anchor-link" href="#&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;&#1099;">&#182;</a></h2><h3 id="&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-1">&#1055;&#1088;&#1080;&#1084;&#1077;&#1088; 1<a class="anchor-link" href="#&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-1">&#182;</a></h3><p>Найти $\nabla f(x)$, если $f(x) = c^Tx$</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Решение:</p>
-<p><img src="proj_poly.gif" alt=""></p>
-<ul>
-<li><p>Из рисунка строим гипотезу: $\pi = y + \sum\limits_{i=1}^m\alpha_i A_i = y + A^T \alpha$. Коэффициент $\alpha$ подбирается так, чтобы $\pi \in S$: $A \pi = b$, т.е.: $$c^T (y + A^T \alpha) = b$$
-$$A(y + A^T\alpha) = b$$
-$$Ay = b - A A^T\alpha$$</p>
-</li>
-<li><p>Проверяем неравенство для выпуклого замкнутого множества: $(\pi - y)^T(x - \pi) \ge 0$
-$$(y + A^T\alpha  - y)^T(x - y - A^T\alpha) = $$
-$$ \alpha^T A(x - y - A^T\alpha) = $$
-$$ \alpha^T (Ax) - \alpha^T (A y) - \alpha^T AA^T \alpha) = $$
-$$ \alpha^T b - \alpha^T (b - A A^T\alpha) - \alpha^T AA^T \alpha = $$
-$$ \alpha^T b - \alpha^T b + \alpha^T AA^T \alpha - \alpha^T AA^T \alpha = 0 \ge 0$$</p>
-</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Separation">Separation<a class="anchor-link" href="#Separation">&#182;</a></h2><h3 id="&#1054;&#1090;&#1076;&#1077;&#1083;&#1080;&#1084;&#1099;&#1077;-&#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1072;">&#1054;&#1090;&#1076;&#1077;&#1083;&#1080;&#1084;&#1099;&#1077; &#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1072;<a class="anchor-link" href="#&#1054;&#1090;&#1076;&#1077;&#1083;&#1080;&#1084;&#1099;&#1077;-&#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1072;">&#182;</a></h3><p>Множества $S_1$ и $S_2$ называются отделимыми, если существуют $\mathbf{p} \neq \mathbf{0} \in \mathbb{R}^n$ и $\beta \in \mathbb{R}$, что:
-$$\langle \mathbf{p}, \mathbf{x_1}\rangle \le \beta \le \langle \mathbf{p}, \mathbf{x_2}\rangle, \;\; \forall \mathbf{x_1} \in S_1, \;\; \forall \mathbf{x_2} \in S_2$$</p>
-<p><img src="simple_separation.png" alt="center"></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#1057;&#1086;&#1073;&#1089;&#1090;&#1074;&#1077;&#1085;&#1085;&#1086;-&#1086;&#1090;&#1076;&#1077;&#1083;&#1080;&#1084;&#1099;&#1077;-&#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1072;">&#1057;&#1086;&#1073;&#1089;&#1090;&#1074;&#1077;&#1085;&#1085;&#1086; &#1086;&#1090;&#1076;&#1077;&#1083;&#1080;&#1084;&#1099;&#1077; &#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1072;<a class="anchor-link" href="#&#1057;&#1086;&#1073;&#1089;&#1090;&#1074;&#1077;&#1085;&#1085;&#1086;-&#1086;&#1090;&#1076;&#1077;&#1083;&#1080;&#1084;&#1099;&#1077;-&#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1072;">&#182;</a></h3><p>Множества $S_1$ и $S_2$ называются собственно отделимыми, если они отделимы и дополнительно можно указать такие $\mathbf{x_1} \in S_1,  \mathbf{x_2} \in S_2$
-$$\langle \mathbf{p}, \mathbf{x_1}\rangle < \langle \mathbf{p}, \mathbf{x_2}\rangle$$</p>
-<p><img src="self_separation.png" alt="center"></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#1057;&#1090;&#1088;&#1086;&#1075;&#1086;-&#1086;&#1090;&#1076;&#1077;&#1083;&#1080;&#1084;&#1099;&#1077;-&#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1072;">&#1057;&#1090;&#1088;&#1086;&#1075;&#1086; &#1086;&#1090;&#1076;&#1077;&#1083;&#1080;&#1084;&#1099;&#1077; &#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1072;<a class="anchor-link" href="#&#1057;&#1090;&#1088;&#1086;&#1075;&#1086;-&#1086;&#1090;&#1076;&#1077;&#1083;&#1080;&#1084;&#1099;&#1077;-&#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1072;">&#182;</a></h3><p>Множества $S_1$ и $S_2$ называются строго отделимыми, если существует $\mathbf{p} \neq \mathbf{0} \in \mathbb{R}^n$, что:
-$$\langle \mathbf{p}, \mathbf{x_1}\rangle < \langle \mathbf{p}, \mathbf{x_2}\rangle, \;\; \forall \mathbf{x_1} \in S_1, \;\; \forall \mathbf{x_2} \in S_2$$</p>
-<p><img src="strict.png" alt="center"></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#1057;&#1080;&#1083;&#1100;&#1085;&#1086;-&#1086;&#1090;&#1076;&#1077;&#1083;&#1080;&#1084;&#1099;&#1077;-&#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1072;">&#1057;&#1080;&#1083;&#1100;&#1085;&#1086; &#1086;&#1090;&#1076;&#1077;&#1083;&#1080;&#1084;&#1099;&#1077; &#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1072;<a class="anchor-link" href="#&#1057;&#1080;&#1083;&#1100;&#1085;&#1086;-&#1086;&#1090;&#1076;&#1077;&#1083;&#1080;&#1084;&#1099;&#1077;-&#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1072;">&#182;</a></h3><p>Множества $S_1$ и $S_2$ называются сильно отделимыми, если существуют $\mathbf{p} \neq \mathbf{0} \in \mathbb{R}^n$ и $\beta \in \mathbb{R}$, что:
-$$ \underset{\mathbf{x_1} \in S_1}{\operatorname{sup}} \langle \mathbf{p}, \mathbf{x_1}\rangle < \beta < \underset{\mathbf{x_2} \in S_2}{\operatorname{inf}}\langle \mathbf{p}, \mathbf{x_2}\rangle, \;\; \forall \mathbf{x_1} \in S_1, \;\; \forall \mathbf{x_2} \in S_2$$</p>
-<p><img src="strong.png" alt="center"></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="separation.png" alt="center"></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#1056;&#1072;&#1089;&#1089;&#1090;&#1086;&#1103;&#1085;&#1080;&#1077;-&#1084;&#1077;&#1078;&#1076;&#1091;-&#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1072;&#1084;&#1080;">&#1056;&#1072;&#1089;&#1089;&#1090;&#1086;&#1103;&#1085;&#1080;&#1077; &#1084;&#1077;&#1078;&#1076;&#1091; &#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1072;&#1084;&#1080;<a class="anchor-link" href="#&#1056;&#1072;&#1089;&#1089;&#1090;&#1086;&#1103;&#1085;&#1080;&#1077;-&#1084;&#1077;&#1078;&#1076;&#1091;-&#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1072;&#1084;&#1080;">&#182;</a></h3><p>Расстоянием между множествами $S_1$ и $S_2$ называется число:
-$$d(S_1, S_2,\| \cdot \|) = \underset{\mathbf{x_1} \in S_1, \mathbf{x_2} \in S_2}{\operatorname{inf}} \|\mathbf{x_1} - \mathbf{x_2}\|$$</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Если $X$ и $Y$ - непустые выпуклые множества в $\mathbb{R}^n$ и $X \cap Y = \emptyset$, тогда $X$ и $Y$ - отделимы.</li>
-<li>Если $X$ - непустое выпуклое замкнутое множество в $\mathbb{R}^n$ и $\mathbf{y} \notin X$, тогда точку $\mathbf{y}$ можно строго отделить от множества $X$.</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Supporting-hyperplane">Supporting hyperplane<a class="anchor-link" href="#Supporting-hyperplane">&#182;</a></h2><h3 id="&#1054;&#1087;&#1086;&#1088;&#1085;&#1072;&#1103;-&#1075;&#1080;&#1087;&#1077;&#1088;&#1087;&#1083;&#1086;&#1089;&#1082;&#1086;&#1089;&#1090;&#1100;">&#1054;&#1087;&#1086;&#1088;&#1085;&#1072;&#1103; &#1075;&#1080;&#1087;&#1077;&#1088;&#1087;&#1083;&#1086;&#1089;&#1082;&#1086;&#1089;&#1090;&#1100;<a class="anchor-link" href="#&#1054;&#1087;&#1086;&#1088;&#1085;&#1072;&#1103;-&#1075;&#1080;&#1087;&#1077;&#1088;&#1087;&#1083;&#1086;&#1089;&#1082;&#1086;&#1089;&#1090;&#1100;">&#182;</a></h3><p>Гиперплоскость $\Gamma_{p,\beta} = \left\{\mathbf{x} \in \mathbb{R}^n : \langle p, \mathbf{x} \rangle > \beta \right\}$ называется опорной к множеству $S$ в граничной точке $\mathbf{a} \in \partial S$, если $$\langle p, \mathbf{x} \rangle \ge \beta = \langle p, \mathbf{a} \rangle \;\; \forall \mathbf{x} \in S$$</p>
-<p>Опорная гиперплоскость называется <em>собственно опорной</em>, если, кроме того, можно указать $\mathbf{x_0} \in S: \langle p, \mathbf{x_0} \rangle > \beta$</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>В любой граничной (относительно граничной) точке выпуклого множества существует опорная (собственно опорная) гиперплоскость.</li>
-<li>Касательная плоскость к поверхности $F(x) = 0,$ где  $F: \mathbb{R}^n \rightarrow \mathbb{R}^1$ в точке $x_0$ определяется уравнением: $$\nabla F(x_0)^T(x-x_0) = 0$$</li>
-<li>Касательная плоскость к графику функции $f(x),$ где  $f: \mathbb{R}^n \rightarrow \mathbb{R}^1$ в точке $x_0$ определяется уравнением: $$\phi(x) = f(x_0) + \nabla f(x_0)^T(x-x_0) = 0$$</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-4">&#1055;&#1088;&#1080;&#1084;&#1077;&#1088; 4<a class="anchor-link" href="#&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-4">&#182;</a></h4><p>Построить гиперплоскость, разделяющую $S_1$ и $S_2$:
-$$S_1 = \left\{ x \in \mathbb{R}^2 \mid x_1 x_2 \ge 1, x_1 > 0\right\}, \;\;\; S_2 = \left\{ x \in \mathbb{R}^2 \mid x_2 \le \frac{4}{x_1 - 1} +9\right\}$$</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Решение:</p>
 <ul>
-<li>Найдем $\partial S_1 \cap \partial S_2$:
-$$
-\begin{cases}
- x_1 x_2 = 1 \\
- x_2 = \frac{4}{x_1 - 1} +9
-\end{cases}
-$$</li>
+<li>$f(x) = \sum\limits_{i=1}^n c_i x_i$</li>
+<li>$\dfrac{\partial f(x)}{\partial x_i} = c_i \rightarrow \nabla f(x) = c$ </li>
 </ul>
-$$
- \begin{cases}
-   x_1 = \frac{1}{3} \\
-   x_2 = 3
- \end{cases}
-$$<p>т.е. множества пересекаются в точке $x_0 = (\frac{1}{3}, 3)$</p>
-<ul>
-<li>Построим касательные плоскости к обеим поверхностям в точке пересечения:
-$$
-\begin{cases}
- \nabla F_1(x_0)^T(x-x_0) = 0 \\
- \nabla F_2(x_0)^T(x-x_0) = 0
-\end{cases}
-$$</li>
-</ul>
-$$
- \begin{cases}
-   3 x_1 + \frac{1}{3}x_2 - 2 = 0 \\
-   -6 x_1 - \frac{2}{3}x_2 + 4 = 0
- \end{cases}
-$$<p>Итого, получаем: $9x_1 + x_2 = 6$, т.е. $p = (9,1), \beta = 6$</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-5">&#1055;&#1088;&#1080;&#1084;&#1077;&#1088; 5<a class="anchor-link" href="#&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-5">&#182;</a></h4><p>Построить опорную гиперплоскость для множества $S = \left\{ x \in \mathbb{R}^2 \mid e^{x_1} \le x_2\right\}$ в граничной точке $x_0 = (0,1)$</p>
+<h3 id="&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-2">&#1055;&#1088;&#1080;&#1084;&#1077;&#1088; 2<a class="anchor-link" href="#&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-2">&#182;</a></h3><p>Найти $\nabla f(x)$, если $f(x) = \dfrac{1}{2}x^TAx + b^Tx + c$</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Решение:</p>
 <ul>
-<li>Имеем поверхность $F(x_1, x_2) = e^{x_1} - x_2, \;\;\; \nabla F = (e^{x_1}, -1), \;\;\; \nabla F(x_0) = (1,-1)$</li>
-<li>Тогда $$\nabla F(x_0)^T(x-x_0) = 0$$
-$$(1,-1)^T (x_1, x_2 - 1) = 0$$</li>
-<li>Искомая опорная гиперплоскость: $x_1 - x_2 + 1 = 0$</li>
+<li>$f(x) = \sum\limits_{i=1}^n\left[ \dfrac{1}{2}x_i \left(\sum\limits_{j=1}^n a_{ij}x_j \right) + b_ix_i + c_i\right] = \dfrac{1}{2} \sum\limits_{i,j=1}^n\left[ x_i a_{ij}x_j \right] + \sum\limits_{i=1}^n b_ix_i + c_i$</li>
+<li>$\dfrac{\partial f(x)}{\partial x_i} = \dfrac{1}{2}\sum\limits_{i,j=1}^n \left(a_{ij} + a_{ji}\right)x_i + b_i \rightarrow \nabla f(x) = \dfrac{1}{2} \left( A + A^T \right)x + b$ </li>
 </ul>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-6">&#1055;&#1088;&#1080;&#1084;&#1077;&#1088; 6<a class="anchor-link" href="#&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-6">&#182;</a></h4><p>Построить опорную гиперплоскость для множества $S = \left\{ x \in \mathbb{R}^3 \mid x_3 \ge x_1^2 + x_2^2\right\}$ так, чтобы она отделяла его от точки $x_0 = \left(-\frac{5}{4}, \frac{5}{16}, \frac{15}{16}\right)$</p>
+<h3 id="&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-3">&#1055;&#1088;&#1080;&#1084;&#1077;&#1088; 3<a class="anchor-link" href="#&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-3">&#182;</a></h3><p>Найти градиент билинейной формы $f(x) = u^T(x)Rv(x)$, $R \in \mathbb{R}^{m \times p}; \;\;\;u(x): \mathbb{R}^n \to \mathbb{R}^m; \;\;\;v(x): \mathbb{R}^n \to \mathbb{R}^p$</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Решение:</p>
+<p>$$\dfrac{d\left( u^TRv\right)}{dx} = \dfrac{du^T}{dx}\left( \dfrac{\partial \left( u^TRv\right)}{\partial u}\right) + \dfrac{dv^T}{dx}\left( \dfrac{\partial \left( u^TRv\right)}{\partial v}\right) =  \dfrac{du^T}{dx}Rv + \dfrac{dv^T}{dx}R^Tu$$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-4">&#1055;&#1088;&#1080;&#1084;&#1077;&#1088; 4<a class="anchor-link" href="#&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-4">&#182;</a></h3><p>Найти $\nabla f(x)$, если $f(x) = \dfrac{1}{2} \|Ax - b\|^2$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Решение:</p>
+<p>Задачу можно решить двумя различными способами: как композицию функций $f(x) = \dfrac{1}{2}\|x\|^2; \;\;\;\; g(x) = Ax - b$, а так же классическим способом, рассмотрев скалярное представление функции.</p>
+<p>Ответ: $\nabla f(x) = A^T(Ax - b)$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-5">&#1055;&#1088;&#1080;&#1084;&#1077;&#1088; 5<a class="anchor-link" href="#&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-5">&#182;</a></h3><p>Найти $\nabla f(x), f''(x)$, если $f(x) = -e^{-x^Tx}$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Решение:</p>
 <ul>
-<li><p>Заметим, что здесь $x_0 \notin \partial S$. А значит, таких гиперплоскостей много. Возможный вариант: искать опорную гиперплоскость в точке $\pi_S(x_0) = \pi \in S$. Значит, $\Gamma_{p, \beta} = \left\{ x \in \mathbb{R}^3 \mid p^Tx = \beta, p^T \pi = \beta \right\}$</p>
+<li>Заметим, что задачу можно решить используя формулу для вычисления градиента сложной функции, однако мы, по старинке, распишем скалярный вид:
+$$f(x) = - e ^{-\sum\limits_i x_i^2}$$</li>
+<li>Аккуратно посчитаем одну из компонент градиента:
+$$\dfrac{\partial f(x)}{\partial x_k} = - e ^{-\sum\limits_i x_i^2} \cdot \left( \dfrac{\partial (-\sum\limits_i x_i^2)}{\partial x_k} \right) = e ^{-\sum\limits_i x_i^2} \cdot 2x_k$$
+Значит, вектор градиента запишется, как: $\nabla f(x) = 2 e^{-x^Tx} \cdot x$</li>
+<li><p>Абсолютно по такой же логике посчитаем элемент гессиана. Обратите внимание на индексы! Типичная ошибка (недопонимание) здесь возникает, когда записывается везде $i,j$, бездумно повторяя индексы
+$$g_k = \dfrac{\partial f(x)}{\partial x_k} \rightarrow H_{k,p} = \dfrac{\partial g_k}{\partial x_p}$$
+$$H_{k,p} = - \left( e ^{-\sum\limits_i x_i^2} \cdot 2x_p\right) 2x_k + 2 e ^{-\sum\limits_i x_i^2} \dfrac{\partial x_k}{\partial x_p} = 2 e ^{-\sum\limits_i x_i^2} \cdot \left( \dfrac{\partial x_k}{\partial x_p} - 2x_px_k\right)$$</p>
 </li>
-<li><p>Будем искать $\pi$, решая задачу минимизации:</p>
+<li><p>Итого: $f''(x) = H_{f(x)} = 2e^{-x^Tx} \left( E - 2 xx^T\right)$</p>
 </li>
-</ul>
-$$\underset{x \in \partial S}{\operatorname{min}}\|x - x_0\|^2$$$$\underset{x \in \partial S}{\operatorname{min}}(x - x_0)^T(x - x_0)$$<p>Учитывая структуру множества $\partial S = \{x \in \mathbb{R}^3 \mid x_3 = x_1^2 + x_2^2\}$, можем перейти к задаче безусловной минимизации.</p>
-$$ \left( x_1 + \frac{5}{4} \right)^2 + \left( x_2 - \frac{5}{16} \right)^2 + \left( x_1^2 + x_2^2 - \frac{15}{16} \right)^2 \rightarrow \operatorname{min}$$<p>Единственным решением которой является точка $\pi = \left( -1, \frac{1}{4}, \frac{17}{16}\right)$.</p>
-<ul>
-<li>Тогда $p = x_0 - \pi = \left( -\frac{1}{4}, \frac{1}{16}, -\frac{1}{8}\right), \;\; \beta = p^T \pi = \frac{17}{128}$</li>
 </ul>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#1044;&#1086;&#1084;&#1072;&#1096;&#1085;&#1077;&#1077;-&#1079;&#1072;&#1076;&#1072;&#1085;&#1080;&#1077;-3">&#1044;&#1086;&#1084;&#1072;&#1096;&#1085;&#1077;&#1077; &#1079;&#1072;&#1076;&#1072;&#1085;&#1080;&#1077; 3<a class="anchor-link" href="#&#1044;&#1086;&#1084;&#1072;&#1096;&#1085;&#1077;&#1077;-&#1079;&#1072;&#1076;&#1072;&#1085;&#1080;&#1077;-3">&#182;</a></h2><ol>
-<li><p>Найти $\pi_S (y) = \pi$, если $S = \{x \in \mathbb{R}^n \mid c^T x \ge b \}$</p>
+<h3 id="&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-6">&#1055;&#1088;&#1080;&#1084;&#1077;&#1088; 6<a class="anchor-link" href="#&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-6">&#182;</a></h3><p>Найти $f'(X)$, если $f(X) = \log\det X$; $X \in S^n_{++}$ - положительно определенная симметричная квадратная матрица</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Решение:</p>
+<ul>
+<li>Применим хитрый трюк и вспомним об еще одном предназначении градиента и производной - линейная аппроксимация функции в окрестности точки.
+Заметим, что:</li>
+</ul>
+<p>$$\log\det\left[ X+ \Delta X\right] = \log \det \left[ X^{1/2} \left(I + X^{-1/2} \Delta X X^{-1/2}\right)X^{1/2}\right] = \log \det \left[ X^{1/2} \right]\det \left[ I + X^{-1/2} \Delta X X^{-1/2}\right] \det \left[ X^{1/2}\right] = $$
+$$ = \log \det \left[ X \right]\det \left[ I + X^{-1/2} \Delta X X^{-1/2}\right]= \log \det \left[ X \right] + \log\det \left[ I + X^{-1/2} \Delta X X^{-1/2}\right]$$</p>
+<ul>
+<li>Вспомним так же про то, что определитель матрицы равен произведению её собственных значений</li>
+</ul>
+<p>$$\log\det\left[ X+ \Delta X\right] = \log\det X + \sum\limits_{i=1}^n \log(1 + \lambda_i)$$
+    Здесь $\lambda_i$ - собственные числа матрицы $X^{-1/2} \Delta X X^{-1/2}$. Далее используем факт "малости" матрицы $\Delta X$ (в смысле малости нормы этой матрицы), а стало быть, для приближения первого порядка справедливо: $\log (1 + \lambda_i) \approx \lambda_i$ т.к. $\lambda_i$ так же должны быть малыми.</p>
+<p>$$\log\det\left[ X+ \Delta X\right] \approx \log\det X + \sum\limits_{i=1}^n \lambda_i$$
+$$\log\det\left[ X+ \Delta X\right] \approx \log\det X + \mathbf{tr}\left[X^{-1/2} \Delta X X^{-1/2}\right] = \log\det X + \mathbf{tr}\left[X^{-1/2} X^{-1/2} \Delta X \right] = \log\det X + \mathbf{tr}\left[X^{-1}\Delta X \right]$$</p>
+<p>Заметим, что в пространстве матриц роль скалярного произведения играет именно след их произведения: $\mathbf{tr}(A^TB) = \mathbf{tr}(AB^T) = \mathbf{tr}(B^TA) = \mathbf{tr}(BA^T)$. Стало быть, имеем:
+$$f(X + \Delta X) \approx f(X) + \langle X^{-1}, \Delta X \rangle$$
+$$f(X + \Delta X) \approx f(X) + \langle f'(X), \Delta X \rangle$$</p>
+<p>Значит, $f'(X) = X^{-1}$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-7">&#1055;&#1088;&#1080;&#1084;&#1077;&#1088; 7<a class="anchor-link" href="#&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-7">&#182;</a></h3><p><img src="../files/learning.png" alt=""></p>
+<p>Рассмотрим упрощенную задачу обучения с помощью линейной модели (однослойной нейронной сети). Для этого необходимо подобрать параметры полносвязного слоя $W \in \mathbb{R}^{c \times n},b \in \mathbb{R}^c$ так, чтобы минимизировать функцию потерь (невязку). Для этого часто используют градиентные методы. Т.е. схема оптимизационных алгоритмов идейно следующая:
+$$b_{k+1} = b_k - \beta \dfrac{\partial L(x,y,W_k,b_k)}{\partial b^T}$$
+$$W_{k+1} = W_k - \omega \dfrac{\partial L(x,y,W_k,b_k)}{\partial W}$$
+Здесь частные производные считаются именно по параметрам $W, b$, а не по аргументу $x$, а $\beta, \omega$ - заданные константы.</p>
+<p>Посчитайте $\dfrac{\partial L(x,y,W,b)}{\partial b^T}$ и $\dfrac{\partial L(x,y,W,b)}{\partial W}$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Решение:</p>
+<ul>
+<li>$L(x,y,W,b) = \dfrac{1}{2}\sum\limits_{i = 1}^c \left( \sum\limits_{j=1}^n (w_{ij}x_j) + b_i - y_i \right)^2$</li>
+<li>$\dfrac{\partial L(x,y,W,b)}{\partial b_p} = \dfrac{1}{2}2 \sum\limits_{i = 1}^c \left( \sum\limits_{j=1}^n (w_{ij}x_j) + b_i - y_i \right) \cdot \dfrac{\partial b_i}{\partial b_p} = \sum\limits_{j=1}^n (w_{pj}x_j) + b_p - y_p$</li>
+<li>Значит, $\dfrac{\partial L(x,y,W,b)}{\partial b^T} = Wx + b - y$</li>
+<li><p>Не забываем про главный секрет векторного дифференцирования: наличие, как минимум, латинского алфавита для индексов:</p>
+<p>$\dfrac{\partial L(x,y,W,b)}{\partial w_{rs}} = \dfrac{1}{2}2 \sum\limits_{i = 1}^c \left( \sum\limits_{j=1}^n (w_{ij}x_j) + b_i - y_i \right) \cdot \dfrac{\partial \sum\limits_{j=1}^n (w_{ij}x_j)}{\partial w_{rs}}$</p>
+<p>$\dfrac{\partial L(x,y,W,b)}{\partial w_{rs}} = \left(\sum\limits_{j=1}^n (w_{rj}x_j) + b_r - y_r\right) \cdot x_s$</p>
+<p>$\dfrac{\partial L(x,y,W,b)}{\partial w_{rs}} = \sum\limits_{j=1}^n (w_{rj}x_jx_s) + b_r x_s - y_r x_s$</p>
 </li>
-<li><p>Найти $\pi_S (y) = \pi$, если $S = \{x \in \mathbb{R}^n \mid x = x_0 + X \alpha, X \in \mathbb{R}^{n \times m},  \alpha \in \mathbb{R}^{m}\}$, $y \notin S$</p>
-</li>
-<li><p>Построить гиперплоскость, разделяющую $S_1$ и $S_2$:
-$$S_1 = \left\{ x \in \mathbb{R}^n \mid x_1^2 + x_2^2 + \ldots + x_n^2 \le 1\right\}, \;\;\; S_2 = \left\{ x \in \mathbb{R}^n \mid x_1^2 + x_2^2 + \ldots + x_{n-1}^2 + 1 \le x_n \right\}$$</p>
-</li>
-<li><p>Построить опорную гиперплоскость для множества $S = \left\{ x \in \mathbb{R}^3 \mid \frac{x_1^2}{4}+\frac{x_2^2}{8}+\frac{x_3^2}{25} \le 1 \right\}$ в граничной точке $x_0 = \left(-1, \frac{12}{5}, \frac{\sqrt{3}}{2}\right)$</p>
-</li>
-<li><p>Пусть $S \subset \mathbb{R}^n$ - замкнутое выпуклое множество, $\mathbf{x} \in S$. Найти множество $Y \subset \mathbb{R}^n$ такое, что $\forall \mathbf{y} \in Y$ выполнено $\mathbf{x} = \pi_S(\mathbf{y})$</p>
-</li>
-<li><p>Пусть даны $\mathbf{x} \in \mathbb{R}^n$ и выпуклый конус $K \subseteq \mathbb{R}^n$. Пусть $Y = \mathbf{x} + K$, $\mathbf{y} \in Y$. Найти множество $X \subset \mathbb{R}^n$, такое, что $\mathbf{x} \in X, \forall \mathbf{y} \in Y: x = \pi_X(\mathbf{y})$</p>
-</li>
+<li>Значит, $\dfrac{\partial L(x,y,W,b)}{\partial W} = Wxx^T + (b-y)x^T$</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#1044;&#1086;&#1084;&#1072;&#1096;&#1085;&#1077;&#1077;-&#1079;&#1072;&#1076;&#1072;&#1085;&#1080;&#1077;-5">&#1044;&#1086;&#1084;&#1072;&#1096;&#1085;&#1077;&#1077; &#1079;&#1072;&#1076;&#1072;&#1085;&#1080;&#1077; 5<a class="anchor-link" href="#&#1044;&#1086;&#1084;&#1072;&#1096;&#1085;&#1077;&#1077;-&#1079;&#1072;&#1076;&#1072;&#1085;&#1080;&#1077;-5">&#182;</a></h2><ol>
+<li>Найти $\nabla f(x)$, если $f(x) = \|Ax\| - \|x^TA\|$</li>
+<li>Найти $\nabla f(x), f''(x)$, если $f(x) = \dfrac{-1}{1 + x^Tx}$</li>
+<li>Найти $f'(X)$, если $f(X) = \det X$<br>
+Примечание: здесь под $f'(X)$ подразумевается оценка фунции $f(X)$ первого порядка в смысле разложения в ряд Тейлора:
+ $$f(X + \Delta X) \approx f(X) + \mathbf{tr}(f'(X)^T \Delta X)$$</li>
+<li>Найти $f''(X)$, если $f(X) = \log \det X$<br>
+Примечание: здесь под $f''(X)$ подразумевается оценка фунции $f(X)$ второго порядка в смысле разложения в ряд Тейлора:
+ $$f(X + \Delta X) \approx f(X) + \mathbf{tr}(f'(X)^T \Delta X) + \frac{1}{2}\mathbf{tr}(\Delta X^T f''(X) \Delta X)$$</li>
+<li>Найти градиент и гессиан функции $f : \mathbb{R}^n \to \mathbb{R}$, $f(x) = \log \sum\limits_{i=1}^m \exp (a_i^Tx + b_i), \;\;\;\; a_1, \ldots, a_m \in \mathbb{R}^n; \;\;\;  b_1, \ldots, b_m  \in \mathbb{R}$</li>
 </ol>
-<p>В качестве решения необходимо предоставить либо:</p>
-<ul>
-<li><code>.pdf</code> файл, сверстанный с помощью $ \LaTeX $ с решениями задач</li>
-<li><code>.ipynb</code> с оформленным решением </li>
-</ul>
 
 </div>
 </div>
@@ -12223,7 +12148,9 @@ $$S_1 = \left\{ x \in \mathbb{R}^n \mid x_1^2 + x_2^2 + \ldots + x_n^2 \le 1\rig
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>C:\ProgramData\Anaconda3\lib\site-packages\IPython\html.py:14: ShimWarning: The `IPython.html` package has been deprecated since IPython 4.0. You should import from `notebook` instead. `IPython.html.widgets` has moved to `ipywidgets`.
@@ -12235,7 +12162,9 @@ C:\ProgramData\Anaconda3\lib\site-packages\ipykernel_launcher.py:4: UserWarning:
 </div>
 
 <div class="output_area">
+
 <div class="prompt output_prompt">Out[1]:</div>
+
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
