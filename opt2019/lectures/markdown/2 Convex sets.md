@@ -176,7 +176,7 @@ $$\mathbf{cone}(S) = \left\{ \sum\limits_{i=1}^k\theta_i x_i \mid x_i \in S, \th
     Определите, выпукло ли множество таких $p$, которые удовлетворяют условию:
     
     * $\mathbb{P}(x > \alpha) \le \beta$
-    * $\mathbb{E} |x^{2017}| \le \alpha \mathbb{E}|x|$
+    * $\mathbb{E} |x^{201}| \le \alpha \mathbb{E}|x|$
     * $\mathbb{E} |x^{2}| \ge \alpha $
     * $\mathbb{V}x \ge \alpha$
 
