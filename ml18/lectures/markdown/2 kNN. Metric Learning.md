@@ -1,5 +1,5 @@
 
-# Lecture 2. <br> Metric methods for classification and regression. Metric learning
+# Lecture 2. Metric methods for classification and regression. Metric learning
 
 ## Previous lecture
 

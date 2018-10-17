@@ -1,5 +1,5 @@
 
-# Lecture 3. Matrix Calculus
+# Lecture 4. Matrix Calculus
 
 ## Базовые понятия
 ### Градиент
@@ -173,18 +173,6 @@ $$W_{k+1} = W_k - \omega \dfrac{\partial L(x,y,W_k,b_k)}{\partial W}$$
    
    $\dfrac{\partial L(x,y,W,b)}{\partial w_{rs}} = \sum\limits_{j=1}^n (w_{rj}x_jx_s) + b_r x_s - y_r x_s$
 * Значит, $\dfrac{\partial L(x,y,W,b)}{\partial W} = Wxx^T + (b-y)x^T$
-
-## Домашнее задание 5
-
-1. Найти $\nabla f(x)$, если $f(x) = \|Ax\| - \|x^TA\|$
-1. Найти $\nabla f(x), f''(x)$, если $f(x) = \dfrac{-1}{1 + x^Tx}$
-1. Найти $f'(X)$, если $f(X) = \det X$  
-Примечание: здесь под $f'(X)$ подразумевается оценка фунции $f(X)$ первого порядка в смысле разложения в ряд Тейлора:
-    $$f(X + \Delta X) \approx f(X) + \mathbf{tr}(f'(X)^T \Delta X)$$
-1. Найти $f''(X)$, если $f(X) = \log \det X$  
-Примечание: здесь под $f''(X)$ подразумевается оценка фунции $f(X)$ второго порядка в смысле разложения в ряд Тейлора:
-    $$f(X + \Delta X) \approx f(X) + \mathbf{tr}(f'(X)^T \Delta X) + \frac{1}{2}\mathbf{tr}(\Delta X^T f''(X) \Delta X)$$
-1. Найти градиент и гессиан функции $f : \mathbb{R}^n \to \mathbb{R}$, $f(x) = \log \sum\limits_{i=1}^m \exp (a_i^Tx + b_i), \;\;\;\; a_1, \ldots, a_m \in \mathbb{R}^n; \;\;\;  b_1, \ldots, b_m  \in \mathbb{R}$
 
 
 ```python

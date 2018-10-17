@@ -1,5 +1,5 @@
 
-# Lecture 1. <br> Introduction to machine learning: definitions, problem statements and prominent achievements
+# Lecture 1. Introduction to machine learning: definitions, problem statements and prominent achievements
 
 ## Approximate syllabus
 
