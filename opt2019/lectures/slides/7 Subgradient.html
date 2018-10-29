@@ -12028,7 +12028,7 @@ $$
 
 </div>
 </div>
-</div>
+</div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12056,7 +12056,21 @@ $$
 
 </div>
 </div>
-</div></section><section>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Решение:</p>
+<p>Решить задачу можно либо геометрически (в каждой точке числовой прямой указать угловые коэффициенты прямых, глобально подпирающих функцию снизу), либо по теореме Моро - Рокафеллара, рассмотрев $f(x)$ как композицию выпуклых функций: 
+$$
+f(x) = \max\{-x, x\}
+$$</p>
+<p><img src="../files/subgradmod.png" alt=""></p>
+
+</div>
+</div>
+</div></div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12065,7 +12079,24 @@ $$
 
 </div>
 </div>
-</div></section><section>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Решение:</p>
+<p>Совершенно аналогично применяем теорему Моро - Рокафеллара, учитывая следующее:</p>
+<p>$$
+\partial f_1(x) = \begin{cases} -1,  &amp;x &lt; 1\\ [-1;1], \;\;\;\;\; &amp;x = 1 \\ 1,  &amp;x &gt; 1 \end{cases} \qquad \partial f_2(x) = \begin{cases} -1,  &amp;x &lt; -1\\ [-1;1], &amp;x = -1 \\ 1,  &amp;x &gt; -1  \end{cases}
+$$</p>
+<p>Таким образом:</p>
+<p>$$
+\partial f(x) = \begin{cases} -2, &amp;x &lt; -1\\ [-2;0], &amp;x = -1 \\ 0,  &amp;-1 &lt; x &lt; 1 \\ [0;2], &amp;x = 1 \\ 2, &amp;x &gt; 1 \\ \end{cases}
+$$</p>
+
+</div>
+</div>
+</div></div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12112,7 +12143,28 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-5">&#1055;&#1088;&#1080;&#1084;&#1077;&#1088; 5<a class="anchor-link" href="#&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-5">&#182;</a></h3><p>Найти $\partial f(x)$, если $f(x) = |c_1^Tx| + |c_2^Tx| $</p>
+<h3 id="&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-5">&#1055;&#1088;&#1080;&#1084;&#1077;&#1088; 5<a class="anchor-link" href="#&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-5">&#182;</a></h3><p>Найти $\partial f(x)$, если $f(x) = |c_1^\top x| + |c_2^\top x| $</p>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Решение:</p>
+<p>Пусть $f_1(x) = |c_1^\top x|$, а $f_2(x) = |c_2^\top x|$. Так как эти функции выпуклы, субдифференциал их суммы равен сумме субдифференциалов. Найдем каждый из них:</p>
+<p>$\partial f_1(x) = \partial \left( \max \{c_1^\top x, -c_1^\top x\} \right) = \begin{cases} -c_1,  &amp;c_1^\top x &lt; 0\\ \mathbf{conv}(-c_1;c_1), &amp;c_1^\top x = 0 \\ c_1,  &amp;c_1^\top x &gt; 0 \end{cases} \qquad \partial f_2(x) = \partial \left( \max \{c_2^\top x, -c_2^\top x\} \right) = \begin{cases} -c_2,  &amp;c_2^\top x &lt; 0\\ \mathbf{conv}(-c_2;c_2), &amp;c_2^\top x = 0 \\ c_2,  &amp;c_2^\top x &gt; 0 \end{cases}$</p>
+<p>Далее интересными представляются лишь различные взаимные расположения векторов $c_1$ и $c_2$, рассмотрение которых предлагается читателю.</p>
+
+</div>
+</div>
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-6">&#1055;&#1088;&#1080;&#1084;&#1077;&#1088; 6<a class="anchor-link" href="#&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-6">&#182;</a></h3><p>Найти $\partial f(x)$, если $f(x) = \| x\|_1 $</p>
 
 </div>
 </div>
@@ -12121,7 +12173,24 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-6">&#1055;&#1088;&#1080;&#1084;&#1077;&#1088; 6<a class="anchor-link" href="#&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-6">&#182;</a></h3><p>Найти $\partial f(x)$, если $f(x) = \| x\|_1 $</p>
+<p>Решение:</p>
+<p>По определению</p>
+<p>$$
+\|x\|_1 = |x_1| + |x_2| + \ldots + |x_n| = s_1 x_1 + s_2 x_2 + \ldots + s_n x_n
+$$</p>
+<p>Рассмотрим эту сумму как поточечный максимум линейных функций по $x$: $g(x) = s^\top x$, где $s_i = \{ -1, 1\}$. Каждая такая функция однозначно определяется набором коэффициентов $\{s_i\}_{i=1}^n$.</p>
+<p>Тогда по теореме Моро Рокафеллара, в каждой точке $\partial f = \mathbf{conv}\left(\bigcup\limits_{i \in I(x_0)} \partial g_i(x)\right)$</p>
+<p>Заметим, что $\partial g(x) = \partial \left( \max \{s^\top x, -s^\top x\} \right) = \begin{cases} -s,  &amp;s^\top x &lt; 0\\ \mathbf{conv}(-s;s), &amp;s^\top x = 0 \\ s,  &amp;s^\top x &gt; 0 \end{cases}$.</p>
+<p>Причем, правило выбора "активной" функции поточечного максимума в каждой точке следующее:</p>
+<ul>
+<li>Если координата точки отрицательна, $s_i = -1$</li>
+<li>Если координата точки положительна, $s_i = 1$</li>
+<li>Если координата точки равна нулю, то подходят оба варианта коэффициентов и соответствующих им функций, а значит, необходимо включать субградиенты этих функций в объединение в теореме Моро Рокафеллара.</li>
+</ul>
+<p>В итоге получаем ответ:</p>
+<p>$$
+\partial f(x) = \left\{ g \; : \; \|g\|_\infty \leq 1, \quad g^\top x = \|x\|_1 \right\}
+$$</p>
 
 </div>
 </div>

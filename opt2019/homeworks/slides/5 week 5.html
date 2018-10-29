@@ -1,8 +1,64 @@
+
 <!DOCTYPE html>
 <html>
-<head><meta charset="utf-8" />
-<title>7 Subgradient</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+<title>5 week 5 slides</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<!-- General and theme style sheets -->
+<link rel="stylesheet" href="reveal.js/css/reveal.css">
+<link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+}
+
+</script>
+
+<!--[if lt IE 9]>
+<script src="reveal.js/lib/js/html5shiv.js"></script>
+<![endif]-->
+
+<!-- Loading the mathjax macro -->
+<!-- Load mathjax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+    <!-- MathJax configuration -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        // Center justify equations in code and markdown cells. Elsewhere
+        // we use CSS to left justify single line equations in code cells.
+        displayAlign: 'center',
+        "HTML-CSS": {
+            styles: {'.MathJax_Display': {"margin": 0}},
+            linebreaks: { automatic: true }
+        }
+    });
+    </script>
+    <!-- End of mathjax configuration -->
+
+<!-- Get Font-awesome from cdn -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.css">
 
 <style type="text/css">
     /*!
@@ -11718,358 +11774,231 @@ ul.typeahead-list > li > a {
 
 <style type="text/css">
 /* Overrides of notebook CSS for static HTML export */
-body {
-  overflow: visible;
-  padding: 8px;
+.reveal {
+  font-size: 160%;
 }
-
-div#notebook {
-  overflow: visible;
-  border-top: none;
-}@media print {
-  div.cell {
-    display: block;
-    page-break-inside: avoid;
-  } 
-  div.output_wrapper { 
-    display: block;
-    page-break-inside: avoid; 
-  }
-  div.output { 
-    display: block;
-    page-break-inside: avoid; 
-  }
+.reveal pre {
+  width: inherit;
+  padding: 0.4em;
+  margin: 0px;
+  font-family: monospace, sans-serif;
+  font-size: 80%;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+}
+.reveal pre code {
+  padding: 0px;
+}
+.reveal section img {
+  border: 0px solid black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+}
+.reveal i {
+  font-style: normal;
+  font-family: FontAwesome;
+  font-size: 2em;
+}
+.reveal .slides {
+  text-align: left;
+}
+.reveal.fade {
+  opacity: 1;
+}
+.reveal .progress {
+  position: static;
+}
+.reveal .controls .navigate-left,
+.reveal .controls .navigate-left.enabled {
+  border-right-color: #727272;
+}
+.reveal .controls .navigate-left.enabled:hover,
+.reveal .controls .navigate-left.enabled.enabled:hover {
+  border-right-color: #dfdfdf;
+}
+.reveal .controls .navigate-right,
+.reveal .controls .navigate-right.enabled {
+  border-left-color: #727272;
+}
+.reveal .controls .navigate-right.enabled:hover,
+.reveal .controls .navigate-right.enabled.enabled:hover {
+  border-left-color: #dfdfdf;
+}
+.reveal .controls .navigate-up,
+.reveal .controls .navigate-up.enabled {
+  border-bottom-color: #727272;
+}
+.reveal .controls .navigate-up.enabled:hover,
+.reveal .controls .navigate-up.enabled.enabled:hover {
+  border-bottom-color: #dfdfdf;
+}
+.reveal .controls .navigate-down,
+.reveal .controls .navigate-down.enabled {
+  border-top-color: #727272;
+}
+.reveal .controls .navigate-down.enabled:hover,
+.reveal .controls .navigate-down.enabled.enabled:hover {
+  border-top-color: #dfdfdf;
+}
+.reveal .progress span {
+  background: #727272;
+}
+div.input_area {
+  padding: 0.06em;
+}
+div.code_cell {
+  background-color: transparent;
+}
+div.prompt {
+  width: 11ex;
+  padding: 0.4em;
+  margin: 0px;
+  font-family: monospace, sans-serif;
+  font-size: 80%;
+  text-align: right;
+}
+div.output_area pre {
+  font-family: monospace, sans-serif;
+  font-size: 80%;
+}
+div.output_prompt {
+  /* 5px right shift to account for margin in parent container */
+  margin: 5px 5px 0 0;
+}
+div.text_cell.rendered .rendered_html {
+  /* The H1 height seems miscalculated, we are just hidding the scrollbar */
+  overflow-y: hidden;
+}
+a.anchor-link {
+  /* There is still an anchor, we are only hidding it */
+  display: none;
+}
+.rendered_html p {
+  text-align: inherit;
+}
+::-webkit-scrollbar
+{
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar *
+{
+  background:transparent;
+}
+::-webkit-scrollbar-thumb
+{
+  background: #727272 !important;
 }
 </style>
 
 <!-- Custom stylesheet, it must be in the same directory as the html file -->
 <link rel="stylesheet" href="custom.css">
 
-<!-- Loading mathjax macro -->
-<!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
-    <!-- MathJax configuration -->
-    <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-            processEscapes: true,
-            processEnvironments: true
-        },
-        // Center justify equations in code and markdown cells. Elsewhere
-        // we use CSS to left justify single line equations in code cells.
-        displayAlign: 'center',
-        "HTML-CSS": {
-            styles: {'.MathJax_Display': {"margin": 0}},
-            linebreaks: { automatic: true }
-        }
-    });
-    </script>
-    <!-- End of mathjax configuration --></head>
+</head>
+
+
 <body>
-  <div tabindex="-1" id="notebook" class="border-box-sizing">
-    <div class="container" id="notebook-container">
 
+
+<div class="reveal">
+<div class="slides">
+<section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="&#1052;&#1077;&#1090;&#1086;&#1076;&#1099;-&#1054;&#1087;&#1090;&#1080;&#1084;&#1080;&#1079;&#1072;&#1094;&#1080;&#1080;.-&#1044;&#1072;&#1085;&#1080;&#1080;&#1083;-&#1052;&#1077;&#1088;&#1082;&#1091;&#1083;&#1086;&#1074;.-&#1057;&#1091;&#1073;&#1075;&#1088;&#1072;&#1076;&#1080;&#1077;&#1085;&#1090;.-&#1057;&#1091;&#1073;&#1076;&#1080;&#1092;&#1092;&#1077;&#1088;&#1077;&#1085;&#1094;&#1080;&#1072;&#1083;.">&#1052;&#1077;&#1090;&#1086;&#1076;&#1099; &#1054;&#1087;&#1090;&#1080;&#1084;&#1080;&#1079;&#1072;&#1094;&#1080;&#1080;. &#1044;&#1072;&#1085;&#1080;&#1080;&#1083; &#1052;&#1077;&#1088;&#1082;&#1091;&#1083;&#1086;&#1074;. &#1057;&#1091;&#1073;&#1075;&#1088;&#1072;&#1076;&#1080;&#1077;&#1085;&#1090;. &#1057;&#1091;&#1073;&#1076;&#1080;&#1092;&#1092;&#1077;&#1088;&#1077;&#1085;&#1094;&#1080;&#1072;&#1083;.<a class="anchor-link" href="#&#1052;&#1077;&#1090;&#1086;&#1076;&#1099;-&#1054;&#1087;&#1090;&#1080;&#1084;&#1080;&#1079;&#1072;&#1094;&#1080;&#1080;.-&#1044;&#1072;&#1085;&#1080;&#1080;&#1083;-&#1052;&#1077;&#1088;&#1082;&#1091;&#1083;&#1086;&#1074;.-&#1057;&#1091;&#1073;&#1075;&#1088;&#1072;&#1076;&#1080;&#1077;&#1085;&#1090;.-&#1057;&#1091;&#1073;&#1076;&#1080;&#1092;&#1092;&#1077;&#1088;&#1077;&#1085;&#1094;&#1080;&#1072;&#1083;.">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Directional-derivative">Directional derivative<a class="anchor-link" href="#Directional-derivative">&#182;</a></h2><h3 id="&#1055;&#1088;&#1086;&#1080;&#1079;&#1074;&#1086;&#1076;&#1085;&#1072;&#1103;-&#1087;&#1086;-&#1085;&#1072;&#1087;&#1088;&#1072;&#1074;&#1083;&#1077;&#1085;&#1080;&#1102;">&#1055;&#1088;&#1086;&#1080;&#1079;&#1074;&#1086;&#1076;&#1085;&#1072;&#1103; &#1087;&#1086; &#1085;&#1072;&#1087;&#1088;&#1072;&#1074;&#1083;&#1077;&#1085;&#1080;&#1102;<a class="anchor-link" href="#&#1055;&#1088;&#1086;&#1080;&#1079;&#1074;&#1086;&#1076;&#1085;&#1072;&#1103;-&#1087;&#1086;-&#1085;&#1072;&#1087;&#1088;&#1072;&#1074;&#1083;&#1077;&#1085;&#1080;&#1102;">&#182;</a></h3><p>Пусть $f(x)$ - выпуклая функция на выпуклом множестве $S \subseteq \mathbb{R}^n$ и пусть $x_0 \in \mathbf{ri} S$. Тогда в $x_0$ существует производная по любому направлению $s \in \mathbf{Lin} S$:
+<h1 id="&#1044;&#1086;&#1084;&#1072;&#1096;&#1085;&#1077;&#1077;-&#1079;&#1072;&#1076;&#1072;&#1085;&#1080;&#1077;-5">&#1044;&#1086;&#1084;&#1072;&#1096;&#1085;&#1077;&#1077; &#1079;&#1072;&#1076;&#1072;&#1085;&#1080;&#1077; 5<a class="anchor-link" href="#&#1044;&#1086;&#1084;&#1072;&#1096;&#1085;&#1077;&#1077;-&#1079;&#1072;&#1076;&#1072;&#1085;&#1080;&#1077;-5">&#182;</a></h1><ol>
+<li><p>Найти $\nabla f(x)$, если $f(x) = \|Ax\| - \|x^TA\|$</p>
+</li>
+<li><p>Найти $\nabla f(x), f''(x)$, если $f(x) = \dfrac{-1}{1 + x^Tx}$</p>
+</li>
+<li><p>Найти $f'(X)$, если $f(X) = \det X$<br>
+Примечание: здесь под $f'(X)$ подразумевается оценка фунции $f(X)$ первого порядка в смысле разложения в ряд Тейлора:
 $$
-f'(x_0; s) = \lim_{\alpha \to 0+} \dfrac{f(x_0 + \alpha s) - f(x_0)}{\alpha}
+ f(X + \Delta X) \approx f(X) + \mathbf{tr}(f'(X)^T \Delta X)
 $$</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#1042;&#1072;&#1078;&#1085;&#1099;&#1077;-&#1092;&#1072;&#1082;&#1090;&#1099;-&#1086;-&#1087;&#1088;&#1086;&#1080;&#1079;&#1074;&#1086;&#1076;&#1085;&#1086;&#1081;-&#1087;&#1086;-&#1085;&#1072;&#1087;&#1088;&#1072;&#1074;&#1083;&#1077;&#1085;&#1080;&#1102;">&#1042;&#1072;&#1078;&#1085;&#1099;&#1077; &#1092;&#1072;&#1082;&#1090;&#1099; &#1086; &#1087;&#1088;&#1086;&#1080;&#1079;&#1074;&#1086;&#1076;&#1085;&#1086;&#1081; &#1087;&#1086; &#1085;&#1072;&#1087;&#1088;&#1072;&#1074;&#1083;&#1077;&#1085;&#1080;&#1102;<a class="anchor-link" href="#&#1042;&#1072;&#1078;&#1085;&#1099;&#1077;-&#1092;&#1072;&#1082;&#1090;&#1099;-&#1086;-&#1087;&#1088;&#1086;&#1080;&#1079;&#1074;&#1086;&#1076;&#1085;&#1086;&#1081;-&#1087;&#1086;-&#1085;&#1072;&#1087;&#1088;&#1072;&#1074;&#1083;&#1077;&#1085;&#1080;&#1102;">&#182;</a></h3><ul>
-<li>Если функция $f(x)$ дифференцируема в точке $x_0$, то ее производная по любому направлению $s \in \mathbb{R}^n$ существует и равна:
+</li>
+<li><p>Найти $f''(X)$, если $f(X) = \log \det X$<br>
+Примечание: здесь под $f''(X)$ подразумевается оценка фунции $f(X)$ второго порядка в смысле разложения в ряд Тейлора:
 $$
-f'(x_0; s) = \langle \nabla f(x_0), s\rangle
-$$</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Subgradient">Subgradient<a class="anchor-link" href="#Subgradient">&#182;</a></h2><h3 id="&#1052;&#1086;&#1090;&#1080;&#1074;&#1072;&#1094;&#1080;&#1103;">&#1052;&#1086;&#1090;&#1080;&#1074;&#1072;&#1094;&#1080;&#1103;<a class="anchor-link" href="#&#1052;&#1086;&#1090;&#1080;&#1074;&#1072;&#1094;&#1080;&#1103;">&#182;</a></h3><p>Важным свойством непрерывной выпуклой функции $f(x)$ является то, что в выбранной точке $x_0$ для всех $x \in \text{dom } f$ выполнено неравенство:</p>
-<p>$$
-f(x)  \geq f(x_0) +  \langle g, x - x_0 \rangle
+f(X + \Delta X) \approx f(X) + \mathbf{tr}(f'(X)^T \Delta X) + \frac{1}{2}\mathbf{tr}(\Delta X^T f''(X) \Delta X)
 $$</p>
-<p>для некоторого вектора $g$, то есть касательная к графику функции является <em>глобальной</em> оценкой снизу для функции.</p>
-<p><img src="../files/conv_sm.png" alt=""></p>
-<ul>
-<li>Если $f(x)$ - дифференцируема, то $g = \nabla f(x_0)$</li>
-<li>Не все непрерывные выпуклые функции дифференцируемы :)</li>
-</ul>
-<p>Не хочется лишаться такого вкусного свойства.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#1057;&#1091;&#1073;&#1075;&#1088;&#1072;&#1076;&#1080;&#1077;&#1085;&#1090;">&#1057;&#1091;&#1073;&#1075;&#1088;&#1072;&#1076;&#1080;&#1077;&#1085;&#1090;<a class="anchor-link" href="#&#1057;&#1091;&#1073;&#1075;&#1088;&#1072;&#1076;&#1080;&#1077;&#1085;&#1090;">&#182;</a></h3><p>Вектор $g$ называется <strong>субградиентом</strong> функции $f(x): S \to \mathbb{R}$ в точке $x_0$,  если $\forall x \in S$:
+</li>
+<li><p>Найти градиент и гессиан функции $f : \mathbb{R}^n \to \mathbb{R}$
 $$
-f(x)  \geq f(x_0) +  \langle g, x - x_0 \rangle
+f(x) = \log \sum\limits_{i=1}^m \exp (a_i^Tx + b_i), \;\;\;\; a_1, \ldots, a_m \in \mathbb{R}^n; \;\;\;  b_1, \ldots, b_m  \in \mathbb{R}
 $$</p>
+</li>
+</ol>
 
 </div>
 </div>
+</div></section></section>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#1057;&#1091;&#1073;&#1076;&#1080;&#1092;&#1092;&#1077;&#1088;&#1077;&#1085;&#1094;&#1080;&#1072;&#1083;">&#1057;&#1091;&#1073;&#1076;&#1080;&#1092;&#1092;&#1077;&#1088;&#1077;&#1085;&#1094;&#1080;&#1072;&#1083;<a class="anchor-link" href="#&#1057;&#1091;&#1073;&#1076;&#1080;&#1092;&#1092;&#1077;&#1088;&#1077;&#1085;&#1094;&#1080;&#1072;&#1083;">&#182;</a></h3><p>Множество всех субградиентов функции $f(x)$ в точке $x_0$ называется <strong>субдифференциалом</strong> $f$ в $x_0$ и обозначается $\partial f(x_0)$.</p>
-<ul>
-<li>Если $x_0 \in \mathbf{ri } S$, то $\partial f(x_0)$  выпуклое компактное множество.</li>
-<li>Выпуклая функция $f(x)$ дифференцируема в точке $x_0\iff \partial f(x_0) = \nabla f(x_0)$ </li>
-<li>Если $\partial f(x_0) \neq \emptyset \;\;\; \forall x_0 \in S$, то $f(x)$ - выпукла на $S$. </li>
-</ul>
-<p><img src="../files/conv_nsm.gif" alt=""></p>
 
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#1058;&#1077;&#1086;&#1088;&#1077;&#1084;&#1072;-&#1052;&#1086;&#1088;&#1086;---&#1056;&#1086;&#1082;&#1072;&#1092;&#1077;&#1083;&#1083;&#1072;&#1088;&#1072;-(&#1089;&#1091;&#1073;&#1076;&#1080;&#1092;&#1092;&#1077;&#1088;&#1077;&#1085;&#1094;&#1080;&#1072;&#1083;-&#1083;&#1080;&#1085;&#1077;&#1081;&#1085;&#1086;&#1081;-&#1082;&#1086;&#1084;&#1073;&#1080;&#1085;&#1072;&#1094;&#1080;&#1080;)">&#1058;&#1077;&#1086;&#1088;&#1077;&#1084;&#1072; &#1052;&#1086;&#1088;&#1086; - &#1056;&#1086;&#1082;&#1072;&#1092;&#1077;&#1083;&#1083;&#1072;&#1088;&#1072; (&#1089;&#1091;&#1073;&#1076;&#1080;&#1092;&#1092;&#1077;&#1088;&#1077;&#1085;&#1094;&#1080;&#1072;&#1083; &#1083;&#1080;&#1085;&#1077;&#1081;&#1085;&#1086;&#1081; &#1082;&#1086;&#1084;&#1073;&#1080;&#1085;&#1072;&#1094;&#1080;&#1080;)<a class="anchor-link" href="#&#1058;&#1077;&#1086;&#1088;&#1077;&#1084;&#1072;-&#1052;&#1086;&#1088;&#1086;---&#1056;&#1086;&#1082;&#1072;&#1092;&#1077;&#1083;&#1083;&#1072;&#1088;&#1072;-(&#1089;&#1091;&#1073;&#1076;&#1080;&#1092;&#1092;&#1077;&#1088;&#1077;&#1085;&#1094;&#1080;&#1072;&#1083;-&#1083;&#1080;&#1085;&#1077;&#1081;&#1085;&#1086;&#1081;-&#1082;&#1086;&#1084;&#1073;&#1080;&#1085;&#1072;&#1094;&#1080;&#1080;)">&#182;</a></h3><p>Пусть $f_i(x)$ - выпуклые функции на выпуклых множествах $S_i, \; i = \overline{1,n}$.<br>
-Тогда, если $\bigcap\limits_{i=1}^n \mathbf{ri } S_i \neq \emptyset$ то функция $f(x) = \sum\limits_{i=1}^n a_i f_i(x), \; a_i &gt; 0$ имеет субдифференциал $\partial_S f(x)$ на множестве $S = \bigcap\limits_{i=1}^n S_i$ и 
-$$
-\partial_S f(x) = \sum\limits_{i=1}^n a_i \partial_{S_i} f_i(x)
-$$</p>
-<h3 id="&#1042;&#1072;&#1078;&#1085;&#1086;&#1077;-&#1089;&#1083;&#1077;&#1076;&#1089;&#1090;&#1074;&#1080;&#1077;-(&#1089;&#1091;&#1073;&#1076;&#1080;&#1092;&#1092;&#1077;&#1088;&#1077;&#1085;&#1094;&#1080;&#1072;&#1083;-&#1084;&#1072;&#1082;&#1089;&#1080;&#1084;&#1091;&#1084;&#1072;)">&#1042;&#1072;&#1078;&#1085;&#1086;&#1077; &#1089;&#1083;&#1077;&#1076;&#1089;&#1090;&#1074;&#1080;&#1077; (&#1089;&#1091;&#1073;&#1076;&#1080;&#1092;&#1092;&#1077;&#1088;&#1077;&#1085;&#1094;&#1080;&#1072;&#1083; &#1084;&#1072;&#1082;&#1089;&#1080;&#1084;&#1091;&#1084;&#1072;)<a class="anchor-link" href="#&#1042;&#1072;&#1078;&#1085;&#1086;&#1077;-&#1089;&#1083;&#1077;&#1076;&#1089;&#1090;&#1074;&#1080;&#1077;-(&#1089;&#1091;&#1073;&#1076;&#1080;&#1092;&#1092;&#1077;&#1088;&#1077;&#1085;&#1094;&#1080;&#1072;&#1083;-&#1084;&#1072;&#1082;&#1089;&#1080;&#1084;&#1091;&#1084;&#1072;)">&#182;</a></h3><p>Пусть $f_i(x)$ - выпуклые функции на открытом выпуклом множестве $S  \subseteq \mathbb{R}^n, \; x_0 \in S$, а поточечный максимум определяется как $f(x)  = \underset{i}{\operatorname{max}} f_i(x)$. Тогда:
-$$
-\partial_S f(x_0) = \mathbf{conv}\left\{  \bigcup\limits_{i \in I(x_0)} \partial_S f_i(x_0) \right\}
-$$
-где $I(x) = \{ i \in [1:m]: f_i(x) = f(x)\}$</p>
+<script>
 
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#1058;&#1077;&#1086;&#1088;&#1077;&#1084;&#1072;-(&#1089;&#1091;&#1073;&#1076;&#1080;&#1092;&#1092;&#1077;&#1088;&#1077;&#1085;&#1094;&#1080;&#1072;&#1083;-&#1089;&#1083;&#1086;&#1078;&#1085;&#1086;&#1081;-&#1092;&#1091;&#1085;&#1082;&#1094;&#1080;&#1080;)">&#1058;&#1077;&#1086;&#1088;&#1077;&#1084;&#1072; (&#1089;&#1091;&#1073;&#1076;&#1080;&#1092;&#1092;&#1077;&#1088;&#1077;&#1085;&#1094;&#1080;&#1072;&#1083; &#1089;&#1083;&#1086;&#1078;&#1085;&#1086;&#1081; &#1092;&#1091;&#1085;&#1082;&#1094;&#1080;&#1080;)<a class="anchor-link" href="#&#1058;&#1077;&#1086;&#1088;&#1077;&#1084;&#1072;-(&#1089;&#1091;&#1073;&#1076;&#1080;&#1092;&#1092;&#1077;&#1088;&#1077;&#1085;&#1094;&#1080;&#1072;&#1083;-&#1089;&#1083;&#1086;&#1078;&#1085;&#1086;&#1081;-&#1092;&#1091;&#1085;&#1082;&#1094;&#1080;&#1080;)">&#182;</a></h3><p>Пусть $g_1, \ldots, g_m$ - выпуклые функции на открытом выпуклом множестве $S \subseteq \mathbb{R}^n$, $g = (g_1, \ldots, g_m)$ - образованная из них вектор - функция, $\varphi$ - монотонно неубывающая выпуклая функция на открытом выпуклом множестве $U \subseteq \mathbb{R}^m$, причем $g(S) \in U$. Тогда субдифференциал функции $f(x) = \varphi \left( g(x)\right)$ имеет вид:
-$$
-\partial f(x) = \bigcup\limits_{p \in \partial \varphi(u)} \left( \sum\limits_{i=1}^{m}p_i \partial g_i(x) \right),
-$$
-где $u = g(x)$</p>
-<h3 id="&#1042;&#1072;&#1078;&#1085;&#1086;&#1077;-&#1089;&#1083;&#1077;&#1076;&#1089;&#1090;&#1074;&#1080;&#1077;">&#1042;&#1072;&#1078;&#1085;&#1086;&#1077; &#1089;&#1083;&#1077;&#1076;&#1089;&#1090;&#1074;&#1080;&#1077;<a class="anchor-link" href="#&#1042;&#1072;&#1078;&#1085;&#1086;&#1077;-&#1089;&#1083;&#1077;&#1076;&#1089;&#1090;&#1074;&#1080;&#1077;">&#182;</a></h3><p>В частности, если функция $\varphi$ дифференцируема в точке $u = g(x)$, то формула запишется так:
-$$
-\partial f(x) = \sum\limits_{i=1}^{m}\dfrac{\partial \varphi}{\partial u_i}(u) \partial g_i(x)
-$$</p>
+require(
+    {
+      // it makes sense to wait a little bit when you are loading
+      // reveal from a cdn in a slow connection environment
+      waitSeconds: 15
+    },
+    [
+      "reveal.js/lib/js/head.min.js",
+      "reveal.js/js/reveal.js"
+    ],
 
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Conditional-subgradient">Conditional subgradient<a class="anchor-link" href="#Conditional-subgradient">&#182;</a></h2><h3 id="&#1054;&#1087;&#1088;&#1077;&#1076;&#1077;&#1083;&#1077;&#1085;&#1080;&#1077;">&#1054;&#1087;&#1088;&#1077;&#1076;&#1077;&#1083;&#1077;&#1085;&#1080;&#1077;<a class="anchor-link" href="#&#1054;&#1087;&#1088;&#1077;&#1076;&#1077;&#1083;&#1077;&#1085;&#1080;&#1077;">&#182;</a></h3><p>Множество 
-$$
-\left\{ g |  f(x) - f(x_0) \geq \langle g, x - x_0 \rangle, \; \forall x \in S \right\}
-$$
-называется <strong>субдифференциалом $f$ в $x_0$ на множестве</strong> $S$ и обозначается $\partial_S f(x_0)$.</p>
+    function(head, Reveal){
 
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Computation-of-subgradient-(subdifferential,-subgradient)">Computation of subgradient (subdifferential, subgradient)<a class="anchor-link" href="#Computation-of-subgradient-(subdifferential,-subgradient)">&#182;</a></h2><ul>
-<li>$\partial (\alpha f)(x) = \alpha \partial f(x), \;\;\;\;\; \alpha \geq 0$</li>
-<li>$\partial (\sum f_i)(x) = \sum \partial f_i (x) \;\;\;\;\; f_i - \text{выпуклые функции}$</li>
-<li>$\partial (f(Ax + b))(x) = A^T\partial f(Ax + b) \;\;\;\;\; f - \text{выпуклая функция}$</li>
-</ul>
+        // Full list of configuration options available here: https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
 
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;&#1099;">&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;&#1099;<a class="anchor-link" href="#&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;&#1099;">&#182;</a></h2><p>Концептуально, различают три способа решения задач на поиск субградиента:</p>
-<ul>
-<li>Теоремы Моро - Рокафеллара, композиции, максимума</li>
-<li>Геометрически</li>
-<li>По определению</li>
-</ul>
-<h3 id="&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-1">&#1055;&#1088;&#1080;&#1084;&#1077;&#1088; 1<a class="anchor-link" href="#&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-1">&#182;</a></h3><p>Найти $\partial f(x)$, если $f(x) = |x|$</p>
+            transition: "slide",
 
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Решение:</p>
-<p>Решить задачу можно либо геометрически (в каждой точке числовой прямой указать угловые коэффициенты прямых, глобально подпирающих функцию снизу), либо по теореме Моро - Рокафеллара, рассмотрев $f(x)$ как композицию выпуклых функций: 
-$$
-f(x) = \max\{-x, x\}
-$$</p>
-<p><img src="../files/subgradmod.png" alt=""></p>
+            // Optional libraries used to extend on reveal.js
+            dependencies: [
+                { src: "reveal.js/lib/js/classList.js",
+                  condition: function() { return !document.body.classList; } },
+                { src: "reveal.js/plugin/notes/notes.js",
+                  async: true,
+                  condition: function() { return !!document.body.classList; } }
+            ]
+        });
 
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-2">&#1055;&#1088;&#1080;&#1084;&#1077;&#1088; 2<a class="anchor-link" href="#&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-2">&#182;</a></h3><p>Найти $\partial f(x)$, если $f(x) = |x - 1| + |x + 1| $</p>
+        var update = function(event){
+          if(MathJax.Hub.getAllJax(Reveal.getCurrentSlide())){
+            MathJax.Hub.Rerender(Reveal.getCurrentSlide());
+          }
+        };
 
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Решение:</p>
-<p>Совершенно аналогично применяем теорему Моро - Рокафеллара, учитывая следующее:</p>
-<p>$$
-\partial f_1(x) = \begin{cases} -1,  &amp;x &lt; 1\\ [-1;1], \;\;\;\;\; &amp;x = 1 \\ 1,  &amp;x &gt; 1 \end{cases} \qquad \partial f_2(x) = \begin{cases} -1,  &amp;x &lt; -1\\ [-1;1], &amp;x = -1 \\ 1,  &amp;x &gt; -1  \end{cases}
-$$</p>
-<p>Таким образом:</p>
-<p>$$
-\partial f(x) = \begin{cases} -2, &amp;x &lt; -1\\ [-2;0], &amp;x = -1 \\ 0,  &amp;-1 &lt; x &lt; 1 \\ [0;2], &amp;x = 1 \\ 2, &amp;x &gt; 1 \\ \end{cases}
-$$</p>
+        Reveal.addEventListener('slidechanged', update);
 
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-3">&#1055;&#1088;&#1080;&#1084;&#1077;&#1088; 3<a class="anchor-link" href="#&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-3">&#182;</a></h3><p>Найти $\partial f(x)$, если $f(x) = \left[ \max(0, f_0(x))\right]^q$. Здесь $f_0(x)$ - выпуклая функция на открытом выпуклом множестве $S$, $q \geq 1$.</p>
+        function setScrollingSlide() {
+            var scroll = true
+            if (scroll === true) {
+              var h = $('.reveal').height() * 0.95;
+              $('section.present').find('section')
+                .filter(function() {
+                  return $(this).height() > h;
+                })
+                .css('height', 'calc(95vh)')
+                .css('overflow-y', 'scroll')
+                .css('margin-top', '20px');
+            }
+        }
 
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Решение:<br>
-Согласно теореме о композиции (функция $\varphi (x) = x^q$ - дифференцируема), а $g(x) = \max(0, f_0(x))$ имеем:
-$$\partial f(x) = q(g(x))^{q-1} \partial g(x)$$</p>
-<p>По теореме о поточечном максимуме:</p>
-<p>$$
-\partial g(x) = \begin{cases} \partial f_0(x), \;\;\; f_0(x) &gt; 0,\\ \{0\}, \;\;\;\;\; f_0(x) &lt; 0 \\ \{a \mid a = \lambda a', \; 0 \le \lambda \le 1, \; a' \in \partial f_0(x), \;\; f_0(x) = 0 \} \end{cases}
-$$</p>
+        // check and set the scrolling slide every time the slide change
+        Reveal.addEventListener('slidechanged', setScrollingSlide);
 
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-4">&#1055;&#1088;&#1080;&#1084;&#1077;&#1088; 4<a class="anchor-link" href="#&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-4">&#182;</a></h3><p>Найти $\partial f(x)$, если $f(x) = \sin x, x \in [\pi/2; 2\pi]$</p>
+    }
 
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="../files/sin.png" alt=""></p>
+);
+</script>
 
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-5">&#1055;&#1088;&#1080;&#1084;&#1077;&#1088; 5<a class="anchor-link" href="#&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-5">&#182;</a></h3><p>Найти $\partial f(x)$, если $f(x) = |c_1^\top x| + |c_2^\top x| $</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Решение:</p>
-<p>Пусть $f_1(x) = |c_1^\top x|$, а $f_2(x) = |c_2^\top x|$. Так как эти функции выпуклы, субдифференциал их суммы равен сумме субдифференциалов. Найдем каждый из них:</p>
-<p>$\partial f_1(x) = \partial \left( \max \{c_1^\top x, -c_1^\top x\} \right) = \begin{cases} -c_1,  &amp;c_1^\top x &lt; 0\\ \mathbf{conv}(-c_1;c_1), &amp;c_1^\top x = 0 \\ c_1,  &amp;c_1^\top x &gt; 0 \end{cases} \qquad \partial f_2(x) = \partial \left( \max \{c_2^\top x, -c_2^\top x\} \right) = \begin{cases} -c_2,  &amp;c_2^\top x &lt; 0\\ \mathbf{conv}(-c_2;c_2), &amp;c_2^\top x = 0 \\ c_2,  &amp;c_2^\top x &gt; 0 \end{cases}$</p>
-<p>Далее интересными представляются лишь различные взаимные расположения векторов $c_1$ и $c_2$, рассмотрение которых предлагается читателю.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-6">&#1055;&#1088;&#1080;&#1084;&#1077;&#1088; 6<a class="anchor-link" href="#&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;-6">&#182;</a></h3><p>Найти $\partial f(x)$, если $f(x) = \| x\|_1 $</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Решение:</p>
-<p>По определению</p>
-<p>$$
-\|x\|_1 = |x_1| + |x_2| + \ldots + |x_n| = s_1 x_1 + s_2 x_2 + \ldots + s_n x_n
-$$</p>
-<p>Рассмотрим эту сумму как поточечный максимум линейных функций по $x$: $g(x) = s^\top x$, где $s_i = \{ -1, 1\}$. Каждая такая функция однозначно определяется набором коэффициентов $\{s_i\}_{i=1}^n$.</p>
-<p>Тогда по теореме Моро Рокафеллара, в каждой точке $\partial f = \mathbf{conv}\left(\bigcup\limits_{i \in I(x_0)} \partial g_i(x)\right)$</p>
-<p>Заметим, что $\partial g(x) = \partial \left( \max \{s^\top x, -s^\top x\} \right) = \begin{cases} -s,  &amp;s^\top x &lt; 0\\ \mathbf{conv}(-s;s), &amp;s^\top x = 0 \\ s,  &amp;s^\top x &gt; 0 \end{cases}$.</p>
-<p>Причем, правило выбора "активной" функции поточечного максимума в каждой точке следующее:</p>
-<ul>
-<li>Если координата точки отрицательна, $s_i = -1$</li>
-<li>Если координата точки положительна, $s_i = 1$</li>
-<li>Если координата точки равна нулю, то подходят оба варианта коэффициентов и соответствующих им функций, а значит, необходимо включать субградиенты этих функций в объединение в теореме Моро Рокафеллара.</li>
-</ul>
-<p>В итоге получаем ответ:</p>
-<p>$$
-\partial f(x) = \left\{ g \; : \; \|g\|_\infty \leq 1, \quad g^\top x = \|x\|_1 \right\}
-$$</p>
-
-</div>
-</div>
-</div>
-    </div>
-  </div>
 </body>
-
- 
 
 
 </html>
