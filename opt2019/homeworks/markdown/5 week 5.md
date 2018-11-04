@@ -11,7 +11,7 @@
     f(X + \Delta X) \approx f(X) + \mathbf{tr}(f'(X)^T \Delta X)
   $$
 
-4. Найти $f''(X)$, если $f(X) = \log \det X$  
+4. Найти $f''(X)$, если $f(X) = \log \det X, \;\;\; X \in \mathbb{S}^{n \times n}_{++}$  
   Примечание: здесь под $f''(X)$ подразумевается оценка фунции $f(X)$ второго порядка в смысле разложения в ряд Тейлора:
   $$
   f(X + \Delta X) \approx f(X) + \mathbf{tr}(f'(X)^T \Delta X) + \frac{1}{2}\mathbf{tr}(\Delta X^T f''(X) \Delta X)
