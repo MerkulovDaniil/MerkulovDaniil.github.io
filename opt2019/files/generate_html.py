@@ -18,7 +18,9 @@ def htmltable_from_dict(dict_):
     ### Names
     names = []
     for name in dict_['nb']:
-        name = name[2:-6]
+        name_temp   = name.split()
+        name_temp   = ' '.join(name_temp[1:])
+        name        = name_temp[:-6]
         names.append(name)
     
     ### Preambule
