@@ -7,7 +7,54 @@ categories:
 description:
 image: /images/posts/180610_opt2018/card.png
 image-sm: /images/posts/180610_opt2018/card-sm.png
+
 ---
+<style>
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+</style>
+
 
 Весенний семестр 2018 года для некоторых студентов третьего курса ФУПМ закончился сдачей проектов по курсу "Методы Оптимизации". Суть проектов заключается в том, чтобы прокачать свои знания и навыки в любой приятной студенту области - будь то программирование на Python или какой - либо конкретный численный метод решения задач оптимизации. Ребята заблаговременно выбрали тему и в течение месяца делали маленькие понятные шаги по реализации проекта. В этом посте приведен список наиболее интересных проектов этого года.
 
@@ -26,6 +73,39 @@ image-sm: /images/posts/180610_opt2018/card-sm.png
 Саша в работе сравнивал метод сопряженных градиентов с квазиньютоновскими методами. Во время проекта он приобрел особую любовь к первому:) Широко исследовался вопрос сходимости алгоритмов в зависимости от точки старта. Работа выполнена четко и на очень высоком уровне, код прилагается.</td>
  </tr>
 </table>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <img src="/w3images/mountains.jpg" alt="Mountains" style="width:100%">
+      <h3>My Work</h3>
+      <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="/w3images/lights.jpg" alt="Lights" style="width:100%">
+      <h3>My Work</h3>
+      <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="/w3images/nature.jpg" alt="Nature" style="width:100%">
+      <h3>My Work</h3>
+      <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="/w3images/mountains.jpg" alt="Mountains" style="width:100%">
+      <h3>My Work</h3>
+      <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+    </div>
+  </div>
+<!-- END GRID -->
+</div>
 
 ------
 
