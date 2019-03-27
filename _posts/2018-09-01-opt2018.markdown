@@ -23,7 +23,7 @@ image-sm: /images/posts/180610_opt2018/card-sm.png
 /* Create four equal columns that floats next to each other */
 .column {
   float: left;
-  width: 25%;
+  width: 33%;
 }
 
 /* Clear floats after rows */ 
@@ -80,6 +80,8 @@ image-sm: /images/posts/180610_opt2018/card-sm.png
     <div class="content">
       <img src="/images/posts/180610_opt2018/artemenkov.jpg" alt="Mountains" style="width:100%">
       <h3>Nonlinear Conjugate Gradients</h3>
+      <p> <a href="/files/posts/opt2018/artemenkov_poster.pdf">Постер</a> </p>
+      <p> <a href="https://colab.research.google.com/drive/1p9sJnHYXCN5QAU9h4EHUkiKRuGPIqQuP">Код</a> </p>
       <p>Саша в работе сравнивал метод сопряженных градиентов с квазиньютоновскими методами. Во время проекта он приобрел особую любовь к первому:) Широко исследовался вопрос сходимости алгоритмов в зависимости от точки старта. Работа выполнена четко и на очень высоком уровне, код прилагается.</p>
     </div>
   </div>
