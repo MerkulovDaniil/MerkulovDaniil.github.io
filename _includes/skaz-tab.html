@@ -1,0 +1,24 @@
+<div class="tab">
+	<div class="post">
+	<p>Сказ - это жанр нерегулярного письменного эпоса на этом сайте. Здесь я пишу то, что кажется недостаточно монументальным для поста, но достаточно важным, что бы не выкидывать это на свалку памяти. Тут о том, как я пытаюсь двигать науку и познавать мир.</p>
+	</div>
+	<ul class="cards">
+		{% for post in site.skaz %}
+		<li class="card">
+        <a class="card__link" href="{{post.url}}">
+		    <div class="card__img">
+		        <figure class="absolute-bg" style="background-image: url('/images/posts/170921_baikal/card-sm.jpg');"></figure>
+		    </div>
+          
+			<div class="card__container">
+				<h3 class="card__header">Сказ {{post.title}}</h3>
+				<p>{{post.date | date_to_string}}</p>
+				<span class="card__more">Жмяк</span>
+			</div>
+        </a>
+		</li>
+		{% endfor %}
+	</ul>
+
+  {% include archive-link.html %}
+</div>

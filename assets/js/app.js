@@ -49,57 +49,6 @@ var Tabs = (function() {
   }
 })();
 
-var Tabs2 = (function() {
-  var s;
-
-  return {
-    settings: {
-      tabs: document.getElementsByClassName('tabs__item2'),
-      tab: document.getElementsByClassName('tab2')
-    },
-
-    init: function() {
-      s = this.settings;
-      this.display();
-      this.click();
-    },
-
-    display: function() {
-      if (s.tab.length) {
-        [].forEach.call(s.tab, function(tab, idx) {
-          if (idx > 0) tab.style.display = 'none';
-        });
-        s.tab[0].classList.add('active');
-        s.tabs[0].classList.add('active');
-      }
-    },
-
-    click: function() {
-      if (s.tabs.length) {
-        var currentIdx = 0,
-            prevIdx = currentIdx;
-
-        [].forEach.call(s.tabs, function(tab, idx) {
-          tab.addEventListener('click', function() {
-            prevIdx = currentIdx;
-            currentIdx = idx;
-
-            if (prevIdx !== currentIdx) {
-              s.tab[prevIdx].style.display = 'none';
-              s.tab[prevIdx].classList.remove('active');
-              s.tabs[prevIdx].classList.remove('active');
-              s.tab[currentIdx].style.display = 'block';
-              s.tab[currentIdx].classList.add('active');
-              s.tabs[currentIdx].classList.add('active');
-            }
-          });
-        });
-      }
-    }
-
-  }
-})();
-
 var Preview = (function() {
   var s;
 
@@ -152,7 +101,6 @@ var rellax = new Rellax('.rellax');
 
 document.addEventListener('DOMContentLoaded', function() {
   Tabs.init();
-  Tabs2.init();
   Preview.init();
   wow.init();
 });

@@ -3,13 +3,11 @@ email: daniil.merkulov@skolkovotech.ru
 baseurl: ""
 paginate: 5
 paginate_path: "/blog/page-:num"
-google_analytics:
 
 # SEO settings
 title: merkulov.top
 description: cozy and warm place
 url: "http://www.merkulov.top"
-twitter_username:
 default_img: "http://www.merkulov.top/images/posts/180217_scientifictools/card-sm.png"
 
 # Profile settings
@@ -24,7 +22,7 @@ social:
 
 # Build settings
 include: ["_categories"]
-exclude: [Gemfile", "Gemfile.lock"]
+exclude: [Gemfile", "Gemfile.lock", node_modules]
 # Markdown settings
 markdown: kramdown
 # !github-pages! mandatory › https://help.github.com/articles/using-jekyll-with-pages/#configuration-settings-you-cannot-change
@@ -35,11 +33,6 @@ highlighter: rouge
 # Options › http://kramdown.gettalong.org/options.html
 kramdown:
   input:          GFM
-  # https://github.com/jekyll/jekyll/pull/4090
-#  syntax_highlighter: rouge
-
-  # Rouge Highlighter in Kramdown › http://kramdown.gettalong.org/syntax_highlighter/rouge.html
-  # span, block element options fall back to global
   syntax_highlighter_opts:
     #line_numbers: true # bad idea, spans don't need linenos and would inherit this option
     span:
@@ -54,4 +47,8 @@ sass:
   style: compressed
 
 # Gems
-gems: [jekyll-paginate, jekyll-sitemap, octopress-autoprefixer, jemoji]
+plugins: [jekyll-paginate, jekyll-sitemap, octopress-autoprefixer, jemoji]
+
+collections:
+  skaz:
+    output: true

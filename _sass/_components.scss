@@ -1,3 +1,33 @@
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  font-size: 25%; /*otsosi u traktorista*/
+  visibility: hidden;
+  width: 120px;
+  background-color: $color-alpha;
+  color: $color-white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 90%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
 /**
  * Tabs
  * On the Blog page for posts and categories
@@ -12,8 +42,8 @@
   list-style-type: none;
 
   @media (min-width: $mq-md) {
-    padding-left: 8em;
-    padding-right: 8em;
+    padding-left: auto;
+    padding-right: auto;
   }
 
   @media (min-width: $mq-xxl) {
@@ -27,13 +57,17 @@
 
   &__item {
     cursor: pointer;
+    font-size: 320%; /*otsosi u traktorista*/
 
-    &:not(.active) {
+    /*&:not(.active) {
       @include border-slide();
-    }
+    }*/
 
     &.active {
       border-bottom: 3px solid $color-alpha;
+          .tooltip .tooltiptext {
+      visibility: visible;
+      }
     }
   }
 }

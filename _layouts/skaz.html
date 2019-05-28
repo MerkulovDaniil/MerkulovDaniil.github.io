@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header>
+    <a class="nav nav--black" href="{{ site.baseurl }}/">
+      <i class="fa fa-lg fa-arrow-left"></i>
+      <span>🛀Домой</span>
+    </a>
+  </header>
+
+  <section class="section-padding bg-grey" itemprop="articleBody">
+    <div class="post">
+      <center><h1>Сказ {{page.title}}</h1></center>
+      <center><h1>{{page.emoji}}</h1></center>
+      {{ content }}
+    </div>
+  </section>
+</article>

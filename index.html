@@ -7,21 +7,22 @@ layout: default
       <figure class="absolute-bg preview__img" style="background-image: url('{{ post.image }}');"></figure>
     {% endfor %}
     <div class="previews__container">
-      <span>Welcome to</span>
-      <h1>{{ site.title }}</h1>
+      <!-- <span>Располагайтесь поудобнее</span> -->
+      <!-- <h1>{{ site.title }}</h1> -->
     </div>
   </div>
 
   <div>
     <header>
       <ul class="tabs">
-        <li class="tabs__item">Posts</li>
-        <li class="tabs__item">Categories</li>
-        <li class="tabs__item">Moments</li>
+        <li class="tabs__item"><div class="tooltip">🛀 <span class="tooltiptext">Home</span></div></li>
+        <li class="tabs__item"><div class="tooltip">🌌<span class="tooltiptext">Категории</span></div></li>
+        <li class="tabs__item"><div class="tooltip">💌<span class="tooltiptext">Сказ</span></div></li>
+        <li class="tabs__item"><div class="tooltip">💩<span class="tooltiptext">Проекты</span></div></li>
       </ul>
     </header>
 
-    <div class="tab">
+    <div id="home" class="tab">
       <ul itemscope itemtype="http://schema.org/Blog">
         {% for post in paginator.posts %}
           <li class="preview" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
@@ -29,7 +30,7 @@ layout: default
               <span class="preview__date" itemprop="datePublished" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</span>
               <h2 class="preview__header" itemprop="name">{{ post.title }}</h2>
               <p class="preview__excerpt" itemprop="description">{{ post.content | strip_html | truncatewords: 30 }}</p>
-              <span class="preview__more">Read More</span>
+              <span class="preview__more">Read Post</span>
             </a>
           </li>
         {% endfor %}
@@ -51,7 +52,8 @@ layout: default
     </div>
 
     {% include categories-tab.html %}
-    {% include moments-tab.html %}
+    {% include skaz-tab.html %}
+    {% include projects-tab.html %}
 
   </div>
 

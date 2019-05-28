@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap&subset=cyrillic');
 /**
  * Base Variables
  */
-$font-header: 'Space Mono', monospace;
-$font-body: 'Inconsolata', monospace;
-$font-post: 'Lora', serif;
+$font-header: 'Noto Sans', sans-serif;
+$font-body: 'Noto Sans', sans-serif;
+$font-post: 'Noto Sans', sans-serif;
 
 $color-alpha: #67568d; /*#9f8f68;*/
 $color-alpha--light: #e5e1ed;/*#f5f3ef;*/
