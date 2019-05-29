@@ -720,3 +720,16 @@
     padding-right: 1em;
   }
 }
+
+.subscribe__card {
+    background-image: url('/images/subscribe_bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 5px;
+    padding: 10px;
+    border:1px solid $color-alpha--light;
+    box-sizing: border-box;
+    max-width:25%;
+    min-width: 300px;
+    margin: auto;
+}

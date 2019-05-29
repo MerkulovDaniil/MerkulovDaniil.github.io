@@ -133,24 +133,15 @@ img {
 }
 
 blockquote {
-  margin: 2em 0;
-
-  font-family: $font-header;
-  font-weight: 700;
-  font-size: 1.1em;
-}
-
-cite {
   display: block;
-  margin-top: 0.125em;
-
-  font-family: $font-body;
-  font-weight: 400;
-  font-style: normal;
-
-  &:before {
-    content: "\2014 \0020";
-  }
+  font-size: 169%;
+  text-align: center;
+  border-width: 2px 0;
+  border-style: solid;
+  border-color: #eee;
+  padding: 0.5em 0 0.5em;
+  margin: 1.5em 0;
+  position: relative;
 }
 
 ol, ul {
