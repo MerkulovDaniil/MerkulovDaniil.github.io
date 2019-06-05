@@ -7,7 +7,7 @@
 		<li class="card">
         <a class="card__link" href="{{post.url}}">
 		    <div class="card__img">
-		        <figure class="absolute-bg" style="background-image: url('/images/posts/170921_baikal/card-sm.jpg');"></figure>
+		        <figure class="absolute-bg" style="background-image: url('{{post.image}}');"></figure>
 		    </div>
           
 			<div class="card__container">
@@ -19,22 +19,6 @@
 		</li>
 		{% endfor %}
 	</ul>
-
-	<div class="subscribe__card">
-    <center><h4>Подпишись!</h4>
-    <form class="newsletter-form" action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('https://feedburner.google.com/fb/a/mailverify?uri=MorningDev', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
-
-        <p class="newsletter-text">Можно получать новый Сказ прямо на почту, горяченьким!</p> 
-
-
-        <input type="hidden" value="MorningDev" name="uri" />
-
-        <input type="hidden" name="loc" value="ru_RU" />
-        
-        <input class="newsletter-email" type="text" name="email" placeholder="neutron@proton.io" /> </br>
-        <input class="newsletter-submit" type="submit" value="Жмяк" /> 
-      </form></center>
-  </div>
 
   {% include archive-link.html %}
 </div>

@@ -1,5 +1,5 @@
 # Site settings
-email: daniil.merkulov@skolkovotech.ru
+email: danya@merkulov.top
 baseurl: ""
 paginate: 5
 paginate_path: "/blog/page-:num"
@@ -7,8 +7,8 @@ paginate_path: "/blog/page-:num"
 # SEO settings
 title: merkulov.top
 description: cozy and warm place
-url: "http://www.merkulov.top"
-default_img: "http://www.merkulov.top/images/posts/180217_scientifictools/card-sm.png"
+url: "https://www.merkulov.top"
+default_img: "https://www.merkulov.top/images/posts/180217_scientifictools/card-sm.png"
 
 # Profile settings
 name: Bratishka
@@ -18,7 +18,7 @@ social:
   github: https://github.com/MerkulovDaniil/
   vk: https://vk.com/merkulov_daniil
   twitter: https://twitter.com/danya_merkulov
-  telegram: https://t.me/bratishk
+  telegram: https://t.me/bratishk_skaz
 
 # Build settings
 include: ["_categories"]
