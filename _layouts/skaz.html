@@ -15,7 +15,7 @@ layout: default
       <center><h1>Сказ {{page.title}}</h1></center>
       <center>{% include rus_date.html date=page.date %}</center>
       <center><h1>{{page.emoji}}</h1></center>
-      {{ content }}
+      {% include anchor_headings.html html=content %}
       <center><a href="https://teleg.one/bratishk_skaz"> <img src="/images/skaz/telega.png" style="width:50%"> </a></center>
     </div>
   </section>

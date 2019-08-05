@@ -6,7 +6,7 @@ categories:
   - Travel
 description:
 image: /images/posts/190714_crimea/card.jpeg
-image-sm: /images/posts/190714_crimea/card-sm.jpeg
+image-sm: /images/posts/190714_crimea/card-sm.jpg
 ---
 
 <STYLE>@media (max-width:320px) {.qp_iframe{min-height:211px}}@media (max-width:375px) {.qp_iframe{min-height:193px}}@media (max-width:414px) {.qp_iframe{min-height:193px}}</STYLE>
@@ -167,7 +167,6 @@ image-sm: /images/posts/190714_crimea/card-sm.jpeg
 На выходе встретили еще троих человек, они нас сфоткали:
 
 ![](/images/posts/190714_crimea/aes2.jpeg)
-
 
 Супер видос:
 <div class="video">
