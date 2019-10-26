@@ -1,0 +1,13 @@
+# example slider
+- selector: example_slider
+  captions: false
+  images:
+    - src: /images/numla.jpg
+      alt: image one
+    - src: /images/numla.jpg
+      alt: image two
+    - src: /images/numla.jpg
+      alt: image three
+  settings:
+    height: "'auto'"
+    effect: "'fade'"
