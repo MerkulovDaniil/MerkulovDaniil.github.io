@@ -782,6 +782,6 @@ div[class^="mySlide"] {display: none}
 
 /* On hover, add a grey background color */
 .prev_slide:hover, .next_slide:hover {
-  background-color: #f1f1f1;
+  background-color: $color-alpha--light-transparent;
   color: black;
 }
