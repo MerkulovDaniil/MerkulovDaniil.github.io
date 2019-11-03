@@ -21,7 +21,7 @@ Usage: {% include slideshow.html images='image_path1 image_path2 ... image_pathn
   {% assign captions_counter = 0 %}
   {% for image in image_array %}
   <div class="mySlides{{ slideshow_counter }}">
-    <img src="{{image}}" style="width:100%">
+    <img src="{{image}}" style="width:100%; max-height: 600px;object-fit: contain;">
     {%- assign ind = forloop.index | strip-%}
     {%- if caption_nums contains {{ind}} -%}
     <div class="slide_text">{{caption_texts[captions_counter]}}</div>
