@@ -753,7 +753,8 @@ div[class^="mySlide"] {display: none}
   bottom: 8px;
   width: 100%;
   text-align: center;
-  box-sizing: border-box
+  box-sizing: border-box;
+  z-index:1100
 }
 
 /* Next & previous buttons */
@@ -766,12 +767,13 @@ div[class^="mySlide"] {display: none}
   padding: 30% 0 0 0;
   color: white;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 26px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
   box-sizing: border-box;
   border-bottom: none !important;
+  z-index:1000
 }
 
 /* Position the "next button" to the right */
@@ -784,4 +786,26 @@ div[class^="mySlide"] {display: none}
 .prev_slide:hover, .next_slide:hover {
   background-color: $color-alpha--light-transparent;
   color: black;
+}
+
+/*Large screen caption hidings*/
+@media only screen and (min-width: $mq-sm) {
+  .slideshow-container:not(:hover) .slide_text {
+ display: none;
+}
+}
+
+/*Small screen captions outside*/
+@media only screen and (max-width: $mq-sm) {
+  .slideshow-container {
+    img{
+      padding-bottom: 10px;
+      margin: 0;
+    }
+  }
+  .slide_text  {
+  color: $color-black; 
+  background-color: transparent; 
+  position: relative;
+}
 }
