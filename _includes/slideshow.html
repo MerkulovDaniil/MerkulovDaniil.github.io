@@ -55,10 +55,10 @@ Usage: {% include slideshow.html images='image_path1 image_path2 vid_RhANeATlFT0
   {% assign showSlides_string = showSlides_string    | append: 'showSlides(1, ' | append: {{i_min}} | append: ');
   ' %}
 {% endfor %}
-{% assign slideIndex_string = slideIndex_string | append: ']' %}
+{% assign slideIndex_string = slideIndex_string  | append: ']' %}
 {% assign slideId_string    =  slideId_string    | append: ']' %}
-{% assign slideIndex_string = slideIndex_string | replace: ',]', ']' %}
-{% assign slideId_string    = slideId_string    | replace: ',]', ']' %}
+{% assign slideIndex_string = slideIndex_string  | replace: ',]', ']' %}
+{% assign slideId_string    = slideId_string     | replace: ',]', ']' %}
 
 
 <script>

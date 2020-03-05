@@ -4,37 +4,25 @@ title: Архив
 description: 
 permalink: /archive/
 ---
-<section class="archives" itemscope itemtype="http://schema.org/Blog">
-  <a class="nav nav--black" href="{{ site.baseurl }}/">
-    <i class="fa fa-lg fa-arrow-left"></i>
-    <span>🛀Домой</span>
-  </a>
-  <header class="archives__header">
-    <span>Архив</span>
-  </header>
-  <div class="section-padding archives__container">
-    {% for post in site.posts %}
-      <article class="card" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-        <a class="card__link" href="{{ post.url | prepend: site.baseurl }}" itemprop="url">
-          <div class="card__img">
-            {% if post.image-sm %}
-              <figure class="absolute-bg wow" style="background-image: url('{{ post.image-sm }}');"></figure>
-            {% else %}
-              <figure class="absolute-bg wow" style="background-image: url('{{ post.image }}');"></figure>
-            {% endif %}
-          </div>
-          <div class="card__container">
-            <h2 class="card__header" itemprop="name">{{ post.title }}</h2>
-            <p class="card__count" itemprop="datePublished" datetime="{{ post.date | date_to_xmlschema }}">
-              {% include rus_date.html date=post.date %}
-              {% if post.categories.size > 0 %}
-                in {{ post.categories | join: ', ' }}
-              {% endif %}
-            </p>
-            <span class="card__more">Read Post</span>
+{% assign postsByYear =
+    site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
+
+{% for year in postsByYear %}
+  <div style="text-align: center;"><h1>{{ year.name }}</h1> </div>
+    <div class="section-padding archives__container">
+      {% for post in year.items %}
+        <a href="{{ post.url | prepend: site.baseurl }}">
+          <div class="archive_card">
+            <div class="info_section">
+              <div class="card_header">
+                <h2>{{post.title}}</h2>
+                <h4>{% include rus_date.html date=post.date %} in {{post.categories[0]}}</h4>            
+              </div>
+            </div>
+            <div class = "blur_back"; style="background-image: url({{post.image}})"> 
+            </div>
           </div>
         </a>
-      </article>
-    {% endfor %}
-  </div>
-</section>
+        {% endfor %}
+    </div>
+{% endfor %}

@@ -1,220 +1,5 @@
-/* Tooltip container */
-.tooltip {
-  position: relative;
-  display: inline-block;
-}
-
-/* Tooltip text */
-.tooltip .tooltiptext {
-  font-size: 25%; /*otsosi u traktorista*/
-  visibility: hidden;
-  width: 120px;
-  background-color: $color-alpha;
-  color: $color-white;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  
-  /* Position the tooltip */
-  position: absolute;
-  z-index: 1;
-  top: 90%;
-  left: 50%;
-  margin-left: -60px;
-}
-
-/* Show the tooltip text when you mouse over the tooltip container */
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-}
-
 /**
- * Tabs
- * On the Blog page for posts and categories
- */
-.tabs {
-  @extend %letter-spacing;
-
-  display: flex;
-  justify-content: space-around;
-  padding: 1em;
-
-  list-style-type: none;
-
-  @media (min-width: $mq-md) {
-    padding-left: auto;
-    padding-right: auto;
-  }
-
-  @media (min-width: $mq-xxl) {
-    padding-left: 10em;
-    padding-right: 10em;
-  }
-
-  ul {
-    list-style-type: none;
-  }
-
-  &__item {
-    cursor: pointer;
-    font-size: 320%; /*otsosi u traktorista*/
-
-    /*&:not(.active) {
-      @include border-slide();
-    }*/
-
-    &.active {
-      border-bottom: 3px solid $color-alpha;
-          .tooltip .tooltiptext {
-      visibility: visible;
-      }
-    }
-  }
-}
-
-.tab {
-
-  &.active {
-    will-change: opacity;
-    animation: fade-in 1s both;
-  }
-
-  ul {
-    list-style-type: none;
-  }
-}
-
-.tabs2 {
-  @extend %letter-spacing;
-
-  display: flex;
-  justify-content: space-around;
-  padding: 1em;
-
-  list-style-type: none;
-
-  @media (min-width: $mq-md) {
-    padding-left: 8em;
-    padding-right: 8em;
-  }
-
-  @media (min-width: $mq-xxl) {
-    padding-left: 10em;
-    padding-right: 10em;
-  }
-
-  ul {
-    list-style-type: none;
-  }
-
-  &__item {
-    cursor: pointer;
-
-    &:not(.active) {
-      @include border-slide();
-    }
-
-    &.active {
-      border-bottom: 3px solid $color-alpha;
-    }
-  }
-}
-
-.tab2 {
-
-  &.active {
-    will-change: opacity;
-    animation: fade-in 1s both;
-  }
-
-  ul {
-    list-style-type: none;
-  }
-}
-
-/**
- * Blog Post Preview
- * On the Blog page
- */
-.previews {
-
-  &__container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    padding: 2em;
-
-    color: $color-white;
-
-    span {
-      @extend %letter-spacing;
-
-      font-family: $font-body;
-    }
-  }
-}
-
-.preview {
-  transition: background-color 0.2s ease-in-out;
-
-  &:nth-child(even) {
-    background-color: $color-white;
-  }
-
-  &:hover {
-    background-color: $color-alpha--light;
-
-    .preview__more {
-      box-shadow: inset 175px 0 0 0 $color-alpha;
-      color: $color-white;
-    }
-  }
-
-  &__img {
-    will-change: opacity;
-    animation: fade-in 1s both;
-  }
-
-  &__link {
-    display: block;
-    padding: 2em 1em;
-
-    @media (min-width: $mq-md) {
-      padding: 4em 8em;
-    }
-
-    @media (min-width: $mq-xxl) {
-      padding-left: 10em;
-      padding-right: 10em;
-    }
-  }
-
-  &__date {
-    font-family: $font-header;
-    color: $color-black;
-  }
-
-  &__header {
-    color: $color-alpha;
-
-    margin-bottom: 0.5em;
-  }
-
-  &__excerpt {
-    color: $color-black;
-  }
-
-  &__more {
-    @include button-slide();
-  }
-}
-
-/**
- * Category Card
- * On the blog page under category tab
+ * Cards
  */
 .cards {
   @include flex-grid(1, 2, $xxl: 3, $pad: 0.25em);
@@ -228,74 +13,215 @@
   }
 }
 
-.card {
 
-  &__link {
-    @include box-shadow(1px);
-
+.card{
+  position: relative;
+  display: block;
+  width: 90%;
+  max-width: 1024px;
+  height: 438px;
+  margin: 40px auto; 
+  overflow: hidden;
+  border-radius: 10px;
+  transition: all 0.4s;
+  box-shadow: 0px 0px 120px -25px rgba(0,0,0, 0.5);
+  &:hover{
+    transform: scale(1.02);
+    box-shadow: 0px 0px 80px -25px rgba(0,0,0, 0.5);
+    transition: all 0.4s;
+  }
+  .info_section{
     position: relative;
+    width: 100%;
+    height: 100%;
+    // background-blend-mode: multiply;
+    z-index: 2;
+    border-radius: 10px;
+    .card_header{
+      position: relative;
+      padding: 25px;
+      padding-bottom: 10px !important;
+      h1{
+        color: black;
+        font-weight: 400;
+      }
+      h4{
+        color: #555;
+        font-weight: 400;
+      }
+      .buttons{
+        display: inline-block;
+        margin: 5px;
+        color: #555;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid rgba(0,0,0,1);
+      }
+    }
+    .card_desc{
+      display: block;
+      padding: 25px;
+      height: 50%;
+      .text{
+        color: #545454;
+      }
+    }
+  }
+  .blur_back{
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    height: 100%; right: 0;
+    background-size: cover;
+    background-position: center;
+    border-radius: 11px;
+  }
+}
 
-    display: block;
+@media screen and (min-width: $mq-sm) {
+  .card_header{
+    width: 50%;
+  }
+  
+  .card_desc{
+    padding-top: 0 !important;
+    width: 50%;
+  }
+  
+  .info_section{
+    background: linear-gradient(to right, #e5e6e6 50%, transparent 100%);
+  }
+  
+  .blur_back{
+    width: 90%;
+    background-position: -100% 10% !important;  
+  }
+}
 
-    background-color: $color-white;
-    transition: background-color 0.2s ease-in-out;
+@media screen and (max-width: $mq-sm) {
+  .card{
+    width: 95%;
+    margin: 20px auto; 
+    min-height: 350px;
+    height: auto;
+  }
+  
+  .blur_back{
+    width: 100%;
+    background-position: top !important;  
+    background-size: contain !important;
+  }
 
-    &:after {
-      @include box-shadow(3px);
+  .card_desc{
+    padding-top: 0 !important;
+  }
+  
+  .card_header{
+    width: 100%;
+    margin-top: 100px;
+    padding-bottom: 0 !important;
+  }
 
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
+  .info_section{
+    background: linear-gradient(to top, #e5e6e6 75%, transparent 100%);
+    display: inline-grid;
+  }
+}
 
-      height: 100%;
+/**
+ * Archive cards the same, but always small width
+ *
+ */
+
+
+.archive_card{
+  width: 95%;
+  margin: 20px auto; 
+  height: auto;
+  position: relative;
+  display: block;
+  max-width: 1024px;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: all 0.4s;
+  box-shadow: 0px 0px 120px -25px rgba(0,0,0, 0.5);
+  &:hover{
+    transform: scale(1.02);
+    box-shadow: 0px 0px 80px -25px rgba(0,0,0, 0.5);
+    transition: all 0.4s;
+  }
+  .info_section{
+    background: linear-gradient(to top, #e5e6e6 50%, transparent 100%);
+    display: inline-grid;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    // background-blend-mode: multiply;
+    z-index: 2;
+    border-radius: 10px;
+    .card_header{
       width: 100%;
-
-      opacity: 0;
-      will-change: opacity;
-      transition: opacity 0.4s ease-in-out;
-    }
-
-    &:hover {
-      background-color: $color-alpha--light;
-
-      &:after {
-        opacity: 1;
+      margin-top: 100px;
+      position: relative;
+      padding: 25px;
+      padding-bottom: 10px !important;
+      h1{
+        color: black;
+        font-weight: 400;
       }
-
-      .card__more {
-        box-shadow: inset 175px 0 0 0 $color-alpha;
-        color: $color-white;
+      h4{
+        color: #555;
+        font-weight: 400;
+      }
+      .buttons{
+        display: inline-block;
+        margin: 5px;
+        color: #555;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid rgba(0,0,0,1);
       }
     }
   }
-
-  &__img {
-    position: relative;
-
-    height: 12em;
-
-    background-color: $color-black;
-
-    &:after {
-      @extend %overlay;
-    }
+  .blur_back{
+    width: 100%;
+    background-position: top !important;  
+    background-size: contain !important;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    height: 100%; right: 0;
+    border-radius: 11px;
   }
+}
 
-  &__container {
-    padding: 2em 1em;
+/**
+ * Index intro card container
+ */
+
+.index_intro{
+  position: relative;
+  display: block;
+  width: 90%;
+  max-width: 1024px;
+  height: auto;
+  margin: 40px auto; 
+  a {
+    text-decoration: underline;
+  } 
+  
+  .profile__social{
+    a {
+    text-decoration: none;
+  } 
   }
+}
 
-  &__header {
-    color: $color-alpha;
-  }
-
-  &__count {
-    color: $color-black;
-  }
-
-  &__more {
-    @include button-slide(0.25em);
+@media screen and (max-width: $mq-sm) {
+  .index_intro{
+    width: 95%;
+    margin: 20px auto; 
+    height: auto;
   }
 }
 
@@ -408,57 +334,58 @@
 /**
  * Navigation
  */
-.nav {
-  @extend %letter-spacing;
 
-  position: absolute;
-  top: 1.25em;
-  left: 1em;
-  z-index: 99;
-
+.page-nav {
+  background: #fff;
   display: flex;
-  align-items: center;
+  flex-direction: row;
+}
+.page-nav a emo {
+  font-size: 0px;
+}
+.page-nav a {
+  color: #000;
+  text-decoration: none;
+  padding: 5px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  font-size: 22px;
+  text-align: center;
+  /* Flex grow and basis will auto adjust the width */
+  /* Remove these if you do not want auto width */
+  flex-grow: 1;
+/*  flex-basis: 0;*/
+  /* A little bit of CSS animation magic */
+  transition: all ease 0.3s;
+}
 
-  font-family: $font-body;
+.page-nav a:hover {
+  color: $color-white;
+  background-color: $color-alpha;
+}
 
-  @media (min-width: $mq-sm) {
-    left: 2em;
-  }
-
-  i {
-
-    @media (min-width: $mq-sm) {
-      margin-right: 0.5em;
-    }
-  }
-
-  span {
+.cat_title{
     display: none;
-
-    @media (min-width: $mq-sm) {
-      display: block;
-    }
+    text-align: center; 
   }
 
-  &--black {
-    color: $color-black;
-
-    &:hover,
-    &:active,
-    &:focus {
-      color: $color-black;
-    }
+/* [ON THE SMALL SCREEN] */
+@media only screen and (max-width: $mq-sm) {
+  /* Transform to large logo, small text */
+  .page-nav a {
+    font-size: 0px;
   }
-
-  &--white {
-    color: $color-white;
-
-    &:hover,
-    &:active,
-    &:focus {
-      color: $color-white;
-    }
+   .page-nav a emo {
+    font-size: 34px;
   }
+  .cat_title{
+    display: block;
+  }
+}
+
+.page-nav a.active {
+  color: $color-white !important;
+  background-color: $color-alpha !important;
 }
 
 /**
@@ -533,18 +460,8 @@
     margin-left: -50vw;
     margin-right: -50vw;
     max-width: none;
+    z-index: 3;
   }
-
-  /*img[src$="#full"] {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 10px;
-    left: 0;
-    min-width: 100%;
-    max-width: none;
-    position: absolute;
-  }*/
 
   figure {
     margin: 2em 0;
@@ -676,21 +593,20 @@
   }
 }
 
-.myvideo {
-    position:relative;
-    padding-bottom:56.25%;
-    padding-top:30px;
-    height:0;
-    overflow:hidden;
-    border:1px solid #ccc;
-    }
-    
-.myvideo iframe,.myvideo object,.myvideo embed {
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
+/* responsive videos */
+.video figure { 
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.video iframe, .video object, .video embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /**
@@ -718,6 +634,8 @@
     margin: 0 auto;
     padding-left: 1em;
     padding-right: 1em;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 
@@ -808,4 +726,44 @@ div[class^="mySlide"] {display: none}
   background-color: transparent; 
   position: relative;
 }
+}
+
+.toc {
+  display: none;
+  width: 20%;
+  height: auto;
+  position: fixed;
+  z-index: 1;
+  top: 40%;
+  .is-active-link::before {
+    background-color: $color-alpha;
+    }
+  }
+
+.post_head_info{
+  background-color: rgba(0,0,0,0.5);
+  a{
+    color: white;
+    text-decoration: underline;
+  }
+}
+
+img.emoji {
+    display: inline-block;
+    left: 0;
+    transform: none;
+    width: 20px;
+    height: 20px;
+    vertical-align: text-top;
+    padding: 0;
+    margin: 0;
+}
+
+/* Inline images */
+.image-inline{
+    position: relative;
+    display: inline-block;
+    float: left;
+    padding: 0px 20px 0px 0px;
+    text-align: center; 
 }

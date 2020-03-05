@@ -10,35 +10,3 @@
   'animations',
   'helpers',
   'code'
-;
-
-/* responsive videos */
-.video figure { 
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-}
-
-.video iframe, .video object, .video embed {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* Inline images */
-.image-inline{
-    position: relative;
-    display: inline-block;
-    float: left;
-    padding: 0px 20px 0px 0px;
-    text-align: center; 
-}
-
-.project_info{
-  left: 22px;
-  right: 0;
-  padding-left:1%;
-}

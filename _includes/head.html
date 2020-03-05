@@ -54,4 +54,14 @@
      </script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
 </head>
+
+<nav class="page-nav">
+  <a {% if page.url == "/" %}class="active"{% endif %} href="/"> <emo>🏡</emo> 🏡 </a>
+  <a {% if page.url contains "Science" %}class="active"{% endif %} href="/Science"> <emo>📜</emo> Science </a>
+  <a {% if page.url contains "Education" %}class="active"{% endif %} href="/Education"> <emo>🎓</emo> Education  </a>
+  <a {% if page.url contains "Travel" %}class="active"{% endif %} href="/Travel"> <emo>🏕</emo> Travel  </a>
+  <a {% if page.url contains "Notes" %}class="active"{% endif %} href="/Notes"> <emo>✒</emo> Notes  </a>
+</nav>

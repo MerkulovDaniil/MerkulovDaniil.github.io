@@ -13,15 +13,19 @@ default_img: "https://merkulov.top/images/posts/180217_scientifictools/card-sm.p
 # Profile settings
 name: Bratishka
 profile_img: /images/profile.jpg
-profile: Меня зовут Даня, я PhD студент в Сколковском Институте Науки и Технологий. Я люблю математику, преподавать, историю, путешествовать и неоднозначность бытия. Этот сайт - попытка собрать воедино то, что мне кажется или показалось важным.
+profile: Меня зовут Даня, я PhD студент в Сколковском Институте Науки и Технологий. Я люблю <a href="/Science"> математику</a>, <a href="/Education"> преподавать</a>, историю, <a href="/Travel"> путешествовать</a> и <a href="/Notes"> неоднозначность бытия</a>. 
+    <ul>
+      <li><a href="https://fmin.xyz/"> 💎 fmin.xyz</a></li>
+      <li><a href="https://nla.skoltech.ru/"> NLA course @ Sk </a></li>
+      <li><a href="https://numla.github.io/"> Seminar @ Sk </a></li>
+    </ul>
 social:
   github: https://github.com/MerkulovDaniil/
   vk: https://vk.com/merkulov_daniil
   twitter: https://twitter.com/danya_merkulov
-  telegram: https://t.me/bratishk_skaz
+  telegram: https://t.me/bratishk
 
 # Build settings
-include: ["_categories"]
 exclude: [Gemfile", "Gemfile.lock", node_modules]
 # Markdown settings
 markdown: kramdown
@@ -48,7 +52,3 @@ sass:
 
 # Gems
 plugins: [jekyll-paginate, jekyll-sitemap, octopress-autoprefixer, jemoji]
-
-collections:
-  skaz:
-    output: true
