@@ -22,3 +22,18 @@
   background-color: rgba($color-black, 0.2);
   transition: background-color 0.4s ease-in-out;
 }
+
+/**
+ * Buttons
+ */
+div[class^="front_button"] {
+  display: inline-block;
+  border-radius: 5px;
+  border: 1px solid $color-black;
+  background-color: white;
+  margin-right: 5px;
+  padding: 3px;
+  a{
+     border-bottom: none;
+  }
+  }

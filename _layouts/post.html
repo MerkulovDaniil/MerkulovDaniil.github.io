@@ -16,6 +16,11 @@ layout: default
 
   <section class="section-padding bg-grey" itemprop="articleBody">
     <div class="post">
+      {%- if page.repo -%} <div class="front_button"><a href="{{page.repo}}" target="_blank"><i class="fab fa-github"></i> repo </a></div>{%- endif -%}
+      {%- if page.bibtex -%}<div class="front_button"><a href="{{page.bibtex}}" target="_blank"><i class="fas fa-quote-right"></i> Cite </a></div>{%- endif -%}
+      {%- if page.pdf -%}<div class="front_button"><a href="{{page.pdf}}" target="_blank"><i class="far fa-file-pdf"></i> .pdf </a></div>{%- endif -%}
+      {%- if page.arxiv -%}<div class="front_button"><a href="{{page.arxiv}}" target="_blank"><i class="ai ai-arxiv"></i> arxiv </a></div>{%- endif -%}
+      {%- if page.video -%}<div class="front_button"><a href="{{page.video}}" target="_blank"><i class="fab fa-youtube"></i> video </a></div>{%- endif -%}</br>
       {% include anchor_headings.html html=content %}
       <script async src="https://comments.app/js/widget.js?2" data-comments-app-website="_-CK4Z7f" data-limit="5" data-color="F646A4"></script>
     </div>

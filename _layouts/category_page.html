@@ -15,7 +15,11 @@ layout: default
 		            <h4>{% include rus_date.html date=post.date %} in {{post.categories[0]}}</h4>            
 		          </div>
 		          <div class="card_desc">
-		          {{ post.content | strip_html | truncatewords: 30 }}
+		          	{%- if post.repo -%} <div class="front_button"><a href="{{post.repo}}" target="_blank"><i class="fab fa-github"></i> <kbd>repo </kbd></a></div>{%- endif -%}
+		            {%- if post.bibtex -%}<div class="front_button"><a href="{{post.bibtex}}" target="_blank"><i class="fas fa-quote-right"></i> Cite </a></div>{%- endif -%}
+		            {%- if post.pdf -%}<div class="front_button"><a href="{{post.pdf}}" target="_blank"><i class="far fa-file-pdf"></i> .pdf </a></div>{%- endif -%}
+		            {%- if post.arxiv -%}<div class="front_button"><a href="{{post.arxiv}}" target="_blank"><i class="ai ai-arxiv"></i> arxiv </a></div>{%- endif -%}
+		            {%- if post.video -%}<div class="front_button"><a href="{{post.video}}" target="_blank"><i class="fab fa-youtube"></i> video </a></div>{%- endif -%}</br>{{ post.content | strip_html | truncatewords: 30 }}
 		          </div>
 		        </div>
 		        <div class = "blur_back"; style="background-image: url({%if post.image-sm %} {{post.image-sm}} {% else %} {{post.image}} {%endif%})"> 
