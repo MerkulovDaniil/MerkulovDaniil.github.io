@@ -137,7 +137,7 @@
 .archive_card{
   width: 95%;
   margin: 20px auto; 
-  height: auto;
+  height: 300px;
   position: relative;
   display: block;
   max-width: 1024px;
@@ -180,6 +180,67 @@
         padding: 5px;
         border-radius: 5px;
         border: 1px solid rgba(0,0,0,1);
+      }
+    }
+  }
+  .blur_back{
+    width: 100%;
+    background-position: top !important;  
+    background-size: contain !important;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    height: 100%; right: 0;
+    border-radius: 11px;
+  }
+}
+
+/**
+ * Default cards the same, but always small width
+ *
+ */
+
+
+.default_card{
+  width: 95%;
+  background-position: center top;
+  background-size: contain;
+  margin: 20px auto; 
+  height: 300px;
+  position: relative;
+  display: block;
+  max-width: 1024px;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: all 0.4s;
+  box-shadow: 0px 0px 120px -25px rgba(0,0,0, 0.5);
+  &:hover{
+    transform: scale(1.02);
+    box-shadow: 0px 0px 80px -25px rgba(0,0,0, 0.5);
+    transition: all 0.4s;
+  }
+  .info_section{
+    background: linear-gradient(to top, #e5e6e6 50%, transparent 100%);
+    display: inline-grid;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    // background-blend-mode: multiply;
+    z-index: 2;
+    border-radius: 10px;
+    .buttons{
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+    .card_header{
+      width: 100%;
+      margin-top: 150px;
+      position: relative;
+      padding: 25px;
+      padding-bottom: 10px !important;
+      h4{
+        color: black;
+        font-weight: 400;
       }
     }
   }
@@ -782,3 +843,29 @@ div[class^="front_button"] {
      border-bottom: none;
   }
   }
+
+
+
+.box{
+  width: 95%;
+  margin: 20px auto; 
+  height: 300px;
+  position: relative;
+  display: block;
+  max-width: 1024px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow:0 4px 7px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.1) inset;
+  &:hover{
+    transform: scale(1.02);
+    box-shadow: 0px 0px 80px -25px rgba(0,0,0, 0.5);
+    transition: all 0.4s;
+  }
+  cover{
+    height: 200px;
+  }
+  img{
+    height: 200px;
+    object-fit: cover;
+  }
+}
