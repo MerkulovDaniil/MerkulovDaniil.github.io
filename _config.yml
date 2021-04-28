@@ -1,8 +1,6 @@
 # Site settings
 email: danya@merkulov.top
 baseurl: ""
-paginate: 5
-paginate_path: "/blog/page-:num"
 
 # SEO settings
 title: merkulov.top
@@ -10,15 +8,13 @@ description: cozy and warm place
 url: "https://merkulov.top"
 default_img: "https://merkulov.top/images/posts/180217_scientifictools/card-sm.png"
 
+
 # Profile settings
 name: Bratishka
 profile_img: /images/profile.jpg
-profile: Меня зовут Даня, я PhD студент в Сколковском Институте Науки и Технологий. Я люблю <a href="/Science"> математику</a>, <a href="/Education"> преподавать</a>, историю, <a href="/Travel"> путешествовать</a> и <a href="/Notes"> неоднозначность бытия</a>. 
-    <ul>
-      <li><a href="https://fmin.xyz/"> 💎 fmin.xyz</a></li>
-      <li><a href="https://nla.skoltech.ru/"> NLA course @ Sk </a></li>
-      <li><a href="https://numla.github.io/"> Seminar @ Sk </a></li>
-    </ul>
+profile: I am PhD student at Skolkovo Institute of Science and Technology 
+  and 
+  Senior Lecturer at Moscow Institute of Physics and Technology. I love <a href="/Papers"> math</a>, <a href="/Teaching"> teaching</a>, history, <a href="/Travel"> travelling</a> and <a href="/Other"> the ambiguity of being</a>. 
 social:
   github: https://github.com/MerkulovDaniil/
   vk: https://vk.com/merkulov_daniil
@@ -51,4 +47,20 @@ sass:
   style: compressed
 
 # Gems
-plugins: [jekyll-paginate, jekyll-sitemap, octopress-autoprefixer, jemoji]
+plugins: [jekyll-sitemap, octopress-autoprefixer, jemoji]
+
+# Collections
+collections:
+  opt:
+    teaching: true
+    output: true
+    permalink: /:collection/:name
+    image: /files/opt.svg
+    title: Optimization Methods
+
+  nla:
+    teaching: true
+    output: true
+    permalink: /:collection/:name
+    image: /files/nla.gif
+    title: Numerical Linear Algebra

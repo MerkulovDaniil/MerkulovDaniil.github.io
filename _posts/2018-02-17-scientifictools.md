@@ -3,7 +3,7 @@ layout: post
 title: Быстрый старт в научные вычисления
 date: 2018-02-17 00:00:00
 categories:
-  - Science
+  - Other
 description:
 image: /images/posts/180217_scientifictools/card.png
 image-sm: /images/posts/180217_scientifictools/card-sm.png
