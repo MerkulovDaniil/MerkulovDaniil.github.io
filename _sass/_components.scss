@@ -905,7 +905,7 @@ div[class^="front_button"] {
 
 
 .table {
-  font-size: 90%;
+  font-size: 80%;
   margin: 0 0 40px 0;
   width: 100%;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
@@ -913,13 +913,13 @@ div[class^="front_button"] {
 }
 @media screen and (max-width: 580px) {
   .table {
+    font-size: 100%;
     display: block;
   }
 }
 
 .row {
   display: table-row;
-  /*background: #f6f6f6;*/
 }
 
 .row:hover{
@@ -967,6 +967,7 @@ div[class^="front_button"] {
 .cell {
   padding: 6px 12px;
   display: table-cell;
+  vertical-align: middle;
 }
 @media screen and (max-width: 580px) {
   .cell {
