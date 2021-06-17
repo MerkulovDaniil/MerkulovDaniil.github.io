@@ -926,6 +926,7 @@ div[class^="front_button"] {
   background-color: #e8f3ff;
 }
 
+
 .row.header {
   font-weight: 900;
   color: #ffffff;
@@ -940,6 +941,9 @@ div[class^="front_button"] {
   .row.header {
     padding: 0;
     height: 6px;
+  }
+  .row:nth-of-type(odd) {
+  background: $color-alpha--light;
   }
   .row.header .cell {
     display: none;
